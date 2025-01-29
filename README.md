@@ -136,6 +136,7 @@ Coming soon. Planned release date: Feb 10, 2025.
 * [From Greenfield Dreams to Brownfield Realities: Navigating Platform Development](https://www.youtube.com/watch?v=1FhkG4DHIMM) | Cat Morris | Kubernetes Community Days UK 2024
 * [The Magic of Platforms](https://www.youtube.com/watch?v=WaL3ZbLgMuI) | Gregor Hohpe | PlatformCon 2022
 * [A RedMonk Conversation: Developer-First Infrastructure](https://www.youtube.com/watch?v=h4nA1-O0QrI) | James Governor, Redmonk & Joe Duffy, Pulumi | Apr 26, 2022
+* [Platform engineering is all about product](https://www.youtube.com/watch?v=jVpOMDkD2mo) | Gal Bashan | PlatformCon 2023
 * [Platform Orchestrators: The Missing Middle of Internal Developer Platforms?](https://www.youtube.com/watch?v=t4IOnciAzbE) | Daniel Bryant, Platform Engineering | Jun 13, 2024
 * [What is Platform as a Product?](https://www.youtube.com/watch?v=W7-ZeflpFyE) | Platform Engineering | Aug 1, 2023
 * [From Fragile to Antifragile Internal Platforms](https://www.youtube.com/watch?v=i5Yv3bNRXWg) | Manuel Pais | PlatformCon 2024
