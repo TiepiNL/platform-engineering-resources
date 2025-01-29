@@ -125,6 +125,7 @@ Coming soon. Planned release date: Feb 10, 2025.
 
 #### Conference Talks & Videos
 
+* [DevOps or DevX – Lessons We Learned Shifting Left the Wrong Way](https://www.youtube.com/watch?v=91rtD9Os9Aw) | Hannah Foxwell, VMware | stackconf 2022
 * [Navigating the landscape of platform engineering tooling](https://www.youtube.com/watch?v=TJJrr-DmOeA) | Lou Bichard, Gitpod | Dec 19, 2023
 * [Platform as a Product](https://www.youtube.com/watch?v=b8YHCDMxqfg) | Manuel Pais | PlatformCon 2022
 * [Beyond engineering: The future of platforms](https://www.youtube.com/watch?v=k5SUWdrlTfs) | Manuel Pais | PlatformCon 2023
@@ -146,7 +147,7 @@ Coming soon. Planned release date: Feb 10, 2025.
 * [Product Mindset: What is it, and how do you cultivate it in your organisation?](https://www.linkedin.com/pulse/product-mindset-what-how-do-you-cultivate-your-philip-olivier/) | Philip Olivier | Oct 10, 2023
 * [There's no value in your platform!](https://www.linkedin.com/pulse/theres-value-your-platform-jonny-williams-1gtce/) | Paul Brown, Adam Clark, Ed Seymour, Jonny Williams | Mar 19, 2024
 * [The problems with MVPs in legacy replacement](https://www.thoughtworks.com/insights/blog/part-1-problems-mvps-legacy-replacement) | Meaghan Waters, Thoughtworks | Feb 12, 2021
-* [Trade Me’s Journey Towards a Thinnest Viable Platform (TVP)](https://teamtopologies.com/industry-examples/trade-me-journey-towards-a-thinnest-viable-platform) | Catherine Matheson & Amir Mohtaseb, Trade Me | Nov 22, 2024
+* [Trade Me's Journey Towards a Thinnest Viable Platform (TVP)](https://teamtopologies.com/industry-examples/trade-me-journey-towards-a-thinnest-viable-platform) | Catherine Matheson & Amir Mohtaseb, Trade Me | Nov 22, 2024
 * [Desirability, feasibility and viability diagram: What does it mean?](https://www.uxdesigninstitute.com/blog/desirability-viability-and-feasibility/) | Cynthia Vinney, UX Design Institute | Oct 6, 2022
 * [Six Signs You Need Platform Engineering](https://www.slideshare.net/slideshow/six-signs-you-need-platform-engineering/259182361) | Weaveworks | Jul 13, 2023
 * [Value Line](https://jshingler.github.io/blog/2023/04/01/valueline/) | By Jim Shingler | April 1, 2023
