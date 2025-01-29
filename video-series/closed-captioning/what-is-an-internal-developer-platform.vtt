@@ -1,0 +1,2626 @@
+﻿WEBVTT
+
+00:00:01.120 --> 00:00:04.700
+Hi there, I'm Tom Peperkamp,
+a platform product owner.
+
+00:00:05.480 --> 00:00:08.520
+That's right, platforms
+should be treated as products!
+
+00:00:09.860 --> 00:00:12.600
+Platform Engineering is a
+new and rapidly evolving field.
+
+00:00:13.900 --> 00:00:15.320
+To help you navigate this space,
+
+00:00:15.560 --> 00:00:20.680
+I've created a video series that dives into
+the why, what, and how of Platform Engineering.
+
+00:00:21.720 --> 00:00:25.480
+This series pulls together insights
+from top quality public resources,
+
+00:00:26.420 --> 00:00:31.260
+organizing them into focused topics to create
+a "crash course" in Platform Engineering.
+
+00:00:32.200 --> 00:00:35.800
+Each video is curated to support
+your Platform Engineering journey,
+
+00:00:36.780 --> 00:00:41.780
+offering practical knowledge and insights to deepen
+your understanding of its principles and potential.
+
+00:00:43.180 --> 00:00:43.880
+Let's get started!
+
+00:00:47.280 --> 00:00:51.180
+Throughout my talk, I'll be referencing
+content from leading voices in our industry.
+
+00:00:52.000 --> 00:00:56.120
+A big shout out to these rock stars for
+their amazing blogs and conference talks!
+
+00:00:57.440 --> 00:01:00.240
+You'll find all the sources
+listed at the end of the video.
+
+00:01:01.160 --> 00:01:03.400
+These references
+aren't just for ethics.
+
+00:01:03.720 --> 00:01:07.460
+They're packed with valuable insights
+that I highly recommend exploring.
+
+00:01:08.260 --> 00:01:10.220
+So if you enjoy this video,
+
+00:01:10.760 --> 00:01:12.880
+definitely check them
+out and dive deeper!
+
+00:01:16.060 --> 00:01:17.060
+Welcome back, everyone!
+
+00:01:17.700 --> 00:01:21.840
+Today, we're focusing on a crucial
+tool for modern software development:
+
+00:01:22.660 --> 00:01:25.960
+the Internal Developer
+Platform, or IDP for short.
+
+00:01:27.400 --> 00:01:31.040
+Imagine a world where developers
+can self-serve everything they need.
+
+00:01:31.540 --> 00:01:37.620
+Environments, deployments, databases,
+observability without waiting on other teams.
+
+00:01:38.500 --> 00:01:39.980
+This is the power of an IDP:
+
+00:01:40.340 --> 00:01:46.940
+a developer -centric platform that transforms how teams
+engage with the organization's delivery configuration,
+
+00:01:47.600 --> 00:01:48.720
+driving autonomy and speed.
+
+00:01:50.760 --> 00:01:51.520
+In this episode,
+
+00:01:52.020 --> 00:01:54.380
+the longest and most
+technical episode of the series,
+
+00:01:54.380 --> 00:01:57.000
+we'll not only define what
+an IDP is,
+
+00:01:57.220 --> 00:02:01.040
+but also explore the available design
+patterns that shape these platforms.
+
+00:02:02.300 --> 00:02:05.520
+Are you ready to join me on my
+search for understandable models
+
+00:02:05.520 --> 00:02:07.840
+to guide essential
+stakeholder conversations?
+
+00:02:11.080 --> 00:02:13.640
+This video follows up
+on my previous video,
+
+00:02:14.540 --> 00:02:17.680
+"Why Platform Engineering is
+the Natural Evolution of DevOps."
+
+00:02:18.660 --> 00:02:20.800
+If you haven't seen it yet,
+go check it out!
+
+00:02:21.680 --> 00:02:25.220
+In that one, we talked about how
+Platform Engineering helps developers
+
+00:02:25.220 --> 00:02:28.720
+deal with the crazy complexity
+of modern software delivery.
+
+00:02:29.260 --> 00:02:33.420
+It's all about making things simpler by
+abstracting away complex infrastructure.
+
+00:02:33.860 --> 00:02:40.100
+Remember, we talked about
+how a full-stack DevOps approach
+
+00:02:40.100 --> 00:02:43.320
+isn't always enough in today's
+complex operational landscape.
+
+00:02:44.440 --> 00:02:46.800
+The solution lies in
+reducing cognitive load,
+
+00:02:47.360 --> 00:02:51.600
+a central idea we explored through the
+lens of Platform Engineering product teams,
+
+00:02:52.480 --> 00:02:54.320
+backed by Team
+Topologies concepts.
+
+00:02:55.380 --> 00:02:59.760
+By enabling developers to focus on delivering
+value rather than dealing with complexity,
+
+00:03:01.180 --> 00:03:04.120
+platforms become the foundation
+of successful organizations.
+
+00:03:05.080 --> 00:03:09.320
+We defined Platform Engineering as a
+'way of thinking' and 'team-of-teams design'.
+
+00:03:10.780 --> 00:03:12.540
+This summary from Weaveworks,
+
+00:03:12.860 --> 00:03:17.280
+a cloud-native pioneer that
+unfortunately closed shop early 2024,
+
+00:03:17.300 --> 00:03:18.980
+paints a more detailed picture.
+
+00:03:20.100 --> 00:03:24.660
+Now, first, let's find out how
+Platform Engineering differs from IDPs,
+
+00:03:25.180 --> 00:03:26.940
+and how these terms
+relate to the each other.
+
+00:03:30.040 --> 00:03:32.140
+We'll use Microsoft's
+introduction to
+
+00:03:32.140 --> 00:03:34.320
+'start right, stay
+right, and get right'
+
+00:03:34.880 --> 00:03:36.720
+as a 'right start' for this video.
+
+00:03:39.060 --> 00:03:44.320
+Why? Because it puts DevEx at
+the center of Platform Engineering.
+
+00:03:45.240 --> 00:03:48.100
+Microsoft describes Platform
+Engineering in their white paper
+
+00:03:48.100 --> 00:03:53.240
+as 'a movement that improves the experience
+of developers and supporting teams.'
+
+00:03:54.340 --> 00:04:00.260
+Microsoft also uses the words "practice" and "a
+cultural shift" to describe Platform Engineering.
+
+00:04:01.140 --> 00:04:04.260
+Platform teams offer
+developers a curated set of
+
+00:04:04.260 --> 00:04:09.660
+tools, capabilities, and processes
+to 'start right, stay right, and get right'.
+
+00:04:10.120 --> 00:04:11.200
+To start right,
+
+00:04:11.780 --> 00:04:17.300
+developers need easy access to tools and systems
+that comply with organizational requirements.
+
+00:04:17.959 --> 00:04:20.940
+They stay right through
+automated governance and policy.
+
+00:04:21.440 --> 00:04:27.580
+To get right, the organization needs to
+think of developers as an internal customer
+
+00:04:27.780 --> 00:04:30.100
+and look for ways to
+improve their experience.
+
+00:04:31.220 --> 00:04:33.100
+Let's try to connect some dots.
+
+00:04:34.140 --> 00:04:38.420
+Platform Engineering is a movement,
+a practice, an approach, a cultural shift,
+
+00:04:38.940 --> 00:04:41.760
+a way of thinking with
+DevEx as the focus.
+
+00:04:43.060 --> 00:04:46.980
+Platform teams offer platforms to
+developers as internal customers.
+
+00:04:48.120 --> 00:04:50.020
+'Platforms to developers
+as internal customers...'
+
+00:04:51.500 --> 00:04:54.660
+Shuffle this a bit and we have
+an Internal Developer Platform!
+
+00:04:56.160 --> 00:05:01.820
+This visualization provides a nice introduction
+to what capabilities an IDP brings,
+
+00:05:02.180 --> 00:05:05.580
+but I'm pretty sure that you're
+here for something less conceptual.
+
+00:05:07.020 --> 00:05:08.160
+So let's dive into that!
+
+00:05:11.000 --> 00:05:13.780
+Sometimes, it's easier to
+say what something isn't.
+
+00:05:14.880 --> 00:05:16.300
+So first things first:
+
+00:05:17.400 --> 00:05:20.620
+An IDP is *not* just a
+wrapper around a cloud service.
+
+00:05:21.540 --> 00:05:24.240
+Is that controversial?
+I think not.
+
+00:05:25.240 --> 00:05:30.880
+Although leveraging cloud services effectively
+is a key component of a successful IDP,
+
+00:05:31.580 --> 00:05:36.000
+IDPs are not about enabling operators
+to do the things they already do.
+
+00:05:37.000 --> 00:05:41.640
+IDPs are about enabling developers to
+do the things they're not expert in doing.
+
+00:05:42.560 --> 00:05:44.780
+Internal Developer
+Platforms mean enablement.
+
+00:05:46.060 --> 00:05:48.740
+IDPs streamline processes,
+increase productivity,
+
+00:05:49.500 --> 00:05:54.420
+and enhance developer experience by enforcing
+standardization and enabling self-service.
+
+00:05:55.680 --> 00:05:59.480
+They positively impact key
+DevOps and DevEx metrics.
+
+00:05:59.525 --> 00:06:00.725
+Wrappers don't do that.
+
+00:06:03.817 --> 00:06:06.397
+Also, Kubernetes is *not* an IDP.
+
+00:06:07.280 --> 00:06:09.400
+Kubernetes is an abstraction
+on the infrastructure
+
+00:06:09.440 --> 00:06:14.220
+that helps automate many important
+but mundane and labor-intensive tasks
+
+00:06:14.220 --> 00:06:18.840
+that were being done by many teams across
+the industry over and over and over again.
+
+00:06:19.660 --> 00:06:22.620
+Kubernetes provides a container
+-centric management environment.
+
+00:06:22.960 --> 00:06:29.140
+It orchestrates computing, networking, and
+storage infrastructure on behalf of user workloads.
+
+00:06:30.000 --> 00:06:35.140
+This provides much of the simplicity
+of Platform as a Service (PaaS),
+
+00:06:35.960 --> 00:06:39.540
+with the flexibility of
+Infrastructure as a Service (IaaS),
+
+00:06:40.440 --> 00:06:43.160
+and enables portability
+across infrastructure providers.
+
+00:06:44.680 --> 00:06:46.880
+That's all great,
+but it's not an IDP.
+
+00:06:47.760 --> 00:06:53.600
+Organizations should build IDPs on top of this
+Kubernetes layer to reduce developers' cognitive load,
+
+00:06:53.600 --> 00:06:58.820
+instead of shifting left the immense
+cognitive load of cloud-native Ops to developers.
+
+00:06:59.840 --> 00:07:01.380
+In the words of
+Kelsey Hightower:
+
+00:07:02.320 --> 00:07:04.160
+'Kubernetes is a platform
+for building platforms.'
+
+00:07:05.300 --> 00:07:07.680
+'It's a better place to
+start, not the endgame.'
+
+00:07:07.900 --> 00:07:12.820
+Now, it's time to build those platforms
+on top of the Kubernetes platform.
+
+00:07:13.720 --> 00:07:16.840
+So today, we'll unlock the
+power of Platform Engineering
+
+00:07:16.840 --> 00:07:24.040
+and discover the key to faster innovation and streamlined
+development with Internal Developer Platforms (IDPs).
+
+00:07:24.740 --> 00:07:28.500
+So, what is an IDP?
+
+00:07:29.000 --> 00:07:33.540
+Let's start with a Container
+Solutions blog post by Cari Liebenberg.
+
+00:07:34.840 --> 00:07:37.220
+She gives us two starting
+definitions to consider.
+
+00:07:38.340 --> 00:07:42.740
+We start with Martin Fowler's often
+cited definition of a digital platform.
+
+00:07:45.660 --> 00:07:50.100
+And Humanitec has this definition
+of the Internal Developer Platform (IDP):
+
+00:07:51.100 --> 00:07:55.220
+'An Internal Developer Platform,
+or IDP, is a self-service layer
+
+00:07:55.220 --> 00:08:00.420
+that allows developers to interact independently
+with their organization's delivery setup,
+
+00:08:01.200 --> 00:08:04.880
+enabling them to self-serve
+environments, deployments, databases, logs,
+
+00:08:05.020 --> 00:08:07.620
+and anything else they
+need to run their applications.'
+
+00:08:09.700 --> 00:08:12.660
+Cari Liebenberg builds on
+these definitions and states:
+
+00:08:13.660 --> 00:08:20.120
+'An Internal Developer Platform (IDP) can be seen
+as a specific implementation of a digital platform,
+
+00:08:21.060 --> 00:08:26.200
+offering self-service functionality as a
+product to meet a variety of a team's needs.
+
+00:08:26.660 --> 00:08:32.240
+The focus for an Internal Developer
+Platform is improving the release process
+
+00:08:32.240 --> 00:08:34.440
+that teams need to
+follow to release software.'
+
+00:08:36.320 --> 00:08:36.940
+Sounds good, right?
+
+00:08:37.940 --> 00:08:42.980
+We'll have a look at how the release process of modern
+teams look like and what these teams might need later.
+
+00:08:45.960 --> 00:08:48.960
+Now that we know what an
+IDP isn't, and how we define it,
+
+00:08:49.380 --> 00:08:51.180
+let's see what one
+actually looks like.
+
+00:08:53.980 --> 00:08:59.560
+Developers usually interact with IDPs
+using APIs, CLIs, and web-based portals
+
+00:08:59.560 --> 00:09:01.880
+that provide access to
+the platform's capabilities.
+
+00:09:03.440 --> 00:09:07.460
+One example is Backstage, an
+open source platform by Spotify.
+
+00:09:08.220 --> 00:09:13.260
+It helps create Internal Developer Portals,
+which are like a one-stop shop for developers
+
+00:09:13.260 --> 00:09:18.060
+to access and manage all their software,
+tools, documentation, and services.
+
+00:09:21.000 --> 00:09:22.240
+Another example is Port.
+
+00:09:23.120 --> 00:09:25.960
+Unlike Backstage, which is
+opinionated in its structure,
+
+00:09:26.800 --> 00:09:30.520
+Port's blueprint approach allows
+greater flexibility for customization.
+
+00:09:31.420 --> 00:09:36.500
+It launched in 2022 and has seen rapid
+early adoption due to its open nature.
+
+00:09:39.940 --> 00:09:44.000
+This is not necessarily an
+Internal Developer *Platform*.
+
+00:09:46.800 --> 00:09:49.480
+What you see here is an
+Internal Developer *Portal*.
+
+00:09:51.500 --> 00:09:55.540
+Developer portals are the first
+touchpoint, but they are not your IDP.
+
+00:09:57.400 --> 00:10:00.400
+Let's have a closer look at the differences
+between Internal Developer Platforms and Portals.
+
+00:10:04.590 --> 00:10:06.080
+First, the platform.
+
+00:10:07.120 --> 00:10:09.400
+An Internal Developer
+Platform is a thing,
+
+00:10:09.700 --> 00:10:14.440
+a product people use to do Platform
+Engineering, built by Platform Teams.
+
+00:10:17.900 --> 00:10:22.240
+An Internal Developer Portal is a component
+of an Internal Developer Platform.
+
+00:10:23.020 --> 00:10:26.720
+It's a single pane of glass
+for "ClickOps" and visibility.
+
+00:10:28.720 --> 00:10:32.040
+By the way, while Backstage
+from our first portal example
+
+00:10:32.520 --> 00:10:38.160
+is essentially like a toolbox that gives you the
+components to build your ideal developer portal,
+
+00:10:38.840 --> 00:10:40.340
+Port can be more
+than just a portal;
+
+00:10:41.020 --> 00:10:44.180
+it's a ready-made solution with a
+focus on infrastructure management.
+
+00:10:46.170 --> 00:10:52.400
+It's the Internal Developer Platform that reduces
+the cognitive load on engineers, developer toil,
+
+00:10:52.900 --> 00:10:57.820
+and manual work, not the service catalog
+or the developer portal on top of it.
+
+00:10:59.140 --> 00:11:03.880
+Without actual self-service offerings, a
+portal is just a "Wizard-of-Oz" experiment,
+
+00:11:04.500 --> 00:11:06.560
+with no more value
+than "TicketOps".
+
+00:11:07.900 --> 00:11:13.960
+And couldn't we better focus on managing those services
+instead of managing requests from people to do something?
+
+00:11:16.940 --> 00:11:21.120
+Building the house first doesn't mean you
+can't think of the door, the portal. yet.
+
+00:11:22.200 --> 00:11:26.960
+A wireframe or mock-up can help with decisions
+about structure and with roadmap conversations.
+
+00:11:28.700 --> 00:11:31.820
+For example, you can access
+the Backstage UI kit in Figma
+
+00:11:31.820 --> 00:11:37.280
+to duplicate your own version and play around
+with a fitting homepage for your own organization.
+
+00:11:38.940 --> 00:11:43.460
+Now, let's have a look at the
+capabilities and benefits of an actual IDP.
+
+00:11:43.900 --> 00:11:45.380
+What's behind the portal?
+
+00:11:47.840 --> 00:11:54.300
+IDPs provide a service layer that abstracts the complexities
+of application configuration and infrastructure management.
+
+00:11:55.840 --> 00:11:58.560
+They are the automation
+and abstraction of modern Ops.
+
+00:12:00.500 --> 00:12:03.380
+Remember from our previous
+discussion on Platform Engineering,
+
+00:12:03.720 --> 00:12:06.480
+the goal is to reduce
+cognitive load for developers.
+
+00:12:07.500 --> 00:12:13.360
+IDPs achieve this by abstracting the complexities of
+application configuration and infrastructure management,
+
+00:12:14.280 --> 00:12:19.680
+allowing developers to focus on writing code and
+autonomously delivering high-quality applications.
+
+00:12:22.100 --> 00:12:26.200
+The very same Kelsey Hightower,
+a Kubernetes thought leader,
+
+00:12:26.820 --> 00:12:29.440
+gave the opening
+keynote at "KubeCon 2017".
+
+00:12:30.540 --> 00:12:32.700
+In his inspiring talk,
+seven years ago,
+
+00:12:33.320 --> 00:12:37.540
+he already suggested this abstraction
+layer to avoid noise for developers.
+
+00:12:40.920 --> 00:12:45.940
+Kelsey Hightower demonstrated a developer
+flow free of any 'implementation details'.
+
+00:12:48.720 --> 00:12:54.540
+In a spot-on article on Cloud Native Now,
+justin Reock cited, again, Kelsey Hightower:
+
+00:12:55.660 --> 00:12:57.480
+'Kubernetes is not a
+tool for developers.
+
+00:12:58.560 --> 00:13:05.260
+They can use it, but Kubernetes is low-level infrastructure
+and works best when people do not know it is there.'
+
+00:13:07.100 --> 00:13:09.180
+Today, we are often in
+the opposite situation.
+
+00:13:10.420 --> 00:13:13.660
+Many developers are painfully
+aware Kubernetes is there.
+
+00:13:14.040 --> 00:13:19.280
+If done right, Kubernetes would become
+invisible and just an implementation detail.
+
+00:13:20.560 --> 00:13:22.720
+"Git push" over "kubectl apply".
+
+00:13:24.240 --> 00:13:27.980
+Do your developers have to write
+YAMLs and use kubectl to do their work?
+
+00:13:28.140 --> 00:13:29.540
+(And what do they think of that?)
+
+00:13:32.880 --> 00:13:35.840
+What does the developer
+workflow actually look like?
+
+00:13:36.180 --> 00:13:39.880
+A modern developer's
+workflow has three major stages:
+
+00:13:40.200 --> 00:13:44.000
+Code, Merge (or Ship), and Run.
+
+00:13:45.300 --> 00:13:49.900
+To elaborate on that, what might a modern
+team need to release software in the cloud?
+
+00:13:50.800 --> 00:13:54.200
+The aforementioned blog by Cari
+Liebenberg gives us some clues.
+
+00:13:55.600 --> 00:13:58.320
+To name some capabilities,
+a team probably needs:
+
+00:13:59.040 --> 00:14:00.560
+a repository to store code,
+
+00:14:01.860 --> 00:14:03.820
+pipelines that will run
+when code is updated,
+
+00:14:05.400 --> 00:14:08.980
+automated scans that run when
+the pipeline runs, which might include:
+
+00:14:08.980 --> 00:14:12.680
+security checks; code quality
+checks; and running tests,
+
+00:14:13.720 --> 00:14:16.220
+and the creation of
+ephemeral environments.
+
+00:14:18.280 --> 00:14:20.660
+In addition to the release
+process is the run model;
+
+00:14:21.580 --> 00:14:24.640
+that is, where will the
+application run and be maintained?
+
+00:14:26.020 --> 00:14:29.980
+This in turn leads to needing
+infrastructure for running the software.
+
+00:14:31.100 --> 00:14:33.260
+The infrastructure
+layers to consider include:
+
+00:14:33.260 --> 00:14:38.320
+networking: How is traffic
+handled? What traffic is allowed?
+
+00:14:38.700 --> 00:14:43.220
+What ports should be accessible? What
+should be public, what should be private?
+
+00:14:45.580 --> 00:14:48.600
+Compute: Is the team using VMs,
+containers, or going Serverless?
+
+00:14:50.080 --> 00:14:52.940
+Storage: Where is
+the data going to live?
+
+00:14:53.940 --> 00:14:58.660
+How is the data going to remain secure?
+What and who can access the data?
+
+00:14:59.980 --> 00:15:03.100
+Observability: What is
+happening across your solution?
+
+00:15:04.260 --> 00:15:07.080
+Who is accessing your systems,
+and what changes are being made?
+
+00:15:08.040 --> 00:15:11.860
+How healthy are your systems?
+How well are your systems performing?
+
+00:15:12.760 --> 00:15:14.100
+What alerts will help your team?
+
+00:15:14.820 --> 00:15:18.760
+Security:
+What access control is in place?
+
+00:15:19.000 --> 00:15:21.380
+What checks and scans
+for security vulnerabilities?
+
+00:15:23.200 --> 00:15:26.860
+That's a lot of 'shifted left' Ops stuff
+that Devs now have to worry about!
+
+00:15:29.800 --> 00:15:31.300
+IDPs to the rescue.
+
+00:15:32.240 --> 00:15:37.060
+An IDP not only supports the Run stage,
+freeing developers from the ops burden,
+
+00:15:37.560 --> 00:15:39.660
+but also supports the
+Code and Merge stages.
+
+00:15:40.040 --> 00:15:45.060
+It provides technical documentation,
+templates, CI/CD pipelines,
+
+00:15:45.680 --> 00:15:48.120
+roles and permissions,
+and other essential tools.
+
+00:15:49.100 --> 00:15:52.900
+This comprehensive support streamlines
+the entire development process,
+
+00:15:53.800 --> 00:15:58.120
+enabling developers to focus on writing code
+and delivering high-quality applications.
+
+00:16:00.340 --> 00:16:07.280
+To dive deeper into the stages of Code, Merge
+and Run, let's look at this Gartner diagram.
+
+00:16:07.840 --> 00:16:12.380
+The diagram breaks down the capabilities
+of the IDP into three key stages:
+
+00:16:13.760 --> 00:16:18.120
+Discover and Create, Integrate and
+Deploy, and Operate and Improve.
+
+00:16:18.800 --> 00:16:22.320
+Do you see how these three
+stages match with Code-Merge-Run?
+
+00:16:23.700 --> 00:16:25.180
+In the Discover
+and Create stage,
+
+00:16:25.580 --> 00:16:31.860
+an IDP can support developers with capabilities
+such as documentation, templates, and IDEs.
+
+00:16:32.840 --> 00:16:35.580
+These tools help streamline
+the initial coding process,
+
+00:16:36.120 --> 00:16:40.020
+ensuring that developers have everything
+they need to start building efficiently.
+
+00:16:41.600 --> 00:16:43.080
+Moving to the Integrate
+and Deploy stage,
+
+00:16:43.860 --> 00:16:48.760
+The IDP can provide CI/CD
+pipelines, infrastructure automation, etc.
+
+00:16:49.880 --> 00:16:54.700
+These capabilities ensure that code changes
+are seamlessly integrated and deployed,
+
+00:16:55.320 --> 00:16:58.560
+reducing the risk of errors and
+speeding up the delivery process.
+
+00:16:58.820 --> 00:17:06.220
+Finally, in the Operate and Improve stage, the IDP
+can offer monitoring, logging, and other capabilities
+
+00:17:06.220 --> 00:17:09.420
+that help maintain the health
+of applications in production
+
+00:17:09.420 --> 00:17:13.060
+and provide valuable insights
+for continuous improvement.
+
+00:17:14.599 --> 00:17:17.140
+By unifying these disparate
+platform capabilities,
+
+00:17:17.800 --> 00:17:22.099
+an IDP not only takes care of the
+traditional Ops domain, the Run stage,
+
+00:17:22.359 --> 00:17:27.180
+but also provides comprehensive support throughout
+the entire software development lifecycle.
+
+00:17:28.860 --> 00:17:30.860
+This holistic approach
+enables developers
+
+00:17:30.860 --> 00:17:34.940
+to focus on delivering high quality
+applications with greater speed and efficiency.
+
+00:17:36.780 --> 00:17:42.360
+It's important to note that IDPs can indeed cover
+the full spectrum, but not necessarily do so.
+
+00:17:43.460 --> 00:17:47.460
+It's a collaborative journey together
+with the platform users, the developers.
+
+00:17:50.800 --> 00:17:53.580
+More on this journey in my
+"Platform-as-a-Product" video,
+
+00:17:54.180 --> 00:17:57.840
+where I cover the "Thinnest
+Viable Platform" (TVP) subject.
+
+00:18:01.800 --> 00:18:07.240
+The IDP as an abstraction layer allows
+developers to self-serve the resources they need
+
+00:18:07.240 --> 00:18:12.100
+to build, test, deploy, and monitor
+applications with minimal friction.
+
+00:18:13.120 --> 00:18:15.820
+IDPs are designed to maximize
+software delivery throughput.
+
+00:18:16.760 --> 00:18:22.600
+The goal of an IDP is to enable developers to focus on
+writing code and delivering high-quality applications
+
+00:18:23.240 --> 00:18:27.000
+without having to worry about the underlying
+infrastructure setup and maintenance.
+
+00:18:28.100 --> 00:18:32.900
+An internal developer platform should be built
+to eventually cover these core self -service,
+
+00:18:34.060 --> 00:18:36.840
+I repeat, self
+-service, capabilities:
+
+00:18:37.900 --> 00:18:39.560
+Cloud Infrastructure
+Orchestration;
+
+00:18:40.420 --> 00:18:41.920
+Role-Based Access Management;
+
+00:18:43.100 --> 00:18:44.640
+Application Configuration
+Management;
+
+00:18:45.760 --> 00:18:48.360
+Deployment Management.
+(plus Environment Management);
+
+00:18:49.140 --> 00:18:53.100
+and Application Observability,
+to enable that goal.
+
+00:18:56.700 --> 00:18:58.320
+One more time for
+the people in the back:
+
+00:18:59.160 --> 00:19:01.040
+Platform capabilities = self-service.
+
+00:19:01.960 --> 00:19:03.900
+Self-service with guardrails.
+
+00:19:05.140 --> 00:19:09.020
+Now, let's look at some real
+-world examples of what that means.
+
+00:19:11.720 --> 00:19:14.860
+Internal Developer Platforms
+enhance the developer experience
+
+00:19:14.860 --> 00:19:18.600
+by streamlining "Day 1"
+and "Day 2" operations.
+
+00:19:20.060 --> 00:19:25.260
+Provided self-service capabilities should cover both
+initial setup tasks ("Day 1")
+
+00:19:25.260 --> 00:19:29.520
+and automating ongoing development
+and maintenance processes ("Day 2").
+
+00:19:31.140 --> 00:19:33.820
+It's a pitfall to only
+focus on "Day 1";
+
+00:19:34.700 --> 00:19:37.780
+"Day 2" is where developers
+spend most of the time.
+
+00:19:39.040 --> 00:19:43.440
+Here's an overview of some "Day 1"
+and "Day 2" operations examples,
+
+00:19:44.400 --> 00:19:46.540
+but I won't dive into
+this level of detail today.
+
+00:19:49.800 --> 00:19:51.100
+This one is for
+the Marketing folks.
+
+00:19:52.320 --> 00:19:55.300
+From a user perspective,
+an IDP that takes care of
+
+00:19:55.360 --> 00:20:00.320
+both "Day 1" and "Day 2" operations
+Provides a "platformless" experience,
+
+00:20:01.220 --> 00:20:05.260
+enabling developers, data scientists
+and others to focus on code and innovation.
+
+00:20:06.980 --> 00:20:10.540
+Platformless allows developers to
+streamline their development process
+
+00:20:10.540 --> 00:20:13.740
+and concentrate on building
+apps that deliver value to users.
+
+00:20:14.840 --> 00:20:16.780
+This doesn't mean
+platforms won't exist;
+
+00:20:17.680 --> 00:20:23.220
+it means that the complexities of a platform don't need
+to be handled by application developers.
+
+00:20:23.760 --> 00:20:28.100
+Instead, the IDP provides a seamless
+or transparent platform experience.
+
+00:20:29.260 --> 00:20:33.300
+'Do not leak your implementation details
+into the developer workflow', remember?
+
+00:20:34.640 --> 00:20:39.600
+The suffix "-less" in tech signifies a
+shift towards increased simplicity
+
+00:20:40.100 --> 00:20:42.020
+and a more user
+-centric design approach.
+
+00:20:43.100 --> 00:20:45.160
+Less, as in: without the burden.
+
+00:20:46.380 --> 00:20:50.260
+"Platformless", the realistic and
+sustainable version of "NoOps".
+
+00:20:53.720 --> 00:20:56.160
+We talked about
+the "why" of platforms,
+
+00:20:56.740 --> 00:21:01.260
+and we've looked from different perspectives
+at the benefits, the "what" of IDPs.
+
+00:21:01.980 --> 00:21:05.780
+It's time to describe
+"how" an IDP looks like.
+
+00:21:06.420 --> 00:21:09.680
+'A picture is worth a
+thousand words', right?
+
+00:21:11.120 --> 00:21:16.920
+What we need is a blueprint, something to
+kick-start conversations and explain our IDP.
+
+00:21:17.800 --> 00:21:19.200
+Without a visualized reference,
+
+00:21:19.880 --> 00:21:25.360
+it's difficult for the Platform Engineers and Product
+Owner (or Product Manager) to avoid misunderstandings.
+
+00:21:26.540 --> 00:21:30.100
+And it also helps the Platform Team
+with their stakeholder communications.
+
+00:21:34.940 --> 00:21:36.720
+And there are more benefits.
+
+00:21:37.760 --> 00:21:42.900
+Some kind of high-level architecture or
+model also helps to clarify boundaries.
+
+00:21:44.040 --> 00:21:49.100
+Think of the AWS Shared Responsibility Model
+(more on shared responsibility models later).
+
+00:21:49.340 --> 00:21:54.500
+Now, let's try to find a suitable
+blueprint for our IDP conversations!
+
+00:21:56.880 --> 00:22:04.340
+This graphic from the Cloud Native Computing
+Foundation (CNCF) "Platform Engineering" whitepaper
+
+00:22:04.860 --> 00:22:10.140
+illustrates the relationships between
+products, platforms, and capability providers.
+
+00:22:10.580 --> 00:22:14.460
+The direction of consumption
+in this diagram is top-down,
+
+00:22:15.100 --> 00:22:18.220
+showing how capabilities are
+consumed by platform interfaces,
+
+00:22:18.960 --> 00:22:21.400
+which are which in turn are
+consumed by product teams.
+
+00:22:22.780 --> 00:22:27.300
+I think this graphic can certainly serve
+as a reference and conversation starter,
+
+00:22:27.580 --> 00:22:31.600
+but not the one to translate
+the "what" of IDPs into a "how".
+
+00:22:32.280 --> 00:22:34.200
+What other options do we have?
+
+00:22:37.780 --> 00:22:40.880
+This picture is from
+internaldeveloperplatform.org,
+
+00:22:41.560 --> 00:22:44.660
+an educational hub to
+promote IDP principles.
+
+00:22:45.260 --> 00:22:48.820
+It illustrates how an IDP
+connects infrastructure,
+
+00:22:49.700 --> 00:22:53.060
+application configurations, application
+configurations, and the management of environments.
+
+00:22:53.980 --> 00:22:57.520
+The illustration is limited to the
+environment management capability
+
+00:22:57.520 --> 00:22:59.840
+and doesn't cover
+the full IDP scope.
+
+00:23:01.060 --> 00:23:05.620
+Conclusion: not suitable for
+a broader conversation. Next!
+
+00:23:08.720 --> 00:23:11.300
+One of my favorite YouTube
+channels is "DevOps Toolkit".
+
+00:23:12.180 --> 00:23:15.960
+Check out Viktor Farcic explaining
+the parts of an IDP in this screenshot.
+
+00:23:17.360 --> 00:23:22.040
+Key takeaway: 'All those things are
+tailor-made for specific developer needs.'
+
+00:23:23.620 --> 00:23:27.120
+This implies that our architecture should
+support a high level of customization.
+
+00:23:28.400 --> 00:23:31.140
+The illustration in this
+video is informative;
+
+00:23:31.640 --> 00:23:38.260
+It tells us the role of an IDP as the bridge between
+the desired state (code) and the actual state.
+
+00:23:38.520 --> 00:23:42.200
+But it lacks the structure to
+paint all IDP building blocks.
+
+00:23:43.720 --> 00:23:44.700
+Let's move on!
+
+00:23:47.740 --> 00:23:51.900
+Viktor Farcic's statement that IDPs
+are tailor-made is supported by Gartner:
+
+00:23:53.180 --> 00:23:54.720
+'Don't expect to buy
+a turnkey platform.'
+
+00:23:56.580 --> 00:24:00.140
+We'll evaluate a more extended
+platform diagram from Gartner later,
+
+00:24:00.480 --> 00:24:05.920
+but before we move on, please take note of
+the automation emphasis in this version here.
+
+00:24:07.910 --> 00:24:14.160
+This diagram, from a blog on the Equinix
+website, illustrates some of the capabilities
+
+00:24:14.160 --> 00:24:21.460
+typically found in IDPs to simplify and streamline
+the software development lifecycle (or SDLC).
+
+00:24:22.920 --> 00:24:29.780
+The author, James Walker, emphasizes that successful
+platforms must be flexible and scalable enough
+
+00:24:29.780 --> 00:24:35.000
+to support your development operations without
+compromising on security or compliance.
+
+00:24:36.500 --> 00:24:40.140
+This requires platforms to support
+all the technologies you're using,
+
+00:24:40.820 --> 00:24:44.400
+including hybrid and on-prem environments,
+in addition to your cloud resources.
+
+00:24:46.360 --> 00:24:49.800
+Although the blog post is
+extensive and a valuable resource,
+
+00:24:50.280 --> 00:24:53.760
+and I do like to focus on the different
+roles interacting with the platform,
+
+00:24:54.680 --> 00:24:57.100
+I think the illustration is
+too limited in its structure.
+
+00:24:58.360 --> 00:25:01.240
+Back to Gartner.
+
+00:25:02.560 --> 00:25:04.660
+This diagram is what we
+can expect from Gartner:
+
+00:25:05.800 --> 00:25:12.300
+High-level and abstract, designed to present a
+conceptual model rather than granular, actionable details.
+
+00:25:13.300 --> 00:25:18.120
+The strength of this diagram lies in
+how it shows that an IDP isn't mandatory;
+
+00:25:19.340 --> 00:25:25.700
+reusable IaaS and PaaS components are also directly
+available to product and service teams as X-as-a-Service.
+
+00:25:26.700 --> 00:25:32.400
+A powerful representation, but unfortunately
+not the level of abstraction we're looking for.
+
+00:25:35.640 --> 00:25:40.260
+I think we can stop searching; this is
+what a true platform blueprint looks like!
+
+00:25:42.260 --> 00:25:46.540
+McKinsey presented this blueprint
+at PlatformCon 2023 in their talk,
+
+00:25:47.160 --> 00:25:51.900
+"Platform as Code: Simplifying Developer
+Platform Design with Reference Architectures".
+
+00:25:53.180 --> 00:25:56.720
+This architectural blueprint,
+with its five main planes,
+
+00:25:56.720 --> 00:26:00.780
+is a great conversation starter
+for a wide variety of stakeholders.
+
+00:26:01.380 --> 00:26:04.340
+Let's have a closer look at
+the planes that make up an IDP.
+
+00:26:06.940 --> 00:26:09.500
+The blueprint has five "planes":
+
+00:26:10.420 --> 00:26:16.520
+Developer Control Plane: this is the primary configuration
+layer and interaction point for the platform users.
+
+00:26:17.880 --> 00:26:21.440
+Components include APIs,
+CLIs, and web-based portals.
+
+00:26:23.120 --> 00:26:24.320
+Integration and Delivery Plane:
+
+00:26:25.240 --> 00:26:30.680
+contains the tools that build, store, configure, and
+deploy requests coming from the Developer Control Plane.
+
+00:26:32.180 --> 00:26:37.120
+Resource Plane: contains all resource
+components necessary to run the app.
+
+00:26:38.520 --> 00:26:43.180
+Monitoring and Logging Plane: Provides real-time
+metrics and logs for apps and infrastructure.
+
+00:26:45.060 --> 00:26:49.920
+Security Plane: manages secrets and
+identity to protect sensitive information.
+
+00:26:51.260 --> 00:26:55.400
+How awesome would it be if we
+could relate our product backlog items
+
+00:26:55.400 --> 00:26:57.320
+to the corresponding
+planes on the blueprint?
+
+00:27:00.660 --> 00:27:03.740
+This graphic by the team
+from PlatformEngineering.org
+
+00:27:03.740 --> 00:27:09.200
+presents well-known tools from the cloud-native tooling landscape, plotted on the five planes.
+
+00:27:10.200 --> 00:27:12.660
+Isn't the structure
+great? I certainly think so!
+
+00:27:13.440 --> 00:27:16.200
+But how do we know
+which tools to select?
+
+00:27:17.160 --> 00:27:18.000
+There's so much choice!
+
+00:27:21.640 --> 00:27:23.700
+And there's a whole lot more
+in the cloud-native toolbox.
+
+00:27:24.220 --> 00:27:28.160
+This overview from the CNCF
+shows just how much is out there.
+
+00:27:29.420 --> 00:27:33.860
+It can be a maze for developers,
+but it's a candy store for Ops folks!
+
+00:27:36.620 --> 00:27:39.720
+Platform teams can "Pick
+&amp; Mix" in the Ops candy store.
+
+00:27:40.480 --> 00:27:45.920
+Like Viktor Farcic said earlier, IDPs are
+'tailor-made for specific developer needs.'
+
+00:27:47.660 --> 00:27:55.420
+It's important to note that it's the Platform Team that carefully selects
+and integrates this curated set of tools, capabilities, and processes,
+
+00:27:55.420 --> 00:28:01.640
+packaged for easy consumption, ensuring they fit well
+together and align with the organization's standards.
+
+00:28:03.040 --> 00:28:09.220
+This careful picking is precisely to avoid the
+risk of fragmented or incompatible toolchains.
+
+00:28:09.640 --> 00:28:15.580
+The goal is to create a cohesive, efficient, and user
+-friendly platform that supports developers in their work.
+
+00:28:16.880 --> 00:28:18.340
+This requires a product mindset,
+
+00:28:18.340 --> 00:28:22.720
+where the platform team continuously
+iterates and improves the platform
+
+00:28:22.720 --> 00:28:24.320
+based on developer feedback.
+
+00:28:25.800 --> 00:28:30.200
+The subject of a product mindset is covered
+in a separate "Platform-as-a-Product" video.
+
+00:28:33.620 --> 00:28:35.900
+Instead of doing your
+own "picking &amp; mixing",
+
+00:28:36.540 --> 00:28:39.100
+you can also start with
+predefined configurations.
+
+00:28:40.020 --> 00:28:43.360
+There are open-sourced reference architectures
+available for different platforms.
+
+00:28:45.260 --> 00:28:49.580
+Here's an example of an IDP reference
+architecture based on OpenShift
+
+00:28:49.580 --> 00:28:53.240
+that outlines the five planes of the
+blueprint we've discussed earlier.
+
+00:28:54.560 --> 00:28:57.460
+How might this architecture
+fit into your existing workflows?
+
+00:29:00.560 --> 00:29:02.980
+Another example, designed
+around Azure services.
+
+00:29:05.340 --> 00:29:07.880
+Now that we've seen reference
+architectures as examples,
+
+00:29:08.500 --> 00:29:10.600
+let's explore how you
+can use them practically.
+
+00:29:13.560 --> 00:29:17.460
+Humanitec doesn't only offer open
+-sourced reference architectures,
+
+00:29:17.940 --> 00:29:21.460
+they also enable you to fork the
+code for the full IDP implementation,
+
+00:29:22.080 --> 00:29:24.200
+including learning
+path, and a whitepaper.
+
+00:29:24.480 --> 00:29:29.760
+You can start setting up an IDP yourself easily,
+with the open-sourced reference architectures.
+
+00:29:31.600 --> 00:29:33.920
+Fork the code for the
+full IDP implementation,
+
+00:29:34.700 --> 00:29:37.880
+explore the learning path, and
+check the accompanying whitepaper.
+
+00:29:39.340 --> 00:29:43.340
+I highly encourage you to discover and explore
+some of the available reference architectures.
+
+00:29:46.480 --> 00:29:51.800
+Or use the available Google Slides presentation
+template to start for yourself with an empty blueprint,
+
+00:29:52.260 --> 00:29:54.740
+and perhaps even create
+your own reference architecture.
+
+00:29:55.260 --> 00:30:02.220
+The tools on the reference architecture are representative
+and can be swapped with what you're using today.
+
+00:30:05.460 --> 00:30:08.580
+Imagine mapping out your
+architecture on those five planes
+
+00:30:08.580 --> 00:30:11.020
+and co-creating a Golden
+Path with your developers.
+
+00:30:12.120 --> 00:30:13.160
+How exciting would that be?
+
+00:30:16.040 --> 00:30:21.760
+Did you know that the CNCF also started an
+initiative to collect reference architectures?
+
+00:30:23.040 --> 00:30:25.340
+They might not use the
+blueprint with the five planes,
+
+00:30:25.560 --> 00:30:26.640
+but check them out anyway!
+
+00:30:30.500 --> 00:30:32.420
+Here's a core truth
+about Platforming:
+
+00:30:32.880 --> 00:30:38.920
+It's not just about the tools, it's about how you organize
+and structure your codebase to empower developers.
+
+00:30:41.080 --> 00:30:44.620
+Thoughtfully structuring
+repositories leads to clear ownership,
+
+00:30:45.220 --> 00:30:48.480
+standardized configurations, and
+the grouping of related services.
+
+00:30:51.400 --> 00:30:57.640
+One (optional) component of the integration and
+delivery plane deserves some special attention:
+
+00:30:58.480 --> 00:31:02.460
+a platform orchestrator. So
+let's take our looking glass.
+
+00:31:04.180 --> 00:31:06.020
+Before we have a close
+look at orchestrators,
+
+00:31:06.260 --> 00:31:10.540
+it's worth noting that the necessity
+of a platform orchestrator can vary.
+
+00:31:11.160 --> 00:31:13.900
+For smaller teams or less
+complex environments,
+
+00:31:14.160 --> 00:31:18.880
+the overhead of implementing and maintaining
+an orchestrator might not be just a justified.
+
+00:31:19.820 --> 00:31:24.720
+In such cases, simpler automation
+tools or manual processes might suffice.
+
+00:31:25.640 --> 00:31:31.080
+The decision to use a platform orchestrator should be based
+on the specific needs and complexity of your organization.
+
+00:31:34.500 --> 00:31:35.980
+For more complex environments,
+
+00:31:36.320 --> 00:31:42.660
+a platform orchestrator might be a solution for
+'the missing middle', as Daniel Bryant calls it.
+
+00:31:44.000 --> 00:31:48.240
+Looking at these models, this
+"middle" seems to have a prominent spot.
+
+00:31:48.740 --> 00:31:53.400
+But what is this orchestration
+middleware? And what problem does it solve?
+
+00:31:56.460 --> 00:32:03.820
+Daniel Bryant noticed that both developer-centric
+top-down and ops-centric bottom-up IDP approaches
+
+00:32:04.380 --> 00:32:09.960
+have their own pros and cons, and suggests that
+orchestration can combine the best of both worlds,
+
+00:32:09.960 --> 00:32:12.120
+as an abstraction
+layer in the middle.
+
+00:32:13.500 --> 00:32:16.300
+I can hear you thinking:
+*another* abstraction layer?
+
+00:32:16.440 --> 00:32:17.980
+Let's elaborate on that.
+
+00:32:21.600 --> 00:32:24.320
+This abstraction is
+basically a platform API
+
+00:32:24.320 --> 00:32:29.660
+as a bridge between the developer's interface
+(portal, git) and the infrastructure.
+
+00:32:31.380 --> 00:32:34.200
+No more Infrastructure-as-Code
+YAML for developers!
+
+00:32:36.930 --> 00:32:42.440
+It's time for a renewed look at this Gartner
+diagram, now through an orchestration lens.
+
+00:32:43.340 --> 00:32:46.800
+Conceptually it certainly
+makes sense, don't you agree?
+
+00:32:48.140 --> 00:32:54.940
+Let's dive into a specific problem an orchestrator
+can resolve: multiple, ephemeral environments.
+
+00:32:58.820 --> 00:33:04.040
+A platform orchestrator sits at the core
+of a *dynamic* Internal Developer Platform,
+
+00:33:04.940 --> 00:33:08.480
+enabling *Dynamic Configuration Management*
+and developer self-service.
+
+00:33:08.960 --> 00:33:11.700
+It drives standardization
+by design.
+
+00:33:13.000 --> 00:33:16.580
+Using a platform orchestrator, you
+can move away from static setups,
+
+00:33:16.860 --> 00:33:21.100
+and can now orchestrate deployments
+and infrastructure provisioning in harmony.
+
+00:33:22.580 --> 00:33:26.180
+Configuration baselines let you
+drive standardization by design,
+
+00:33:26.960 --> 00:33:28.980
+abstracting complexity
+away from developers,
+
+00:33:29.620 --> 00:33:32.940
+yet without removing the necessary
+context in the delivery workflows.
+
+00:33:34.760 --> 00:33:38.220
+Instead of having a static
+YAML-CI-CD workflow
+
+00:33:38.660 --> 00:33:42.280
+using YAML files that are
+manually localized to the context,
+
+00:33:42.740 --> 00:33:50.900
+a dynamic approach pulls apart the
+environment-specific elements of your configurations
+
+00:33:50.900 --> 00:33:54.320
+and ties app configs
+to infrastructure configs.
+
+00:33:55.500 --> 00:34:01.500
+The platform orchestrator reads this
+*Declarative Application Model* and deploys the application.
+
+00:34:03.240 --> 00:34:04.240
+Depending on your situation,
+
+00:34:04.520 --> 00:34:09.679
+the differences between static and dynamic
+IDPs might be worth further exploration!
+
+00:34:09.980 --> 00:34:13.699
+You can start with the reference
+resources at the end of this video.
+
+00:34:17.440 --> 00:34:20.699
+You have already heard the term
+'Golden Path' several times now.
+
+00:34:21.580 --> 00:34:22.780
+Time to explain the concept.
+
+00:34:24.420 --> 00:34:26.820
+A Golden Path is basically
+the answer to the question,
+
+00:34:28.139 --> 00:34:31.360
+'What is the best way for developers
+to do X in our organization?'
+
+00:34:32.900 --> 00:34:35.960
+Golden or paved paths are
+predefined routes in a platform
+
+00:34:35.960 --> 00:34:40.920
+that outline the best practices, steps, and
+required tools to achieve a specific goal.
+
+00:34:42.300 --> 00:34:46.060
+The golden path should be self-service,
+but in the way your developers want.
+
+00:34:47.420 --> 00:34:49.659
+As we discussed in the
+Platform Engineering video,
+
+00:34:50.159 --> 00:34:53.420
+reducing cognitive load is
+crucial for developer productivity.
+
+00:34:54.440 --> 00:34:58.360
+Golden Paths contribute to this by
+providing well-structured pathways
+
+00:34:58.380 --> 00:35:02.420
+that minimize the mental effort required
+to build, deploy, and run applications.
+
+00:35:06.980 --> 00:35:09.380
+There are many other defintions of Golden Paths available.
+
+00:35:09.760 --> 00:35:13.280
+I'll share four more of them because
+they all emphasize different elements.
+
+00:35:14.600 --> 00:35:18.720
+'The Golden Path is the sweet spot
+between giving developers complete freedom
+
+00:35:18.720 --> 00:35:22.840
+and putting developers in a cage
+for fear they will do something wrong.'
+
+00:35:24.160 --> 00:35:26.820
+This definition can be
+rephrased as a mantra:
+
+00:35:27.740 --> 00:35:28.960
+'Golden paths over cages.'
+
+00:35:30.440 --> 00:35:31.400
+Here's another one:
+
+00:35:32.040 --> 00:35:35.640
+'Golden Paths are ways for
+developers to do things by themselves,
+
+00:35:36.500 --> 00:35:41.240
+but in a way where platform engineers have
+baked the organization's standards in.'
+
+00:35:42.440 --> 00:35:48.760
+This definition emphasizes autonomy (through
+self-service) and compliance (standards baked in).
+
+00:35:51.450 --> 00:35:59.380
+The next definition is from the insightful "Build
+Golden Paths for Day 50, Not for Day 1" talk
+
+00:35:59.820 --> 00:36:02.700
+by Caspar von Grünberg
+at PlatformCon 2023.
+
+00:36:04.360 --> 00:36:08.340
+'Any procedure in the software
+development lifecycle a user can follow
+
+00:36:08.340 --> 00:36:11.580
+with minimal cognitive load
+and that drives standardization.'
+
+00:36:12.980 --> 00:36:15.280
+This one emphasizes
+the full SDLC;
+
+00:36:16.360 --> 00:36:19.300
+Golden Paths aren't
+just for Day 1 operations.
+
+00:36:21.260 --> 00:36:26.380
+If developers follow Golden
+Paths, then everybody wins.
+
+00:36:27.960 --> 00:36:31.480
+IF. Using the platform and
+following paths is not a must.
+
+00:36:32.540 --> 00:36:35.160
+In my upcoming
+"Platform-as-a-Product" video,
+
+00:36:35.820 --> 00:36:38.120
+I'll elaborate on the subject
+of compelling platforms.
+
+00:36:39.820 --> 00:36:43.360
+It's important to balance standardization
+with the need for flexibility.
+
+00:36:45.260 --> 00:36:47.980
+While Golden Paths offer
+streamlined and efficient workflows,
+
+00:36:48.500 --> 00:36:53.840
+developers may occasionally need to deviate from
+these paths to address unique challenges or innovate.
+
+00:36:54.560 --> 00:36:59.780
+A proactive and open attitude towards
+these off-path flows can be beneficial.
+
+00:37:01.340 --> 00:37:03.660
+Instead of viewing
+deviations as disruptions,
+
+00:37:04.080 --> 00:37:06.960
+embrace them as opportunities
+for further IDP development.
+
+00:37:08.300 --> 00:37:12.060
+By actively seeing feedback and
+understanding why developers go off-path,
+
+00:37:12.820 --> 00:37:16.680
+the Platform Team can continuously
+improve and adapt the platform
+
+00:37:16.680 --> 00:37:19.660
+to better meet the
+evolving needs of its users.
+
+00:37:21.140 --> 00:37:25.420
+This approach ensures that the platform
+remains both robust and adaptable,
+
+00:37:26.340 --> 00:37:30.740
+supporting a wide range of developer needs while
+maintaining high standards and consistency.
+
+00:37:33.760 --> 00:37:38.500
+The fourth, or actually fifth,
+and last definition is from Spotify,
+
+00:37:39.260 --> 00:37:41.120
+one of the pioneers
+in Platform Engineering.
+
+00:37:42.240 --> 00:37:46.280
+'The Golden Path is the opinionated
+and supported path to build your system
+
+00:37:46.280 --> 00:37:49.660
+and the Golden Path tutorial
+walks you through this path.'
+
+00:37:51.480 --> 00:37:55.040
+"Opinionated" means standards
+and tools are built in as a convention.
+
+00:37:56.740 --> 00:38:01.580
+"Supported" means the platform team keeps it
+working and updated and provides customer support.
+
+00:38:02.980 --> 00:38:08.120
+This last definition emphasizes the
+maintenance and support by the Platform Team,
+
+00:38:08.840 --> 00:38:10.500
+including a
+walk-through tutorial.
+
+00:38:12.780 --> 00:38:19.740
+In Platform Engineering, the Internal Developer
+Platform (IDP) typically comes first as the foundation,
+
+00:38:19.740 --> 00:38:22.940
+and the Golden Path
+is then built on top of it.
+
+00:38:23.980 --> 00:38:29.080
+The IDP provides the underlying infrastructure,
+tools, and capabilities that developers can leverage,
+
+00:38:30.040 --> 00:38:36.660
+while the Golden Path defines the opinionated, streamlined
+workflows or sensible defaults for using the platform effectively.
+
+00:38:37.580 --> 00:38:40.000
+However, these can
+evolve in tandem.
+
+00:38:40.880 --> 00:38:45.920
+Golden Paths may influence the design of the
+IDP by clarifying what developers need most,
+
+00:38:46.420 --> 00:38:49.800
+and the IDP's capabilities can
+expand to support new Golden Paths.
+
+00:38:51.460 --> 00:38:53.520
+When developing
+tutorials for Golden Paths,
+
+00:38:54.060 --> 00:38:57.520
+it's important to keep in mind
+that the primary job of the tutorials
+
+00:38:57.520 --> 00:39:00.740
+is to walk onboarding engineers
+through the Golden Path.
+
+00:39:01.960 --> 00:39:05.140
+You do have to think about
+the way to present the tutorials
+
+00:39:05.140 --> 00:39:08.160
+in the Developer Control
+Plane, in the portal.
+
+00:39:09.680 --> 00:39:14.900
+Spotify has chosen an approach with one Golden
+Path tutorial per engineering discipline.
+
+00:39:15.660 --> 00:39:17.600
+It doesn't have to
+be done this way;
+
+00:39:18.520 --> 00:39:21.720
+for example, I could imagine
+a more modular approach,
+
+00:39:21.720 --> 00:39:25.520
+with one golden path tutorial
+per engineering job-to-be-done.
+
+00:39:28.400 --> 00:39:30.440
+How can we use Golden
+Paths in conversations?
+
+00:39:32.160 --> 00:39:37.680
+Like with IDPs, it would help us to have a
+powerful structure, lingo, and visualizations.
+
+00:39:39.180 --> 00:39:41.160
+Here's one concept,
+shaped by Kratix.
+
+00:39:44.320 --> 00:39:49.340
+The heart of Kratix, a framework for
+building platforms, are so-called Promises.
+
+00:39:50.380 --> 00:39:57.820
+Via Promises, Platform Engineers can codify their organization's
+policies and opinions (security, compliance, etc.)
+
+00:39:58.420 --> 00:40:00.940
+into the X-as-a-Service
+software supply chain,
+
+00:40:01.860 --> 00:40:07.700
+making it easy and straightforward for application
+teams to consume the services via the IDP.
+
+00:40:09.760 --> 00:40:13.260
+Other orchestrators have similar
+concepts with different terminology.
+
+00:40:14.200 --> 00:40:16.860
+In this video, I use
+Kratix as an example
+
+00:40:17.420 --> 00:40:20.020
+because I love the clear
+language of Contracts and Promises,
+
+00:40:20.940 --> 00:40:23.500
+a lingo that my stakeholders
+easily understand.
+
+00:40:26.600 --> 00:40:30.340
+A Promise is a Contract between
+the platform and its users.
+
+00:40:31.300 --> 00:40:35.520
+It describes a reusable component
+with organizational standards built-in.
+
+00:40:37.040 --> 00:40:41.480
+Designing the right Promise for a single service
+allows platforms to be built incrementally.
+
+00:40:44.100 --> 00:40:47.700
+The value of your platform
+increases dramatically
+
+00:40:47.780 --> 00:40:50.580
+when you offer application
+teams tailored Golden Paths.
+
+00:40:52.040 --> 00:40:56.500
+Creating a Golden Path with a system
+based on reusable components is easy.
+
+00:40:57.380 --> 00:41:01.740
+Decide on, define, and install the
+individual Promises that are required,
+
+00:41:02.460 --> 00:41:06.440
+then define a higher-level Promise that
+brings those individual Promises together.
+
+00:41:07.800 --> 00:41:11.460
+How does this sound: a complete
+development environment setup-
+
+00:41:12.400 --> 00:41:17.460
+networking, integration, security,
+governance, compliance, and deployment-
+
+00:41:18.460 --> 00:41:20.040
+all available on demand.
+
+00:41:20.790 --> 00:41:24.540
+What do you think of these
+easy-to-understand visualizations?
+
+00:41:25.600 --> 00:41:30.560
+I bet you can use them to kickstart Golden Path
+conversations with your teammates or stakeholders!
+
+00:41:34.320 --> 00:41:40.820
+Gregor Hohpe came up with a beautiful metaphor to describe the
+difference between single service and higher-level Promises.
+
+00:41:42.500 --> 00:41:45.360
+Imagine you have a
+basket full of various fruits.
+
+00:41:46.340 --> 00:41:50.180
+While each fruit has its own value
+and can be enjoyed on its own,
+
+00:41:50.680 --> 00:41:53.920
+the real magic happens when
+you combine them into a fruit salad.
+
+00:41:55.480 --> 00:41:59.180
+A higher-level promise, a
+Golden Path, is like that fruit salad.
+
+00:41:59.680 --> 00:42:05.140
+It takes those individual building blocks and
+curates them into a cohesive, integrated experience,
+
+00:42:06.620 --> 00:42:11.240
+reducing complexity, and ultimately providing
+more value than the sum of its parts.
+
+00:42:12.500 --> 00:42:15.300
+I hope this metaphor can help
+you have fruitful conversations!
+
+00:42:19.300 --> 00:42:20.820
+One more thing...
+
+00:42:21.810 --> 00:42:25.000
+We started this video with a
+tweet from Kelsey Hightower,
+
+00:42:25.000 --> 00:42:28.600
+stating that 'Kubernetes is a
+platform for building platforms.
+
+00:42:29.220 --> 00:42:31.920
+It's a better place to
+start, not the endgame.'
+
+00:42:33.440 --> 00:42:35.900
+Then we went on a journey
+towards the endgame,
+
+00:42:36.040 --> 00:42:38.520
+but we haven't talked
+about our starting place.
+
+00:42:40.740 --> 00:42:44.000
+See, do you know what's
+missing in the IDP blueprint?
+
+00:42:44.680 --> 00:42:46.360
+The platform itself!
+
+00:42:49.280 --> 00:42:51.220
+What you see here in
+the architectural blueprint
+
+00:42:51.220 --> 00:42:54.440
+is what's offered to the
+platform user, the developers.
+
+00:42:55.120 --> 00:42:59.500
+The foundation of it, the
+platform itself, isn't included.
+
+00:42:59.900 --> 00:43:03.140
+This makes sense from a
+platform user perspective;
+
+00:43:03.840 --> 00:43:06.640
+remember, they want
+to be "platformless"!
+
+00:43:07.520 --> 00:43:10.020
+However, from a
+platform point of view,
+
+00:43:10.280 --> 00:43:15.480
+it's crucial to visualize the underlying
+infrastructure and services that support the IDP.
+
+00:43:16.800 --> 00:43:19.460
+This helps in understanding
+the full scope of the platform
+
+00:43:19.460 --> 00:43:23.140
+and ensures that all components
+are well-integrated and maintained.
+
+00:43:26.240 --> 00:43:32.660
+In his "Extending the IDP Reference
+Architecture" talk at PlatformCon 2024,
+
+00:43:33.540 --> 00:43:38.300
+Max Körbächer discussed the multiple dimensions
+and different perspectives of platforms
+
+00:43:38.300 --> 00:43:43.060
+and suggested extending the
+architecture with what he calls "User Land",
+
+00:43:43.940 --> 00:43:48.000
+the platform capabilities that form
+the foundation that carries the IDPs.
+
+00:43:49.380 --> 00:43:52.900
+For example, we include
+namespace observability in the IDP,
+
+00:43:53.160 --> 00:43:57.260
+but we also have observability in
+place for the platform as a whole.
+
+00:43:58.600 --> 00:44:02.980
+By extending the architectural blueprint to
+include the platform's foundational elements,
+
+00:44:03.720 --> 00:44:08.940
+we can provide a more comprehensive view that
+benefits both developers and Platform Engineers.
+
+00:44:09.920 --> 00:44:17.360
+This visualization can serve as a valuable reference for
+ongoing development, maintenance, and optimization of the IDP.
+
+00:44:20.240 --> 00:44:22.360
+Another extension Max
+Körbächer suggested
+
+00:44:22.860 --> 00:44:25.540
+is a standardized way to
+define platform services.
+
+00:44:26.740 --> 00:44:31.640
+We've all seen the 'treat your platform as a product'
+statements by every leading resource in the industry.
+
+00:44:32.880 --> 00:44:36.080
+But how can we describe what
+this platform product actually is?
+
+00:44:36.860 --> 00:44:38.400
+More on this in
+my upcoming video.
+
+00:44:38.800 --> 00:44:46.300
+A third and last suggested extension
+is from an "Organization" viewpoint.
+
+00:44:47.440 --> 00:44:50.700
+One could say that "Locations"
+would be a more suitable name,
+
+00:44:51.300 --> 00:44:55.140
+to better align with e.g., the
+Operating Model Canvas (OMC),
+
+00:44:55.880 --> 00:44:58.640
+but an architectural view
+from such a perspective
+
+00:44:59.300 --> 00:45:03.220
+could be an additional layer in our
+quest for visualized conversation starters.
+
+00:45:06.240 --> 00:45:11.080
+We see a similar approach in another Gartner
+diagram about the topic of Platform Engineering.
+
+00:45:12.340 --> 00:45:16.880
+Compared to Max Körbächer's suggestion, this
+diagram provides another level of abstraction.
+
+00:45:18.600 --> 00:45:23.460
+The outer circle includes Data Center Infrastructure,
+Edge Infrastructure, and Cloud Infrastructure,
+
+00:45:24.560 --> 00:45:29.000
+focusing on different locations and their roles
+within the Platform Engineering landscape as well.
+
+00:45:32.180 --> 00:45:36.060
+An IDP blueprint isn't the only
+layer at which we can start dialogues.
+
+00:45:36.720 --> 00:45:39.360
+Do you see value in
+other suggested layers?
+
+00:45:40.680 --> 00:45:42.640
+Do you miss a
+dimension or perspective?
+
+00:45:44.720 --> 00:45:47.220
+One perspective I would
+like to add is responsibility.
+
+00:45:51.180 --> 00:45:55.620
+AWS came up with this so-called
+"Shared Responsibility Model".
+
+00:45:56.160 --> 00:45:59.900
+It helps customers to carefully
+consider the services they choose
+
+00:45:59.900 --> 00:46:03.700
+as the responsibilities vary
+depending on the services used.
+
+00:46:05.000 --> 00:46:08.700
+A high-level IDP architecture
+can be a powerful tool
+
+00:46:08.700 --> 00:46:13.080
+for defining a Shared Responsibility
+Model for your platform services.
+
+00:46:14.720 --> 00:46:19.740
+Here's how: each component becomes
+a logical boundary for responsibilities.
+
+00:46:21.240 --> 00:46:23.820
+It's also possible to define
+ownership across planes.
+
+00:46:24.420 --> 00:46:32.860
+The blueprint also makes explicit which standardized aspects
+the platform abstracts (Platform Team's responsibility).
+
+00:46:33.280 --> 00:46:36.860
+It's even possible to use an
+outcome-based dimension
+
+00:46:36.860 --> 00:46:39.800
+and tie each layer or
+feature of the platform
+
+00:46:39.800 --> 00:46:43.580
+to e.g., reliability,
+security, or velocity,
+
+00:46:43.720 --> 00:46:48.440
+enabling the Shared Responsibility
+Model to focus on collective goals
+
+00:46:48.860 --> 00:46:50.320
+rather than siloed concerns.
+
+00:46:51.620 --> 00:46:54.580
+An example. For
+monitoring and observability,
+
+00:46:55.080 --> 00:46:57.720
+the shared responsibility
+model might look like this:
+
+00:46:58.660 --> 00:47:01.880
+the Platform Team provides a
+centralized logging and metrics solution,
+
+00:47:02.520 --> 00:47:05.020
+ensures it scales, and
+defines standard dashboards;
+
+00:47:06.500 --> 00:47:09.940
+application/product teams
+configure application-specific metrics,
+
+00:47:10.480 --> 00:47:15.900
+set appropriate alerts, and respond to application-related
+incidents ('you build it, you own it');
+
+00:47:16.860 --> 00:47:22.540
+and a shared responsibility for aligning
+SLIs/SLOs, and refining monitoring practices.
+
+00:47:24.620 --> 00:47:30.160
+Would clear boundaries visualized in a Shared
+Responsibility Model help you with your conversations?
+
+00:47:32.220 --> 00:47:37.480
+Wow, you've made it all the way
+to the end of this video. Great job!
+
+00:47:37.840 --> 00:47:43.320
+You should now be able to explain the concepts
+of Internal Developer Portals and Golden Paths,
+
+00:47:43.320 --> 00:47:47.200
+and how they can enable developers
+during the software development lifecycle.
+
+00:47:48.360 --> 00:47:51.160
+We've seen many different
+models with different perspectives,
+
+00:47:51.720 --> 00:47:55.860
+which we can use in our conversations
+with each other and with our stakeholders.
+
+00:47:56.820 --> 00:47:59.760
+To sum it all up in
+an elevator pitch:
+
+00:48:00.680 --> 00:48:05.940
+Internal Developer Platforms (IDPs) are
+transformative tools in Platform Engineering
+
+00:48:05.940 --> 00:48:11.800
+that streamline software development by automating
+key tasks and providing self-service capabilities.
+
+00:48:13.340 --> 00:48:17.640
+By reducing cognitive load and enabling
+developers to focus on meaningful work,
+
+00:48:18.220 --> 00:48:20.320
+IDPs drive efficiency
+and innovation,
+
+00:48:21.080 --> 00:48:23.400
+ultimately delivering greater
+value to the organization.
+
+00:48:24.600 --> 00:48:28.460
+Embracing the principles of Platform
+Engineering and adopting a product mindset
+
+00:48:28.460 --> 00:48:33.140
+ensures that these platforms continuously
+evolve to meet the needs of developers.
+
+00:48:35.500 --> 00:48:40.800
+Join Luca from platformengineering.org
+as he recaps the concept of an IDP for you.
+
+00:48:43.560 --> 00:48:44.980
+All right. So what is an IDP?
+
+00:48:45.320 --> 00:48:48.680
+Well, an Internal Developer Platform
+is a set of tools and technologies
+
+00:48:48.680 --> 00:48:51.740
+that a Platform Engineering
+team binds into a Golden Path
+
+00:48:52.040 --> 00:48:55.580
+to enable developer self-service along
+the entire lifecycle of an application.
+
+00:48:56.920 --> 00:49:00.940
+By providing developers with a self-service
+option while driving standardization,
+
+00:49:01.480 --> 00:49:03.460
+IDPs significantly
+boost productivity
+
+00:49:03.460 --> 00:49:06.020
+through a reduction in
+waiting time, distraction,
+
+00:49:06.640 --> 00:49:08.160
+or just manual work
+for operation teams.
+
+00:49:08.900 --> 00:49:12.020
+A recent benchmarking study we
+did on Platform Engineering has shown
+
+00:49:12.020 --> 00:49:14.080
+that IDPs are the
+single biggest driver
+
+00:49:14.080 --> 00:49:16.180
+to help an organization
+innovate faster
+
+00:49:16.180 --> 00:49:17.380
+and slash time to market.
+
+00:49:18.340 --> 00:49:20.240
+There is no one-size-fits-all for IDPs.
+
+00:49:21.080 --> 00:49:22.980
+The platform at a large
+retailer in the States
+
+00:49:22.980 --> 00:49:25.740
+will differ widely from the
+platform at a startup in Berlin.
+
+00:49:26.580 --> 00:49:29.840
+But there are still clear patterns
+in the design of modern IDPs
+
+00:49:29.840 --> 00:49:32.840
+and they can be divided
+and described by five planes.
+
+00:49:33.680 --> 00:49:36.860
+The exact designs of those planes
+differs by organizational preference.
+
+00:49:37.880 --> 00:49:39.960
+First, we have the
+Developer Control Plane,
+
+00:49:40.280 --> 00:49:43.660
+which clusters the primary interface
+developers can choose to use
+
+00:49:43.660 --> 00:49:45.100
+when interacting
+with the platform.
+
+00:49:46.080 --> 00:49:47.120
+Such an interface could be
+
+00:49:47.120 --> 00:49:49.940
+a workload specification for a
+fully code-based interaction,
+
+00:49:50.540 --> 00:49:52.640
+a developer portal
+for a UI-based view,
+
+00:49:52.800 --> 00:49:54.020
+or an API or CLI.
+
+00:49:54.480 --> 00:49:57.280
+The Integration Delivery Plane
+contains the flow of a request
+
+00:49:57.280 --> 00:50:00.020
+from the interface all the way
+through to the running application
+
+00:50:00.020 --> 00:50:01.460
+with all its
+configured resources.
+
+00:50:02.480 --> 00:50:05.060
+It includes CI pipelines,
+a platform orchestrator,
+
+00:50:05.340 --> 00:50:06.900
+maybe a dedicated CD system,
+
+00:50:07.240 --> 00:50:09.180
+and sometimes dedicated
+Infrastructure Control Planes.
+
+00:50:10.060 --> 00:50:13.600
+The Resource Plane encompasses
+all cloud and on-prem resources.
+
+00:50:14.020 --> 00:50:17.240
+This includes compute,
+databases, file storage, or DNS.
+
+00:50:18.160 --> 00:50:21.640
+The Security Plane includes policy
+layers and secrets management,
+
+00:50:22.040 --> 00:50:24.780
+and the Observability Plane
+logging and APM functionality.
+
+00:50:26.580 --> 00:50:28.260
+If you're a developer
+developing your application
+
+00:50:28.260 --> 00:50:30.480
+with a state-of-the-art
+Internal Developer Platform,
+
+00:50:30.780 --> 00:50:33.000
+you should be able to
+self-serve everything you need
+
+00:50:33.000 --> 00:50:36.040
+to build, deploy, and operate
+your application and resources.
+
+00:50:36.900 --> 00:50:39.360
+It's important to point out
+that this goes way beyond
+
+00:50:39.360 --> 00:50:40.780
+the creation phase of a service.
+
+00:50:41.020 --> 00:50:44.360
+While well-crafted platforms
+treat every single deployment
+
+00:50:44.360 --> 00:50:49.660
+like day zero and create application and infrastructure
+configurations dynamically with every Git push.
+
+00:50:50.620 --> 00:50:52.960
+This ensures consistency
+and standardization
+
+00:50:52.960 --> 00:50:55.080
+across the entire life
+cycle of your application.
+
+00:50:56.000 --> 00:50:58.820
+Well-designed IDPs follow a
+Platform-as-a-Product approach
+
+00:50:59.320 --> 00:51:02.800
+where a Platform Team builds,
+maintains, and continuously improves
+
+00:51:02.800 --> 00:51:06.200
+the IDP using product management
+principles and best practices.
+
+00:51:06.980 --> 00:51:08.760
+So why would you need
+an IDP in the first place?
+
+00:51:09.360 --> 00:51:13.040
+Most organizations already have an IDP.
+Actually, whether they realize it or not.
+
+00:51:13.500 --> 00:51:16.680
+The question is whether it's a
+scalable, enterprise-grade IDP.
+
+00:51:17.220 --> 00:51:19.600
+A modern IDP ensures
+standardization by design,
+
+00:51:19.920 --> 00:51:23.100
+enables developer self-service, and
+reduces cognitive load on developers.
+
+00:51:24.220 --> 00:51:26.000
+It can help organizations
+innovate faster,
+
+00:51:26.440 --> 00:51:28.660
+shorten time to market,
+increase revenue growth,
+
+00:51:28.960 --> 00:51:30.640
+and improve customer
+satisfaction and retention.
+
+00:51:35.690 --> 00:51:37.960
+Thank you for watching!
+
+00:51:38.860 --> 00:51:41.840
+I hope you found this session
+insightful and engaging.
+
+00:51:43.260 --> 00:51:49.840
+If you have any questions or would like to discuss platforms
+and Platform Engineering further, feel free to reach out.
+
+00:51:50.480 --> 00:51:54.500
+Your feedback and thoughts are
+always welcome and appreciated.
+
+00:51:56.140 --> 00:51:59.100
+Stay tuned for my upcoming
+video on Platform-as-a-Product,
+
+00:51:59.980 --> 00:52:06.280
+where we'll dive deeper into how adopting a product mindset can
+enhance the effectiveness of your Internal Developer Platform.
+
+00:52:07.340 --> 00:52:11.880
+We'll explore how this approach ensures that
+platforms are not only technically robust,
+
+00:52:12.300 --> 00:52:16.240
+but also user-centric and continuously
+evolving to meet developer needs.
+
+00:52:17.720 --> 00:52:19.900
+I look forward to seeing
+you in future videos!
+
+00:52:23.200 --> 00:52:24.840
+Thank you for sticking
+around to the end.
+
+00:52:25.800 --> 00:52:30.100
+The remainder of this video contains
+an overview of all resources used.
+
+00:52:30.900 --> 00:52:34.760
+There's some great stuff out there, often
+with references to even more great stuff.
+
+00:52:35.640 --> 00:52:37.600
+Are you ready to go
+down this rabbit hole?
