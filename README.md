@@ -133,7 +133,7 @@ Coming soon. Planned release date: Feb 10, 2025.
 * [Whose (cognitive) load is it anyway?](https://www.youtube.com/watch?v=zfKwxL9KZ9I) | Paula Kennedy | PlatformCon 2022
 * [Emerging Patterns & Anti-Patterns With Team Topologies](https://videos.itrevolution.com/watch/549298122) | Team Topologies
 * [Building a Successful Platform Team](https://videos.itrevolution.com/watch/549298069) | CROZ
-* [From Greenfield Dreams to Brownfield Realities: Navigating Platform Development](https://www.youtube.com/watch?v=1FhkG4DHIMM) | Cat Morris | Kubernetes Community Days UK 2024
+* [From Greenfield Dreams to Brownfield Realities: Navigating Platform Development](https://www.youtube.com/watch?v=1FhkG4DHIMM) ([slides](https://speakerdeck.com/syntasso/from-greenfield-dreams-to-brownfield-realities-navigating-platform-development)) | Cat Morris | Kubernetes Community Days UK 2024
 * [Bad abstractions: 5 practical rules for building successful platforms](https://www.youtube.com/watch?v=6Ns6OWnbPN4) | Natan Yellin | Platform engineers meetup (webinar) | Jan 28, 2025
 * [The Magic of Platforms](https://www.youtube.com/watch?v=WaL3ZbLgMuI) | Gregor Hohpe | PlatformCon 2022
 * [A RedMonk Conversation: Developer-First Infrastructure](https://www.youtube.com/watch?v=h4nA1-O0QrI) | James Governor, Redmonk & Joe Duffy, Pulumi | Apr 26, 2022
