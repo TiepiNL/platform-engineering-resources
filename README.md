@@ -151,12 +151,14 @@ Coming soon. Planned release date: Feb 10, 2025.
 * [There's no value in your platform!](https://www.linkedin.com/pulse/theres-value-your-platform-jonny-williams-1gtce/) | Paul Brown, Adam Clark, Ed Seymour, Jonny Williams | Mar 19, 2024
 * [The problems with MVPs in legacy replacement](https://www.thoughtworks.com/insights/blog/part-1-problems-mvps-legacy-replacement) | Meaghan Waters, Thoughtworks | Feb 12, 2021
 * [MVP or TVP? Why Your Internal Developer Platform Needs Both](https://thenewstack.io/mvp-or-tvp-why-your-internal-developer-platform-needs-both/) | Abby Bangser | Oct 13, 2023
+* [TVP - Thinnest Viable Platform](https://dev.to/ajparadith/tvp-thinnest-viable-platform-5f0h) | Paradith | Oct 21, 2024
+
 * [Trade Me's Journey Towards a Thinnest Viable Platform (TVP)](https://teamtopologies.com/industry-examples/trade-me-journey-towards-a-thinnest-viable-platform) | Catherine Matheson & Amir Mohtaseb, Trade Me | Nov 22, 2024
 * [Sensible defaults](https://www.thoughtworks.com/insights/topic/sensible-defaults) | Thoughtworks
-* [Platform Manifesto](https://teamtopologies.com/platform-manifesto) | by Team Toplogies
+* [Platform Manifesto](https://teamtopologies.com/platform-manifesto) | Team Toplogies
 * [Desirability, feasibility and viability diagram: What does it mean?](https://www.uxdesigninstitute.com/blog/desirability-viability-and-feasibility/) | Cynthia Vinney, UX Design Institute | Oct 6, 2022
 * [Six Signs You Need Platform Engineering](https://www.slideshare.net/slideshow/six-signs-you-need-platform-engineering/259182361) | Weaveworks | Jul 13, 2023
-* [Value Line](https://jshingler.github.io/blog/2023/04/01/valueline/) | By Jim Shingler | April 1, 2023
+* [Value Line](https://jshingler.github.io/blog/2023/04/01/valueline/) | Jim Shingler | April 1, 2023
 
 ### 4. From Product Vision to Product Goal
 
