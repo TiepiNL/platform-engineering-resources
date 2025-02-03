@@ -146,6 +146,7 @@ Coming soon. Planned release date: Feb 10, 2025.
 
 * [What I Talk About When I Talk About Platforms](https://martinfowler.com/articles/talk-about-platforms.html) | Evan Bottcher | Mar 05, 2018
 * [Platform Engineering That Empowers Users and Reduces Risk](https://www.gartner.com/en/infrastructure-and-it-operations-leaders/topics/platform-engineering) | Gartner
+* [Platform as a Product](https://tomgeraghty.co.uk/index.php/platform-as-a-product/) | Tom Geraghty | Nov 23, 2021
 * [Service Level Terminology](https://blog.alexewerlof.com/p/service-level-terminology) | Alex Ewerlöf | Oct 25, 2024
 * [Product Mindset: What is it, and how do you cultivate it in your organisation?](https://www.linkedin.com/pulse/product-mindset-what-how-do-you-cultivate-your-philip-olivier/) | Philip Olivier | Oct 10, 2023
 * [There's no value in your platform!](https://www.linkedin.com/pulse/theres-value-your-platform-jonny-williams-1gtce/) | Paul Brown, Adam Clark, Ed Seymour, Jonny Williams | Mar 19, 2024
