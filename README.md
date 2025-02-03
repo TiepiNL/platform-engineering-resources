@@ -127,7 +127,7 @@ Coming soon. Planned release date: Feb 10, 2025.
 
 * [DevOps or DevX – Lessons We Learned Shifting Left the Wrong Way](https://www.youtube.com/watch?v=91rtD9Os9Aw) | Hannah Foxwell, VMware | stackconf 2022
 * [Navigating the landscape of platform engineering tooling](https://www.youtube.com/watch?v=TJJrr-DmOeA) | Lou Bichard, Gitpod | Dec 19, 2023
-* [Platform as a Product](https://www.youtube.com/watch?v=b8YHCDMxqfg) | Manuel Pais | PlatformCon 2022
+* [Platform as a Product](https://www.youtube.com/watch?v=b8YHCDMxqfg) ([blog](https://platformengineering.org/talks-library/platform-as-a-product)) | Manuel Pais | PlatformCon 2022
 * [Beyond engineering: The future of platforms](https://www.youtube.com/watch?v=k5SUWdrlTfs) | Manuel Pais | PlatformCon 2023
 * [What Is Platform as a Product & Why Should You Care?](https://www.youtube.com/watch?v=Hsob6TGTAPo) ([slides](https://speakerdeck.com/mfpais/what-is-platform-as-a-product-and-why-should-you-care)) |Manuel Pais | Platform Engineering Kaigi 2024
 * [Whose (cognitive) load is it anyway?](https://www.youtube.com/watch?v=zfKwxL9KZ9I) | Paula Kennedy | PlatformCon 2022
@@ -152,7 +152,6 @@ Coming soon. Planned release date: Feb 10, 2025.
 * [The problems with MVPs in legacy replacement](https://www.thoughtworks.com/insights/blog/part-1-problems-mvps-legacy-replacement) | Meaghan Waters, Thoughtworks | Feb 12, 2021
 * [MVP or TVP? Why Your Internal Developer Platform Needs Both](https://thenewstack.io/mvp-or-tvp-why-your-internal-developer-platform-needs-both/) | Abby Bangser | Oct 13, 2023
 * [TVP - Thinnest Viable Platform](https://dev.to/ajparadith/tvp-thinnest-viable-platform-5f0h) | Paradith | Oct 21, 2024
-
 * [Trade Me's Journey Towards a Thinnest Viable Platform (TVP)](https://teamtopologies.com/industry-examples/trade-me-journey-towards-a-thinnest-viable-platform) | Catherine Matheson & Amir Mohtaseb, Trade Me | Nov 22, 2024
 * [Sensible defaults](https://www.thoughtworks.com/insights/topic/sensible-defaults) | Thoughtworks
 * [Platform Manifesto](https://teamtopologies.com/platform-manifesto) | Team Toplogies
