@@ -126,10 +126,10 @@ Coming soon. Planned release date: Feb 10, 2025.
 #### Conference Talks & Videos
 
 * [Navigating the landscape of platform engineering tooling](https://www.youtube.com/watch?v=TJJrr-DmOeA) | Lou Bichard, Gitpod | Dec 19, 2023
-* [DevOps or DevX – Lessons We Learned Shifting Left the Wrong Way](https://www.youtube.com/watch?v=91rtD9Os9Aw) | Hannah Foxwell, VMware | stackconf 2022
 * [Platform as a Product](https://www.youtube.com/watch?v=b8YHCDMxqfg) ([blog](https://platformengineering.org/talks-library/platform-as-a-product)) | Manuel Pais | PlatformCon 2022
 * [Beyond engineering: The future of platforms](https://www.youtube.com/watch?v=k5SUWdrlTfs) | Manuel Pais | PlatformCon 2023
 * [What Is Platform as a Product & Why Should You Care?](https://www.youtube.com/watch?v=Hsob6TGTAPo) ([slides](https://speakerdeck.com/mfpais/what-is-platform-as-a-product-and-why-should-you-care)) |Manuel Pais | Platform Engineering Kaigi 2024
+* [DevOps or DevX – Lessons We Learned Shifting Left the Wrong Way](https://www.youtube.com/watch?v=91rtD9Os9Aw) | Hannah Foxwell, VMware | stackconf 2022
 * [Whose (cognitive) load is it anyway?](https://www.youtube.com/watch?v=zfKwxL9KZ9I) | Paula Kennedy | PlatformCon 2022
 * [Emerging Patterns & Anti-Patterns With Team Topologies](https://videos.itrevolution.com/watch/549298122) | Team Topologies
 * [Building a Successful Platform Team](https://videos.itrevolution.com/watch/549298069) | CROZ
