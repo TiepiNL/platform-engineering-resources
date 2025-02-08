@@ -174,6 +174,10 @@ Coming soon. Planned release date: Mar 10, 2025.
 
 Interesting stuff I wish I'd discovered sooner or might use in future videos.
 
+#### Reports
+
+* [Measuring the value of your internal developer platform investments](https://itrevolution.com/product/value-internal-developer-platform-investments/) (email-wall) | Sridhar Kotagiri & Ajay Chankramath @ Thoughtworks, via ITrevolution | Spring 2024
+
 #### Conference Talks & Videos
 
 * [From infrastructure to app deployment: Where does a platform start & end?](https://www.youtube.com/watch?v=GEWkHeJ6KHc) | Paula Kennedy @ Syntasso | DevOps Exchange London 2023
