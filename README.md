@@ -128,12 +128,12 @@ Coming soon. Planned release date: Feb 10, 2025.
 * [Navigating the landscape of platform engineering tooling](https://www.youtube.com/watch?v=TJJrr-DmOeA) | Lou Bichard @ Gitpod | Dec 19, 2023
 * [Platform as a Product](https://www.youtube.com/watch?v=b8YHCDMxqfg) ([blog](https://platformengineering.org/talks-library/platform-as-a-product)) | Manuel Pais @ Team Topologies | PlatformCon 2022
 * [Beyond engineering: The future of platforms](https://www.youtube.com/watch?v=k5SUWdrlTfs) | Manuel Pais @ Team Topologies | PlatformCon 2023
-* [What Is Platform as a Product & Why Should You Care?](https://www.youtube.com/watch?v=Hsob6TGTAPo) ([slides](https://speakerdeck.com/mfpais/what-is-platform-as-a-product-and-why-should-you-care)) |Manuel Pais @ Team Topologies | Platform Engineering Kaigi 2024
+* [What Is Platform as a Product & Why Should You Care?](https://www.youtube.com/watch?v=Hsob6TGTAPo) ([slides](https://speakerdeck.com/mfpais/what-is-platform-as-a-product-and-why-should-you-care)) | Manuel Pais @ Team Topologies | Platform Engineering Kaigi 2024
 * [DevOps or DevX – Lessons We Learned Shifting Left the Wrong Way](https://www.youtube.com/watch?v=91rtD9Os9Aw) | Hannah Foxwell @ VMware | stackconf 2022
 * [Whose (cognitive) load is it anyway?](https://www.youtube.com/watch?v=zfKwxL9KZ9I) | Paula Kennedy @ Syntasso | PlatformCon 2022
 * [Emerging Patterns & Anti-Patterns With Team Topologies](https://videos.itrevolution.com/watch/549298122) | Matthew Skelton @ Team Topologies | DevOps Enterprise Summit (DOES) Virtual - Europe 2021
 * [Building a Successful Platform Team](https://videos.itrevolution.com/watch/549298069) | CROZ
-* [From Greenfield Dreams to Brownfield Realities: Navigating Platform Development](https://www.youtube.com/watch?v=1FhkG4DHIMM) ([slides](https://speakerdeck.com/syntasso/from-greenfield-dreams-to-brownfield-realities-navigating-platform-development)) | Cat Morris | Kubernetes Community Days UK 2024
+* [From Greenfield Dreams to Brownfield Realities: Navigating Platform Development](https://www.youtube.com/watch?v=1FhkG4DHIMM) ([slides](https://speakerdeck.com/syntasso/from-greenfield-dreams-to-brownfield-realities-navigating-platform-development)) | Cat Morris @ Syntasso | Kubernetes Community Days UK 2024
 * [Bad abstractions: 5 practical rules for building successful platforms](https://www.youtube.com/watch?v=6Ns6OWnbPN4) | Natan Yellin | Platform engineers meetup (webinar) | Jan 28, 2025
 * [The Magic of Platforms](https://www.youtube.com/watch?v=WaL3ZbLgMuI) | Gregor Hohpe | PlatformCon 2022
 * [A RedMonk Conversation: Developer-First Infrastructure](https://www.youtube.com/watch?v=h4nA1-O0QrI) | James Governor @ Redmonk & Joe Duffy @ Pulumi | Apr 26, 2022
