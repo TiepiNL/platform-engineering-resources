@@ -71,7 +71,7 @@ Each section below corresponds to one of the videos and contains links categoriz
 
 #### Reports
 
-* [Platform engineering: an introduction to start right, stay right, and get right](https://azure.github.io/Cloud-Native/downloads/platform-engineering-an-introduction.pdf) )pdf) | Microsoft | 2024
+* [Platform engineering: an introduction to start right, stay right, and get right](https://azure.github.io/Cloud-Native/downloads/platform-engineering-an-introduction.pdf) (pdf) | Microsoft | 2024
 * [CNCF Platforms White Paper](https://github.com/cncf/tag-app-delivery/raw/main/platforms-whitepaper/v1/assets/platforms-def-v1.0.pdf) (pdf)
 * [Gartner Top 10 Strategic Technology Trends for 2023](https://www.gartner.com/en/articles/gartner-top-10-strategic-technology-trends-for-2023) | Gartner | 2022
 
