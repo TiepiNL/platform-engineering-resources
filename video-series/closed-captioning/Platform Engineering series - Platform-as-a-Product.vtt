@@ -1,0 +1,2328 @@
+﻿WEBVTT
+
+00:00:01.120 --> 00:00:04.700
+Hi there, I'm Tom Peperkamp,
+a platform product owner.
+
+00:00:05.500 --> 00:00:08.520
+That's right—platforms
+should be treated as products!
+
+00:00:09.860 --> 00:00:13.100
+Platform Engineering is a
+new and rapidly evolving field.
+
+00:00:13.800 --> 00:00:15.420
+To help you navigate this space,
+
+00:00:15.760 --> 00:00:18.719
+I've created a video series
+that dives into the <i>why</i>,
+
+00:00:18.720 --> 00:00:21.200
+<i>what</i>, and <i>how</i> of Platform Engineering.
+
+00:00:21.720 --> 00:00:25.980
+This series pulls together insights
+from top quality public resources,
+
+00:00:26.420 --> 00:00:31.460
+organizing them into focused topics to create
+a crash course in Platform Engineering.
+
+00:00:32.100 --> 00:00:36.200
+Each video is curated to support
+your Platform Engineering journey,
+
+00:00:36.380 --> 00:00:38.659
+offering practical knowledge and insights
+
+00:00:38.660 --> 00:00:42.480
+to deepen your understanding
+of its principles and potential.
+
+00:00:42.980 --> 00:00:44.708
+Let's get started!
+
+00:00:46.832 --> 00:00:48.460
+Throughout my talk,
+
+00:00:48.500 --> 00:00:51.480
+I'll be referencing content from
+leading voices in our industry.
+
+00:00:52.000 --> 00:00:53.899
+A big shoutout to these rockstars
+
+00:00:53.900 --> 00:00:56.320
+for their amazing blogs
+and conference talks!
+
+00:00:57.240 --> 00:01:00.240
+You'll find all the sources
+listed at the end of the video.
+
+00:01:01.060 --> 00:01:03.500
+These references aren't just for ethics.
+
+00:01:03.678 --> 00:01:07.418
+They're packed with valuable insights
+that I highly recommend exploring.
+
+00:01:08.060 --> 00:01:13.280
+So if you enjoy this video, definitely
+check them out and dive deeper!
+
+00:01:16.060 --> 00:01:17.660
+Hello, and welcome!
+
+00:01:18.480 --> 00:01:21.939
+In this session, we'll explore the
+concept of Platform-as-a-Product
+
+00:01:21.940 --> 00:01:24.980
+and why it's a necessity for
+platform engineering teams.
+
+00:01:25.650 --> 00:01:27.448
+We'll answer two key questions.
+
+00:01:27.472 --> 00:01:29.570
+What is Platform-as-a-Product?
+
+00:01:30.020 --> 00:01:32.400
+And why should we adopt this approach?
+
+00:01:33.560 --> 00:01:36.478
+Platform-as-a-Product is
+an engineering concept
+
+00:01:36.502 --> 00:01:39.520
+that recommends approaching
+and managing internal platforms
+
+00:01:39.820 --> 00:01:42.878
+the same way as customer-facing products:
+
+00:01:42.902 --> 00:01:44.760
+with a product mindset.
+
+00:01:47.080 --> 00:01:50.480
+Building a successful platform
+is far from a walk in the park.
+
+00:01:51.160 --> 00:01:55.180
+It's a complex endeavor that requires
+more than just technical expertise.
+
+00:01:55.760 --> 00:02:00.239
+As we'll see, simply throwing tools
+together doesn't guarantee success
+
+00:02:00.240 --> 00:02:02.320
+and can even lead to frustration.
+
+00:02:02.680 --> 00:02:06.860
+In fact, there are many ways
+platform initiatives can go off the rails.
+
+00:02:10.000 --> 00:02:13.540
+So, what does
+"platform done wrong" look like?
+
+00:02:14.120 --> 00:02:17.400
+We can broadly categorize
+the pitfalls into two scenarios.
+
+00:02:17.860 --> 00:02:21.299
+On the one hand, teams are
+essentially playing the "rename game",
+
+00:02:21.300 --> 00:02:24.840
+with siloed knowledge and
+little to no developer self-service.
+
+00:02:25.799 --> 00:02:30.834
+On the other, we have teams
+playing "platform as a product"... badly.
+
+00:02:32.158 --> 00:02:34.453
+Notice how both of these scenarios
+
+00:02:34.777 --> 00:02:38.058
+point to a breakdown in communication
+and shared understanding?
+
+00:02:38.782 --> 00:02:42.570
+A successful platform requires
+more than just the right tools,
+
+00:02:43.194 --> 00:02:46.082
+it needs a culture that
+fosters collaboration and empathy.
+
+00:02:47.406 --> 00:02:50.629
+That’s why Platform Teams
+need to be collaborative,
+
+00:02:50.630 --> 00:02:53.930
+user-centric Product Teams
+in every sense of the word.
+
+00:02:55.254 --> 00:02:57.054
+Let's dig into what that really means.
+
+00:03:00.000 --> 00:03:03.760
+Before we dive into what
+Platform-as-a-Product is and how to do it,
+
+00:03:04.260 --> 00:03:07.060
+let's begin with <i>why</i> it's so important.
+
+00:03:10.020 --> 00:03:12.860
+In our first video on
+the evolution of DevOps,
+
+00:03:13.140 --> 00:03:16.380
+we discussed the phenomenon
+of being stuck in the middle,
+
+00:03:16.820 --> 00:03:19.683
+that frustrating plateau
+where teams struggle
+
+00:03:19.707 --> 00:03:22.180
+to move from medium
+to high performance.
+
+00:03:23.280 --> 00:03:25.959
+We learned that the key to
+escaping the middle phase
+
+00:03:25.960 --> 00:03:28.540
+is a successful platform team approach.
+
+00:03:31.070 --> 00:03:33.140
+If that sounds like your organization,
+
+00:03:33.180 --> 00:03:35.620
+I highly encourage
+you to revisit that video.
+
+00:03:36.300 --> 00:03:40.280
+It sets the stage for why a new approach
+is needed to overcome this stagnation.
+
+00:03:42.980 --> 00:03:45.520
+A refresher: ultimately,
+
+00:03:45.780 --> 00:03:50.520
+the <i>why</i> behind building platforms
+at all is to reduce cognitive load.
+
+00:03:51.180 --> 00:03:55.200
+By abstracting away complexity
+and providing self-service capabilities,
+
+00:03:55.560 --> 00:03:58.700
+we free up development teams
+to focus on what they do best,
+
+00:03:59.060 --> 00:04:00.880
+building and the delivering value.
+
+00:04:04.120 --> 00:04:07.780
+But here's the catch: not all
+platforms are created equal.
+
+00:04:08.340 --> 00:04:11.220
+If a platform is too rigid
+or overly prescriptive,
+
+00:04:11.580 --> 00:04:15.720
+it can actually increase cognitive
+load, defeating its very purpose.
+
+00:04:19.180 --> 00:04:22.720
+To avoid this pitfall, platforms
+need to be compelling.
+
+00:04:23.530 --> 00:04:27.430
+They should be designed as internal
+products that developers want to use.
+
+00:04:30.100 --> 00:04:33.240
+So how do we escape the
+middle phase of DevOps?
+
+00:04:33.730 --> 00:04:36.630
+A platform doesn't
+auto-magically unstuck you.
+
+00:04:37.880 --> 00:04:40.920
+The key is treating your
+platform as a product.
+
+00:04:43.220 --> 00:04:45.360
+It's about embracing a product mindset,
+
+00:04:45.560 --> 00:04:49.580
+which involves understanding user
+needs, iterating based on feedback,
+
+00:04:49.780 --> 00:04:53.360
+and continually evolving
+the platform to deliver value.
+
+00:04:56.120 --> 00:04:59.300
+So, what does this
+product mindset entail?
+
+00:05:00.100 --> 00:05:03.100
+A helpful guide is this "Looking
+Glass" report from Thoughtworks.
+
+00:05:06.370 --> 00:05:09.239
+Thoughtworks emphasizes
+that platforms should be viewed
+
+00:05:09.240 --> 00:05:11.920
+as products with customers
+that need to be won over.
+
+00:05:12.700 --> 00:05:15.480
+This requires a compelling
+value proposition,
+
+00:05:15.740 --> 00:05:19.900
+clear roadmap, and dedicated
+resources to support those customers.
+
+00:05:21.080 --> 00:05:24.740
+Like any good product, the
+platform needs ongoing attention,
+
+00:05:25.200 --> 00:05:30.240
+adapting in response to developer feedback
+and the ever-changing business landscape.
+
+00:05:33.180 --> 00:05:37.059
+Similarly, VMware highlights the
+importance of understanding
+
+00:05:37.060 --> 00:05:41.200
+that a platform is not just an
+off-the-shelf piece of software.
+
+00:05:41.320 --> 00:05:44.979
+It's a constantly evolving
+set of reusable services
+
+00:05:44.980 --> 00:05:48.299
+that needs to be integrated
+with existing systems
+
+00:05:48.300 --> 00:05:51.120
+to create valuable
+outcomes for your business.
+
+00:05:51.380 --> 00:05:54.900
+And, importantly, it should be
+a recognizable internal brand,
+
+00:05:55.160 --> 00:05:58.060
+something developers
+identify with and trust.
+
+00:06:01.200 --> 00:06:03.940
+So, I think we're all on the same page.
+
+00:06:04.520 --> 00:06:06.860
+Treat the platform as a product!
+
+00:06:09.320 --> 00:06:11.760
+We know <i>why</i> this approach is important:
+
+00:06:12.160 --> 00:06:15.800
+to reduce cognitive load and
+escape the middle phase of DevOps.
+
+00:06:16.670 --> 00:06:18.590
+And we know <i>what</i> we need to do:
+
+00:06:19.070 --> 00:06:21.710
+build curated, self-service interfaces.
+
+00:06:22.820 --> 00:06:28.220
+So, <i>how</i> do we actually <i>apply</i> this
+product thinking to internal platforms?
+
+00:06:31.180 --> 00:06:33.980
+To answer that, let's start
+with the first question now
+
+00:06:34.160 --> 00:06:36.820
+and define what a
+Platform-as-a-Product is.
+
+00:06:39.300 --> 00:06:43.140
+Many of you will be familiar with
+this quote attributed to Henry Ford:
+
+00:06:44.100 --> 00:06:48.400
+"If I had asked people what they wanted,
+they would have said faster horses."
+
+00:06:49.740 --> 00:06:53.800
+The sentiment is that customers
+often articulate solutions.
+
+00:06:54.540 --> 00:06:59.480
+How to solve a problem rather than the
+underlying what, the actual need or goal.
+
+00:06:59.860 --> 00:07:02.900
+Here's the thing: Henry
+Ford never said that!
+
+00:07:06.340 --> 00:07:08.480
+Something that Ford actually said was,
+
+00:07:08.560 --> 00:07:10.899
+"If there is any one secret of success,
+
+00:07:10.900 --> 00:07:14.319
+it lies in the ability to get the
+other person's point of view
+
+00:07:14.320 --> 00:07:18.120
+and see things from that person's
+angle as well as from your own."
+
+00:07:19.550 --> 00:07:23.410
+This highlights the essential need to
+truly understand your developers' needs.
+
+00:07:24.460 --> 00:07:27.380
+So, how does this apply
+to Platform Engineering?
+
+00:07:27.820 --> 00:07:32.380
+Simple: when your developers ask
+for a specific tool or configuration,
+
+00:07:32.540 --> 00:07:35.600
+don't just blindly build it. Dig deeper!
+
+00:07:36.420 --> 00:07:39.400
+Understand the underlying
+problem they're trying to solve.
+
+00:07:42.320 --> 00:07:47.440
+That user-centricity is the key to defining
+what a platform as a product truly is.
+
+00:07:48.680 --> 00:07:53.860
+A platform simplifies something for users.
+This is core to its value proposition:
+
+00:07:53.920 --> 00:07:58.420
+simplifying the jobs to be done that
+your developers need to accomplish.
+
+00:07:59.780 --> 00:08:03.140
+A platform evolves to take
+advantage of technology changes.
+
+00:08:03.620 --> 00:08:08.160
+It needs to stay current and relevant,
+adapting to new tools and practices.
+
+00:08:09.550 --> 00:08:12.440
+A platform is carefully
+designed and curated.
+
+00:08:12.620 --> 00:08:15.040
+Think of it as a well-stocked toolbox,
+
+00:08:15.340 --> 00:08:18.320
+where every tool has its
+purpose and is easy to find.
+
+00:08:19.200 --> 00:08:21.887
+It is long-lived and evolves over time
+
+00:08:21.888 --> 00:08:24.916
+in response to the needs
+and desires of the users.
+
+00:08:25.620 --> 00:08:29.759
+It is as important to remove
+unused or under-used features
+
+00:08:29.760 --> 00:08:33.340
+as much as it is to evolve
+new features and functions.
+
+00:08:33.840 --> 00:08:37.000
+A platform should only
+do what it needs to do.
+
+00:08:37.760 --> 00:08:42.180
+A platform is optional to use—no
+team is forced to use the platform.
+
+00:08:42.850 --> 00:08:46.270
+As we'll discuss, mandated
+platforms can backfire.
+
+00:08:47.440 --> 00:08:50.380
+Crucially, a platform
+is OWNED by a team.
+
+00:08:51.150 --> 00:08:54.870
+You build it, you own it, you're
+responsible for its success.
+
+00:08:55.620 --> 00:08:59.400
+And, like any good product,
+your platform should have a name!
+
+00:08:59.930 --> 00:09:04.710
+Giving your platform a name helps with internal
+branding and promotes a sense of ownership.
+
+00:09:06.120 --> 00:09:10.540
+These characteristics highlight that
+platforms aren't just about technology.
+
+00:09:10.750 --> 00:09:13.730
+They're about creating a
+valuable and user-friendly product.
+
+00:09:16.310 --> 00:09:19.709
+That last point, that the
+platform is optional to use,
+
+00:09:19.710 --> 00:09:22.770
+is particularly important
+and worth zooming in on.
+
+00:09:25.280 --> 00:09:27.799
+The reality is that the mandated platform
+
+00:09:27.800 --> 00:09:32.140
+can actually increase cognitive
+load and slow down teams.
+
+00:09:33.380 --> 00:09:37.220
+If developers are forced to use a
+platform that doesn't meet their needs,
+
+00:09:37.450 --> 00:09:41.590
+they'll find workarounds, leading to
+increased complexity and frustration.
+
+00:09:44.280 --> 00:09:47.880
+So, how can we balance the need
+for consistency and control with...
+
+00:09:48.020 --> 00:09:51.040
+the need to empower
+developers and provide flexibility?
+
+00:09:54.440 --> 00:09:57.199
+Gardner suggests <i>mandating controls</i>,
+
+00:09:57.200 --> 00:09:59.480
+such as architecture and security,
+
+00:09:59.504 --> 00:10:01.936
+instead of platform adoption.
+
+00:10:02.350 --> 00:10:06.409
+This includes enabling teams to choose
+to self-comply with these requirements
+
+00:10:06.410 --> 00:10:09.910
+or follow the compelling "paved
+road" of platform engineering.
+
+00:10:10.960 --> 00:10:14.580
+This ideal approach can work,
+but only if governance is in place.
+
+00:10:15.340 --> 00:10:19.180
+If teams can choose to self-comply,
+but there's no enforcement,
+
+00:10:19.480 --> 00:10:22.040
+they may end up building
+uncompliant environments,
+
+00:10:22.470 --> 00:10:25.790
+viewing the platform as a
+burden rather than a valuable tool.
+
+00:10:28.400 --> 00:10:33.880
+In his blog post, Tom Geraghty highlights
+the core premise of Platform-as-a-Product:
+
+00:10:34.080 --> 00:10:38.860
+to explicitly recognize the platform
+as a separate, long-lived system.
+
+00:10:39.450 --> 00:10:43.480
+It sits between the infrastructure
+and customer-facing applications.
+
+00:10:44.312 --> 00:10:47.572
+To ensure its success, the
+platform requires a dedicated team,
+
+00:10:47.780 --> 00:10:50.680
+well-defined practices,
+and a sustainable budget.
+
+00:10:51.540 --> 00:10:54.040
+This ensures consistency
+in the platform layer
+
+00:10:54.340 --> 00:10:57.940
+while enabling flexibility and
+innovation in the application layer.
+
+00:11:00.440 --> 00:11:04.840
+Hannah Foxwell emphasizes that
+"good fences make good neighbors".
+
+00:11:06.040 --> 00:11:09.599
+Each layer—infrastructure,
+platform, and applications—should
+
+00:11:09.600 --> 00:11:12.900
+own their service in production
+and their path to production.
+
+00:11:14.160 --> 00:11:18.360
+The platform team provides the services
+and the application teams consume them.
+
+00:11:18.970 --> 00:11:21.190
+This helps to clearly
+define responsibilities,
+
+00:11:21.590 --> 00:11:24.750
+which is essential for building
+a successful platform product.
+
+00:11:27.360 --> 00:11:31.500
+Think of the platform product as
+consisting of composable services,
+
+00:11:31.520 --> 00:11:34.040
+or what Kratix calls "Promises".
+
+00:11:34.630 --> 00:11:38.750
+These Promises are building blocks
+with organizational standards baked in,
+
+00:11:39.140 --> 00:11:42.480
+providing sensible defaults
+and supported services
+
+00:11:42.750 --> 00:11:45.370
+like observability and backup plans.
+
+00:11:47.060 --> 00:11:52.180
+Promises can be offered individually, similar
+to Infrastructure-as-a-Service (IaaS).
+
+00:11:53.360 --> 00:11:57.300
+Or, they can be combined
+into higher-level Promises,
+
+00:11:57.590 --> 00:12:01.769
+forming Golden Paths within your
+internal developer platform (IDP),
+
+00:12:01.770 --> 00:12:04.790
+to support the entire
+software development lifecycle.
+
+00:12:07.475 --> 00:12:10.755
+The concept of a "platform
+product" can feel abstract.
+
+00:12:10.780 --> 00:12:14.720
+But at its core, it's simply a
+well-defined group of services.
+
+00:12:15.070 --> 00:12:18.229
+These services are provided...
+
+00:12:18.530 --> 00:12:21.632
+by a service owner...
+
+00:12:21.656 --> 00:12:24.770
+and consumed by developers
+to solve specific problems.
+
+00:12:26.000 --> 00:12:27.839
+In the context of platforms,
+
+00:12:27.840 --> 00:12:30.398
+these services...
+
+00:12:30.422 --> 00:12:32.380
+are your individual XaaS offerings...
+
+00:12:32.380 --> 00:12:36.100
+and your higher-level promises that
+support the entire development workflow.
+
+00:12:39.450 --> 00:12:43.639
+So, a good platform product
+ultimately leads to happy users,
+
+00:12:43.640 --> 00:12:47.320
+eliminates technology bloat,
+and reduces cognitive load.
+
+00:12:47.920 --> 00:12:49.920
+What are the ingredients for that again?
+
+00:12:52.500 --> 00:12:56.180
+To build this kind of platform,
+you need more than just technology.
+
+00:12:56.620 --> 00:12:58.620
+You need to apply a product mindset.
+
+00:12:59.220 --> 00:13:04.159
+This includes developing a clear product
+strategy, focusing on developer delight,
+
+00:13:04.160 --> 00:13:09.040
+iterating based on feedback, and tracking key
+metrics like adoption and value delivered.
+
+00:13:11.420 --> 00:13:14.980
+So, what does it mean to
+"apply a product mindset"?
+
+00:13:15.640 --> 00:13:18.740
+Philip Olivier identifies
+six key focus areas:
+
+00:13:19.150 --> 00:13:23.430
+User engagement &amp; value
+delivery, strategic alignment &amp; vision,
+
+00:13:23.770 --> 00:13:27.390
+collaboration &amp; team dynamics,
+data-driven decision making,
+
+00:13:27.780 --> 00:13:31.640
+ethics &amp; professional development,
+and risk management &amp; resilience.
+
+00:13:33.813 --> 00:13:37.533
+It's about more than building a
+technical solution that helps developers.
+
+00:13:37.953 --> 00:13:40.813
+It's about crafting a valuable
+product that they love to use.
+
+00:13:41.890 --> 00:13:44.829
+Let's see how Olivier's
+self-assessment tool
+
+00:13:44.830 --> 00:13:48.470
+can help identify where your
+organization needs to focus.
+
+00:13:51.500 --> 00:13:57.080
+This self-assessment tool covers those six key
+areas with a series of diagnostic statements.
+
+00:13:58.110 --> 00:14:01.210
+This assessment isn't just
+about technical capabilities.
+
+00:14:01.460 --> 00:14:04.199
+It's also about how we can
+how well your team collaborates,
+
+00:14:04.200 --> 00:14:06.820
+communicates, and
+values user feedback.
+
+00:14:07.520 --> 00:14:10.300
+It's a reflection of your
+organizational culture.
+
+00:14:11.860 --> 00:14:16.840
+By honestly assessing your team's responses,
+you can identify strengths and weaknesses
+
+00:14:17.060 --> 00:14:20.720
+and gain a clear understanding of
+your organization's product mindset.
+
+00:14:21.520 --> 00:14:25.800
+I highly recommend checking it out
+and seeing where you can improve.
+
+00:14:28.570 --> 00:14:30.910
+Here's another view
+of the product mindset
+
+00:14:31.320 --> 00:14:34.399
+through this capability
+model which focuses on
+
+00:14:34.400 --> 00:14:38.540
+functionality, usability,
+feedback, and community.
+
+00:14:39.580 --> 00:14:42.640
+This is a concrete way to
+foster a product mindset,
+
+00:14:43.060 --> 00:14:46.340
+but remember to adapt
+it to your specific context.
+
+00:14:49.350 --> 00:14:54.380
+This holistic workflow demonstrates the
+iterative nature of product development.
+
+00:14:55.300 --> 00:15:00.680
+Structured as a double loop, the left side
+"evaluates" ideas and decides on viability.
+
+00:15:01.540 --> 00:15:05.499
+The right side "realizes"
+those ideas in an iterative
+
+00:15:05.500 --> 00:15:09.060
+build-Launch-Evaluate-Iterate process.
+
+00:15:09.800 --> 00:15:13.759
+It aligns with common product management
+concepts like the "double diamond"
+
+00:15:13.760 --> 00:15:18.120
+and offers a comprehensive view of
+what building a modern product entails.
+
+00:15:19.060 --> 00:15:23.839
+In this context, collaboration
+means understanding user needs
+
+00:15:23.840 --> 00:15:27.400
+and determining a viable,
+value-driven product to match.
+
+00:15:28.340 --> 00:15:30.827
+Take a closer look at
+this model and consider
+
+00:15:30.828 --> 00:15:34.716
+how you currently do or do or
+don't do the mentioned steps.
+
+00:15:37.680 --> 00:15:41.640
+It's clear that product management
+is key to a successful platform.
+
+00:15:42.360 --> 00:15:44.740
+But, as Matthew Skelton points out,
+
+00:15:45.240 --> 00:15:50.360
+it can also be one of the trickiest aspects
+of adopting a Team Topologies approach.
+
+00:15:51.530 --> 00:15:54.289
+Given what we've learned so
+far about Platform-as-a-Product
+
+00:15:54.790 --> 00:15:57.650
+and the required product
+mindset, it's no surprise!
+
+00:15:58.380 --> 00:16:01.220
+That "Platform is not easy", remember?
+
+00:16:03.660 --> 00:16:06.839
+VMware highlights the importance
+of having the right people
+
+00:16:06.840 --> 00:16:10.900
+in the product manager role and
+describes several key personas.
+
+00:16:11.547 --> 00:16:15.787
+It seems that the ideal product
+manager combines various qualities:
+
+00:16:16.180 --> 00:16:20.559
+an <i>alchemist</i> that distills disparate
+requirements into a clear vision,
+
+00:16:20.560 --> 00:16:24.719
+a <i>visionary</i> that isn't afraid
+to question legacy thinking,
+
+00:16:24.720 --> 00:16:27.739
+an <i>influencer</i> that fosters
+strong relationships,
+
+00:16:27.740 --> 00:16:32.360
+and a <i>lean champion</i> that relentlessly
+pursues the elimination of waste.
+
+00:16:33.840 --> 00:16:37.579
+The latter, the lean champion,
+is especially important
+
+00:16:37.580 --> 00:16:41.160
+because maximizing the amount
+of work <i>not</i> done is essential;
+
+00:16:41.920 --> 00:16:43.800
+we want to escape the build trap.
+
+00:16:46.530 --> 00:16:49.119
+So, the "build trap" is what happens
+
+00:16:49.120 --> 00:16:51.360
+if we don't treat our
+platform as a product.
+
+00:16:51.620 --> 00:16:53.980
+You might end up
+building a "feature factory",
+
+00:16:54.500 --> 00:16:59.140
+churning out features without understanding if
+they are needed or solving the right problems.
+
+00:16:59.900 --> 00:17:03.860
+To avoid this, we need to follow a
+typical product management approach:
+
+00:17:04.260 --> 00:17:07.079
+understand our users,
+make their lives easier,
+
+00:17:07.080 --> 00:17:12.440
+ruthlessly prioritize, take small steps,
+and iterate quickly based on feedback.
+
+00:17:14.639 --> 00:17:19.220
+Does your organization reward or punish
+experimentation and learning from failures?
+
+00:17:19.960 --> 00:17:24.219
+The answer to that question says a lot about
+your readiness for Platform-as-a-Product.
+
+00:17:25.379 --> 00:17:28.100
+Now, think of your IT department.
+
+00:17:28.800 --> 00:17:32.119
+Do you see a team lead,
+product owner, or another person
+
+00:17:32.120 --> 00:17:35.200
+capable of making this
+platform journey a success?
+
+00:17:37.650 --> 00:17:41.950
+One of the best ways to avoid the
+build trap is to start small and iterate.
+
+00:17:42.560 --> 00:17:44.159
+To explore that thought,
+
+00:17:44.160 --> 00:17:49.059
+let's zoom in to the concepts of
+Minimum Viable Product (MVP),
+
+00:17:49.160 --> 00:17:52.019
+Shortest Path to Value (SPV),
+
+00:17:52.020 --> 00:17:54.799
+and Thinnest Viable Platform (TVP),
+
+00:17:54.800 --> 00:17:56.540
+to see if they can help us further.
+
+00:17:59.790 --> 00:18:03.900
+The key thing to remember is
+that platforms are brownfield.
+
+00:18:04.720 --> 00:18:08.280
+Every DevOps team already has a
+platform, whether they know it or not!
+
+00:18:08.840 --> 00:18:10.960
+We don't start companies
+with platform teams.
+
+00:18:11.511 --> 00:18:14.771
+We start with engineering
+teams deploying to production.
+
+00:18:15.700 --> 00:18:18.860
+So, when we intentionally
+start building a platform,
+
+00:18:19.180 --> 00:18:21.200
+we're not in a greenfield situation.
+
+00:18:23.660 --> 00:18:25.419
+As Wikipedia states,
+
+00:18:25.420 --> 00:18:29.859
+"Brownfield development describes
+problem spaces needing the development and
+
+00:18:29.860 --> 00:18:33.419
+deployment of new software
+systems in the immediate presence
+
+00:18:33.420 --> 00:18:37.780
+of existing (legacy) software
+applications/systems."
+
+00:18:42.720 --> 00:18:46.160
+This presents a challenge for
+the traditional MPV approach.
+
+00:18:46.771 --> 00:18:49.731
+As Meaghan Waters points
+out in this Thoughtworks article,
+
+00:18:50.210 --> 00:18:54.790
+MVPs are designed to test the market
+hypothesis with minimal resources.
+
+00:18:55.680 --> 00:18:58.279
+This approach works
+well in the greenfield,
+
+00:18:58.280 --> 00:19:01.320
+but not necessarily in
+a brownfield situation.
+
+00:19:01.880 --> 00:19:06.600
+To understand why, let's look at the
+idea of hypothesis testing a little deeper.
+
+00:19:09.660 --> 00:19:12.899
+The Build-Measure-Learn
+loop is great for hypothesis testing,
+
+00:19:12.900 --> 00:19:14.580
+if you're starting from scratch.
+
+00:19:14.920 --> 00:19:19.140
+But in a brownfield situation, your
+DevOps teams have already built something.
+
+00:19:19.700 --> 00:19:22.100
+So, you need to start with learning.
+
+00:19:23.062 --> 00:19:26.402
+Cat Morris perfectly captured
+this idea with her presentation
+
+00:19:26.402 --> 00:19:29.382
+"From Greenfield Dreams
+to Brownfield Realities",
+
+00:19:29.600 --> 00:19:32.240
+advocating we adapt
+our approach accordingly.
+
+00:19:34.620 --> 00:19:38.100
+For platforms, we
+need to rethink the MPV.
+
+00:19:39.120 --> 00:19:41.720
+Instead of trying to
+build a slice of everything,
+
+00:19:42.060 --> 00:19:47.140
+Cat Morris suggests focusing
+on the Shortest Path to Value (SPV):
+
+00:19:47.700 --> 00:19:51.440
+enabling a user to complete
+one job from beginning to end.
+
+00:19:52.120 --> 00:19:55.880
+In her words: "think cupcake
+over one slice of a big pie."
+
+00:19:58.640 --> 00:20:03.899
+This "one job from beginning
+to end" concept aligns with
+
+00:20:05.300 --> 00:20:08.380
+the Jobs To be Done (JTBD) theory.
+
+00:20:08.780 --> 00:20:13.080
+By understanding the underlying "job" that
+your developers are trying to accomplish,
+
+00:20:13.760 --> 00:20:17.680
+you can focus on building a platform
+that truly solves their problems.
+
+00:20:20.620 --> 00:20:24.820
+To clarify that "Job To Be Done",
+here are two examples:
+
+00:20:25.540 --> 00:20:28.539
+"When I need to deploy my
+first microservice to production..."
+
+00:20:28.540 --> 00:20:33.220
+and "When my microservice is
+running in production, I want to..."
+
+00:20:34.380 --> 00:20:38.320
+They also highlight that we should look
+at the full software development lifecycle,
+
+00:20:38.700 --> 00:20:40.880
+not just "Day 1" operations.
+
+00:20:43.500 --> 00:20:46.419
+User Story Mapping can
+be used together with JTBD
+
+00:20:46.420 --> 00:20:49.840
+to break down that job into
+smaller activities and tasks.
+
+00:20:50.380 --> 00:20:54.860
+The backbone comes from the "Job To
+Be Done" and the rest breaks it down.
+
+00:20:56.060 --> 00:20:59.760
+The key here is a thin,
+end-to-end "release slice"
+
+00:21:00.200 --> 00:21:04.120
+focused on delivering
+value quickly: an SPV.
+
+00:21:05.360 --> 00:21:08.099
+Can you picture a workshop
+with your developers,
+
+00:21:08.100 --> 00:21:12.360
+mapping out their jobs-to-be-done
+and defining SPVs for your platform?
+
+00:21:15.830 --> 00:21:18.390
+So we've talked about how to get started,
+
+00:21:18.440 --> 00:21:22.680
+focusing on the Shortest Path to
+Value instead of using an MVP approach.
+
+00:21:23.780 --> 00:21:28.640
+But how do we ensure that the platform
+itself doesn't become bloated and unwieldy?
+
+00:21:30.000 --> 00:21:33.340
+That's where the concept of a
+Thinnest Viable Platform comes in.
+
+00:21:33.700 --> 00:21:39.180
+A platform that is just "big enough" to
+meet the needs of its users, but no bigger.
+
+00:21:41.710 --> 00:21:46.579
+Manuel Pais defines a
+Thinnest Viable Platform (TVP),
+
+00:21:46.580 --> 00:21:52.079
+as "the smallest set of APIs
+documentation and tools needed
+
+00:21:52.080 --> 00:21:56.360
+to accelerate teams developing
+modern software services and systems."
+
+00:21:56.740 --> 00:22:00.359
+You might recall the "Lean
+Champion" product manager persona,
+
+00:22:00.360 --> 00:22:02.339
+the need to escape the build trap,
+
+00:22:02.340 --> 00:22:06.560
+and the previous slide which
+emphasizes to keep your platform small.
+
+00:22:07.580 --> 00:22:11.039
+The goal is to only maintain
+the custom platform components
+
+00:22:11.040 --> 00:22:14.260
+that uniquely improve your
+business' ability to deliver value.
+
+00:22:15.060 --> 00:22:21.500
+Use the SPV concept for new ideas, and the TVP
+concept to direct the lifespan of the product.
+
+00:22:23.520 --> 00:22:29.080
+Matthew Skelton emphasizes that the TVP is
+about thinness, to avoid a massive platform.
+
+00:22:30.000 --> 00:22:32.460
+It remains throughout an
+organizational evolution,
+
+00:22:32.870 --> 00:22:36.630
+whereas MVP is normally the
+first stage of something larger.
+
+00:22:39.100 --> 00:22:42.600
+One key to a thin platform
+is avoiding bad abstractions.
+
+00:22:43.220 --> 00:22:45.480
+You should always
+be improving workflows,
+
+00:22:45.930 --> 00:22:48.670
+not just creating layers of
+abstraction for the sake of it.
+
+00:22:49.940 --> 00:22:52.200
+Make the "getting
+started" workflow easier,
+
+00:22:52.460 --> 00:22:55.220
+remove Day-0 choices
+by setting strong defaults,
+
+00:22:55.560 --> 00:22:59.620
+and use your knowledge of the application
+stack to make common patterns easier.
+
+00:23:01.420 --> 00:23:06.620
+Those are the Jobs To Be Done +
+User Story Mapping insights implemented.
+
+00:23:07.740 --> 00:23:11.660
+But be careful when hiding
+existing abstractions altogether!
+
+00:23:13.140 --> 00:23:14.819
+As Natan Yellin points out,
+
+00:23:15.420 --> 00:23:20.600
+over time, everyone either reflects the
+Kubernetes API or reinvents it poorly.
+
+00:23:21.310 --> 00:23:24.130
+As Peter Gillard-Moss
+from Thoughtworks puts it,
+
+00:23:24.300 --> 00:23:27.439
+"Platforms are a means
+of centralizing expertise...
+
+00:23:27.440 --> 00:23:31.100
+while decentralizing innovation
+to the customer or user."
+
+00:23:31.720 --> 00:23:38.420
+The centralizing expertise part links directly to
+Tom Geraghty's core premise of Platform-as-a-Product:
+
+00:23:38.900 --> 00:23:43.960
+by focusing on a centralized platform that
+truly enables developers to deliver value
+
+00:23:44.080 --> 00:23:47.980
+in a consistent and reliable
+way, you decentralize innovation
+
+00:23:48.300 --> 00:23:52.600
+and you can avoid building unnecessary
+abstractions and keep your platform lean.
+
+00:23:55.820 --> 00:24:00.060
+Remember, complexity is the result
+of requirements and doesn't disappear.
+
+00:24:00.680 --> 00:24:02.560
+It can only be reassigned.
+
+00:24:03.427 --> 00:24:09.047
+So, be wary of claims that your platform will
+eliminate the need for developers to do something.
+
+00:24:09.800 --> 00:24:13.740
+Instead, focus on reassigning
+that complexity to the right place,
+
+00:24:14.000 --> 00:24:16.820
+centralizing expertise
+where it makes sense.
+
+00:24:19.910 --> 00:24:22.500
+A platform should be a
+foundation that elevates you.
+
+00:24:23.080 --> 00:24:26.339
+Building on top of it shouldn't
+mean starting from scratch,
+
+00:24:26.340 --> 00:24:28.660
+but building on the creations of others.
+
+00:24:30.820 --> 00:24:35.180
+As Gregor Hope explains, there are two
+ways to approach platform development:
+
+00:24:35.660 --> 00:24:38.500
+a "sinking platform"
+or a "floating platform".
+
+00:24:39.100 --> 00:24:43.220
+With a sinking platform, you invest
+heavily in custom-built components,
+
+00:24:43.440 --> 00:24:48.160
+but as the underlying base
+platform (e.g., Kubernetes) evolves,
+
+00:24:48.400 --> 00:24:50.940
+your platform becomes
+bloated and redundant.
+
+00:24:51.680 --> 00:24:53.700
+A floating platform, on the other hand,
+
+00:24:53.930 --> 00:24:56.999
+embraces the Thinnest
+Viable Platform principle
+
+00:24:57.000 --> 00:25:00.260
+and is designed to adapt to
+changes in the base platform,
+
+00:25:00.600 --> 00:25:04.900
+allowing you to shed custom components
+and focus on new areas of innovation.
+
+00:25:06.140 --> 00:25:09.720
+By maintaining a floating
+platform that adheres to the TVP,
+
+00:25:09.980 --> 00:25:12.899
+you can continue to deliver
+value to your developers
+
+00:25:12.900 --> 00:25:16.760
+without duplicating effort or
+building unnecessary complexity.
+
+00:25:19.860 --> 00:25:24.280
+Here are six TVP guiding
+principles, as defined by Trade Me,
+
+00:25:24.720 --> 00:25:27.040
+beautifully summarized
+in this illustration.
+
+00:25:28.130 --> 00:25:34.730
+While Platform, Product, "Just big enough", and
+Golden Path are probably clear to you by now,
+
+00:25:34.740 --> 00:25:38.480
+the Open Contribution Model
+deserves some more explanation.
+
+00:25:39.220 --> 00:25:42.120
+Think of it like an open-source
+project within your company.
+
+00:25:42.752 --> 00:25:47.872
+While the dedicated platform team maintains
+the core, anyone can contribute new features.
+
+00:25:48.280 --> 00:25:50.960
+In consultation with the
+platform maintainers, of course,
+
+00:25:51.360 --> 00:25:56.560
+this ensures the platform evolves to meet
+specific needs without unnecessary bloat.
+
+00:25:57.220 --> 00:26:00.760
+It also guarantees that the
+platform is built from real needs,
+
+00:26:01.060 --> 00:26:03.660
+not from what the platform
+team thinks developers need.
+
+00:26:04.860 --> 00:26:07.080
+Open contribution is about culture.
+
+00:26:07.300 --> 00:26:09.820
+It isn't just about allowing contributions,
+
+00:26:10.240 --> 00:26:14.640
+it's about actively encouraging them and
+recognizing the value of diverse perspectives.
+
+00:26:15.580 --> 00:26:19.420
+Is your platform team truly open to
+feedback and contributions from anyone?
+
+00:26:21.440 --> 00:26:24.920
+"Opinionated but Sensible"
+is another important trait.
+
+00:26:25.560 --> 00:26:27.539
+Rather than dictating every detail,
+
+00:26:27.540 --> 00:26:31.159
+the platform offers sensible
+but adjustable defaults,
+
+00:26:31.160 --> 00:26:33.919
+while organizational standards
+are built-in as a convention
+
+00:26:33.920 --> 00:26:36.480
+for things like security and compliance.
+
+00:26:37.080 --> 00:26:40.420
+They reduce friction,
+simplify complex choices,
+
+00:26:40.860 --> 00:26:43.180
+and create a smoother
+developer experience.
+
+00:26:43.935 --> 00:26:47.279
+So, start with the Shortest Path to Value,
+
+00:26:47.280 --> 00:26:51.100
+and then maintain it through
+the Thinnest Viable Platform.
+
+00:26:51.680 --> 00:26:55.160
+How well do these TVP principles
+line up with your approach?
+
+00:26:57.940 --> 00:27:00.899
+We've discussed the
+importance of a product mindset
+
+00:27:00.900 --> 00:27:05.160
+and the SPV/TVP approach
+to build a successful platform.
+
+00:27:05.810 --> 00:27:11.890
+However, all of this will fall flat if you don't
+put developers at the center of your strategy.
+
+00:27:12.700 --> 00:27:15.760
+So, let's zoom in from a
+broader product mindset
+
+00:27:15.940 --> 00:27:18.100
+to a more zoomed-in user-centric one,
+
+00:27:18.380 --> 00:27:20.780
+using all of the insights
+we've gained along the way.
+
+00:27:23.780 --> 00:27:26.800
+What does it really mean to put
+developers in the driver's seat?
+
+00:27:27.400 --> 00:27:30.960
+It means using software engineering
+techniques to manage cloud complexity.
+
+00:27:32.280 --> 00:27:35.539
+The ultimate goal is to ensure
+that developers can stay focused
+
+00:27:35.540 --> 00:27:38.540
+on writing code, not
+wrestling with infrastructure.
+
+00:27:41.790 --> 00:27:44.799
+That's why, like a
+developer-first infrastructure,
+
+00:27:45.100 --> 00:27:48.040
+it's all about having a
+problem-first mindset.
+
+00:27:49.080 --> 00:27:53.500
+Your Internal Developer Platform must
+solve a problem your developers have.
+
+00:27:54.140 --> 00:27:57.340
+If you can answer yes to the
+question of a problem-first approach,
+
+00:27:57.720 --> 00:27:59.879
+your implementation has solid reasoning,
+
+00:27:59.880 --> 00:28:02.900
+and the path towards a
+great product is much clearer.
+
+00:28:06.160 --> 00:28:08.960
+Have you clearly defined the
+problems your platform is solving?
+
+00:28:11.950 --> 00:28:16.319
+Let's reiterate: move away from
+what impressive tech you can build,
+
+00:28:16.320 --> 00:28:19.540
+and toward what you
+should build, and build that.
+
+00:28:20.320 --> 00:28:22.460
+Solve problems, and they will come.
+
+00:28:23.440 --> 00:28:26.060
+If you don't, you'll fall
+victim to the build trap,
+
+00:28:26.420 --> 00:28:28.540
+focusing on technology over value.
+
+00:28:29.180 --> 00:28:30.780
+Let's look at some examples.
+
+00:28:32.970 --> 00:28:35.110
+These are just some common problems.
+
+00:28:35.880 --> 00:28:38.920
+Do you recognize any of them in
+your own development workflows?
+
+00:28:39.510 --> 00:28:43.290
+Or perhaps you're grappling with
+other challenges not listed here?
+
+00:28:44.440 --> 00:28:46.259
+It's important to have
+a clear understanding
+
+00:28:46.260 --> 00:28:50.440
+of these pain points before even
+thinking about building a platform.
+
+00:28:52.900 --> 00:28:56.880
+These product lenses highlight the
+three factors you need to consider
+
+00:28:57.320 --> 00:28:59.900
+to ensure you are
+actually solving a problem.
+
+00:29:00.800 --> 00:29:06.260
+Does the solution solve a real
+desire from our end user? (Desirability.)
+
+00:29:06.900 --> 00:29:11.620
+Is this a sound product, given
+current business resources? (Viability.)
+
+00:29:12.300 --> 00:29:14.900
+Is building this given
+current technology feasible?
+
+00:29:16.180 --> 00:29:21.400
+The desirability lens is the most important
+one from a user-centric perspective.
+
+00:29:22.330 --> 00:29:24.350
+If there's no desire from the end user,
+
+00:29:24.620 --> 00:29:26.620
+the other two lenses don't matter.
+
+00:29:27.400 --> 00:29:28.920
+Is there actually a problem?
+
+00:29:29.360 --> 00:29:30.860
+Is our product solving it?
+
+00:29:31.480 --> 00:29:35.320
+And perhaps most importantly,
+is the experience great?
+
+00:29:38.020 --> 00:29:40.720
+A platform isn't just a collection of tools.
+
+00:29:40.960 --> 00:29:43.740
+It's a curated experience for engineers.
+
+00:29:44.380 --> 00:29:47.619
+The word "curated" implies
+the product should be:
+
+00:29:47.620 --> 00:29:53.800
+selected, organized, and presented
+using professional or expert knowledge.
+
+00:29:54.900 --> 00:29:58.360
+By understanding the developers
+and their specific use case,
+
+00:29:58.540 --> 00:30:00.680
+a better platform will come to fruition.
+
+00:30:01.740 --> 00:30:05.920
+Great understanding is the
+foundation for improved desirability.
+
+00:30:09.100 --> 00:30:12.320
+Don't underestimate the
+knowledge your developers possess.
+
+00:30:13.080 --> 00:30:16.600
+They are on the front lines,
+experiencing these problems first hand.
+
+00:30:17.280 --> 00:30:20.340
+This isn't just about collecting
+feedback through surveys.
+
+00:30:20.660 --> 00:30:23.220
+It's about true partnership
+with application teams.
+
+00:30:24.380 --> 00:30:27.800
+Develop your platform
+with them, not for them.
+
+00:30:31.000 --> 00:30:35.720
+As you begin developing your platform, strong
+collaboration with application teams is key.
+
+00:30:36.720 --> 00:30:39.300
+And that means more than
+just asking them what they want.
+
+00:30:39.800 --> 00:30:42.380
+It means actively
+observing their workflows,
+
+00:30:42.560 --> 00:30:44.200
+understanding their pain points,
+
+00:30:44.420 --> 00:30:48.220
+and building trust through consistent
+communication and responsiveness.
+
+00:30:49.500 --> 00:30:54.259
+This collaborative stage evolves into a
+more established X-as-a-Service model
+
+00:30:54.260 --> 00:30:56.979
+with support and
+well-written documentation,
+
+00:30:56.980 --> 00:31:01.380
+but doesn't mean the collaboration
+ends; new iterations will follow.
+
+00:31:02.200 --> 00:31:06.940
+Remember the "A platform evolves to
+take advantage of technology changes"?
+
+00:31:10.040 --> 00:31:14.120
+Building trust early is crucial
+to reduce adoption delays later.
+
+00:31:14.770 --> 00:31:18.670
+The reason for this has something to
+do with behavioral economic concepts
+
+00:31:18.840 --> 00:31:22.660
+like prospect theory or
+the endowment effect.
+
+00:31:23.480 --> 00:31:27.400
+People will value something they
+already have more than something new.
+
+00:31:27.960 --> 00:31:32.900
+You can overcome that bias by helping
+people get started by building early trust.
+
+00:31:34.580 --> 00:31:36.340
+In Team Topologies terms,
+
+00:31:36.360 --> 00:31:42.440
+we can facilitate initial interactions and enable
+developers to adopt the new services later.
+
+00:31:44.967 --> 00:31:49.327
+However, you need to be aware of
+the dangers of platform enablement.
+
+00:31:50.220 --> 00:31:54.940
+Enabling activities can derail the
+platform roadmap, so plan accordingly.
+
+00:31:55.600 --> 00:31:58.280
+By reserving dedicated
+time for facilitation,
+
+00:31:58.280 --> 00:32:01.159
+like 'planting seeds' as we discussed,
+
+00:32:01.360 --> 00:32:03.239
+and for onboarding activities,
+
+00:32:03.240 --> 00:32:07.340
+we can avoid over-commitment of
+the platform team in other helping tasks.
+
+00:32:09.920 --> 00:32:13.559
+A final thought on
+developer centricity I share
+
+00:32:13.560 --> 00:32:15.240
+comes from Gregor Hohpe.
+
+00:32:16.380 --> 00:32:18.460
+Developers' lives aren't static:
+
+00:32:18.747 --> 00:32:22.487
+they're going through a learning curve
+and also going through a product lifecycle.
+
+00:32:23.600 --> 00:32:28.899
+They start simple, and then their needs and their
+ideas become more sophisticated and more complex,
+
+00:32:28.960 --> 00:32:32.320
+and the scale of what they
+operate might also increase.
+
+00:32:32.800 --> 00:32:35.420
+With your platform attempts
+to make their lives easier,
+
+00:32:35.520 --> 00:32:38.500
+you'll never get a perfect linear curve.
+
+00:32:39.780 --> 00:32:41.520
+This is where the trade-offs lie.
+
+00:32:42.040 --> 00:32:44.340
+Always be aware of what you're doing.
+
+00:32:48.060 --> 00:32:50.480
+Let's recap what we've discussed so far.
+
+00:32:51.320 --> 00:32:53.440
+Platform teams take time to establish,
+
+00:32:53.460 --> 00:32:59.360
+but they drive true impact with
+speed, scalability, and consistency.
+
+00:32:59.520 --> 00:33:04.320
+To unleash that potential, it's crucial
+to have a dedicated product manager.
+
+00:33:06.560 --> 00:33:12.100
+Remember, most platform initiatives fail because
+of a lack of focus on organizational dynamics.
+
+00:33:12.160 --> 00:33:15.800
+You need to explicitly
+focus on team interactions,
+
+00:33:16.120 --> 00:33:19.780
+developer experience, feedback
+loops, and product management.
+
+00:33:21.180 --> 00:33:25.540
+And finally, treat your platform
+as a product, not a project.
+
+00:33:28.080 --> 00:33:31.899
+The folks from Team Topologies
+created a platform manifesto
+
+00:33:31.900 --> 00:33:35.040
+that perfectly summarizes
+our key learnings.
+
+00:33:35.640 --> 00:33:38.299
+Teams and interactions,
+adoption and engagement,
+
+00:33:38.300 --> 00:33:43.360
+and a rich customer experience are
+all essential ingredients for success.
+
+00:33:44.480 --> 00:33:47.260
+So, how well does this manifesto,
+
+00:33:47.600 --> 00:33:50.060
+along with those TVP guiding principles,
+
+00:33:50.330 --> 00:33:53.670
+align with your current approach
+to building and managing platforms?
+
+00:33:55.320 --> 00:33:57.460
+Could this guide your
+decisions every day?
+
+00:33:59.960 --> 00:34:03.640
+To sum it all up, in a
+Platform-as-a-Product elevator pitch:
+
+00:34:04.210 --> 00:34:06.250
+treat your internal platform as a product,
+
+00:34:07.080 --> 00:34:09.099
+understand your developers' problems,
+
+00:34:09.100 --> 00:34:12.659
+and make their lives easier with
+a carefully curated, compelling,
+
+00:34:12.660 --> 00:34:15.820
+and most importantly,
+optional platform product.
+
+00:34:17.480 --> 00:34:20.799
+Now, join Luca from
+platformengineering.org
+
+00:34:20.800 --> 00:34:24.480
+as he recaps the core concepts
+of Platform-as-a-Product for you.
+
+00:34:25.380 --> 00:34:27.579
+Hi, I'm Luca from the platform
+engineering community.
+
+00:34:27.960 --> 00:34:30.219
+In this video, we're going to
+dive into platform as a product,
+
+00:34:30.520 --> 00:34:32.239
+and how platform teams
+can use this approach
+
+00:34:32.440 --> 00:34:34.738
+to build better self-service capabilities
+
+00:34:34.739 --> 00:34:37.539
+for application developers and
+broadly their engineer organization.
+
+00:34:39.550 --> 00:34:41.680
+Alright, so first of all, what
+is platform engineering?
+
+00:34:41.760 --> 00:34:43.839
+Well, platform engineering
+is the discipline of
+
+00:34:43.840 --> 00:34:46.160
+designing workflows and
+Golden Paths for developers,
+
+00:34:46.459 --> 00:34:48.179
+so that they can
+self-serve the tech and tools
+
+00:34:48.180 --> 00:34:50.339
+they need to run their apps and services
+
+00:34:50.340 --> 00:34:52.499
+without having to depend
+on their operation colleagues.
+
+00:34:54.000 --> 00:34:56.279
+The sum of these Golden
+Paths is commonly referred to
+
+00:34:56.280 --> 00:34:58.639
+as an Internal Developer
+Platform, or IDP for short.
+
+00:34:59.120 --> 00:35:02.439
+The IDP is the product that is built
+by the platform engineering team
+
+00:35:02.440 --> 00:35:04.600
+and shipped to the rest
+of the org as a product.
+
+00:35:06.200 --> 00:35:08.240
+So, what do we mean
+by Platform-as-a-Product?
+
+00:35:08.440 --> 00:35:10.680
+Platform as a product
+means building, extending,
+
+00:35:11.020 --> 00:35:12.839
+and maintaining your
+Internal Developer Platform
+
+00:35:12.840 --> 00:35:15.180
+using product management
+principles and best practices.
+
+00:35:15.500 --> 00:35:16.899
+The idea was actually first brought up
+
+00:35:16.900 --> 00:35:19.059
+in Thoughtworks'
+<i>Technology Radar</i> in 2017,
+
+00:35:19.060 --> 00:35:22.200
+and it was then popularized
+among the broader audience
+
+00:35:22.225 --> 00:35:25.685
+thanks to the book, Team Topologies,
+by Manuel Pais and Matthew Skelton.
+
+00:35:26.060 --> 00:35:27.080
+So, in this context,
+
+00:35:27.280 --> 00:35:30.700
+Platform-as-a-Product means building
+a platform that is customer focused,
+
+00:35:31.140 --> 00:35:33.760
+with developers as the primary
+customers of the platform team.
+
+00:35:34.260 --> 00:35:36.659
+Having platform engineering
+teams take ownership
+
+00:35:36.760 --> 00:35:38.939
+of the core functionality
+of the platform layer
+
+00:35:39.040 --> 00:35:40.619
+and do internal marketing
+
+00:35:40.620 --> 00:35:43.620
+to get all the stakeholders
+within an organization aligned.
+
+00:35:44.100 --> 00:35:46.399
+It means assigning product
+management responsibilities
+
+00:35:46.500 --> 00:35:49.100
+that include continuous
+improvement activities,
+
+00:35:49.480 --> 00:35:53.060
+such as road mapping, usage metric
+data gathering, and quality monitoring.
+
+00:35:53.880 --> 00:35:55.900
+And also avoiding the
+common phenomenon,
+
+00:35:56.160 --> 00:35:57.819
+especially in large enterprises
+
+00:35:57.820 --> 00:36:00.019
+of layering different platform teams
+
+00:36:00.020 --> 00:36:01.700
+that are split by tech stack.
+
+00:36:02.220 --> 00:36:04.080
+Following a
+Platform-as-a-Product mindset,
+
+00:36:04.360 --> 00:36:05.899
+the platform built by the platform team
+
+00:36:05.900 --> 00:36:07.940
+competes against other solutions.
+
+00:36:08.040 --> 00:36:09.540
+And customers, the developers,
+
+00:36:09.640 --> 00:36:12.840
+need to experience it as something
+significantly better than the status quo.
+
+00:36:14.180 --> 00:36:16.360
+So instead of building
+something on their best guess,
+
+00:36:16.440 --> 00:36:19.480
+for the platform team, everything
+needs to start with user research.
+
+00:36:19.820 --> 00:36:23.039
+You need to conduct interviews with
+developers regarding their pain points,
+
+00:36:23.140 --> 00:36:24.880
+and figure out what they really need.
+
+00:36:25.740 --> 00:36:29.600
+You need to identify the actions that
+are performed most often and cause pain,
+
+00:36:29.640 --> 00:36:32.500
+and have a clear user testing
+and feedback loops in place.
+
+00:36:32.720 --> 00:36:34.559
+Then based on this user research,
+
+00:36:34.560 --> 00:36:37.100
+come up with a roadmap aligned
+with your mission statement.
+
+00:36:37.820 --> 00:36:40.440
+Not to be confused with a
+backlog of nice-to-haves.
+
+00:36:40.720 --> 00:36:42.660
+Now, building a platform is one thing,
+
+00:36:42.783 --> 00:36:45.963
+but marketing and selling the platform
+internally is actually more difficult.
+
+00:36:46.620 --> 00:36:48.180
+To ensure developer adoption,
+
+00:36:48.292 --> 00:36:51.992
+platform teams need to use different kinds
+of messaging for different kinds of personas.
+
+00:36:52.240 --> 00:36:54.300
+To treat your platform as a product
+
+00:36:54.700 --> 00:36:57.280
+ultimately means to ensure
+that the platform engineering org
+
+00:36:57.680 --> 00:37:00.680
+creates value by solving
+organizational problems.
+
+00:37:01.400 --> 00:37:03.179
+You also need to make
+sure that your platform team
+
+00:37:03.180 --> 00:37:05.360
+is building a product that
+developers really love.
+
+00:37:06.280 --> 00:37:07.320
+Quick side comment.
+
+00:37:07.580 --> 00:37:09.699
+When evaluating whether
+to build your own platform
+
+00:37:09.800 --> 00:37:11.720
+following a
+Platform-as-a-Product approach,
+
+00:37:12.020 --> 00:37:15.319
+it is also important to consider
+whether this is the best solution
+
+00:37:15.320 --> 00:37:16.520
+for your team right now.
+
+00:37:17.360 --> 00:37:20.019
+If you don't have the budget to
+hire a dedicated platform team,
+
+00:37:20.020 --> 00:37:23.560
+for example, it might not be the
+most feasible option for you at the end.
+
+00:37:24.260 --> 00:37:27.239
+In such cases, adopting a
+PaaS, or Platform-as-a-Service
+
+00:37:27.240 --> 00:37:29.359
+or an end-to-end platform solution
+
+00:37:29.460 --> 00:37:30.660
+may be more suitable.
+
+00:37:31.220 --> 00:37:33.779
+It is crucial, however, to
+have an exit plan in place
+
+00:37:33.780 --> 00:37:37.020
+in case you need to transition to
+a platform as a product later on.
+
+00:37:37.600 --> 00:37:38.660
+As your business grows,
+
+00:37:38.700 --> 00:37:41.620
+you may encounter scalability
+issues and increased complexity,
+
+00:37:42.080 --> 00:37:43.979
+and the PaaS solution
+you start using today
+
+00:37:44.080 --> 00:37:46.460
+can often become
+obsolete in a year from now.
+
+00:37:47.020 --> 00:37:48.699
+This is when shifting to an IDP
+
+00:37:48.700 --> 00:37:50.619
+built with a platform
+as a product approach
+
+00:37:50.620 --> 00:37:52.040
+can be extremely powerful.
+
+00:37:53.400 --> 00:37:54.479
+Thank you for watching our video
+
+00:37:54.480 --> 00:37:56.420
+on platform engineering
+and Platform-as-a-Product.
+
+00:37:59.580 --> 00:38:01.720
+One more thing...
+
+00:38:02.560 --> 00:38:04.480
+To truly embrace the product mindset,
+
+00:38:04.840 --> 00:38:06.560
+we need to talk about measuring value.
+
+00:38:10.120 --> 00:38:13.040
+It's critical to measure the
+success of your platform.
+
+00:38:13.800 --> 00:38:16.639
+How else will you know
+if it's delivering value
+
+00:38:16.640 --> 00:38:18.880
+and truly solving developers' problems?
+
+00:38:20.450 --> 00:38:21.579
+It sounds obvious,
+
+00:38:21.580 --> 00:38:24.400
+but it's often overlooked
+and far from easy,
+
+00:38:24.860 --> 00:38:27.920
+especially when it comes to
+measuring the success of your IDP.
+
+00:38:31.370 --> 00:38:34.640
+A key goal of platform engineering
+is reducing cognitive load.
+
+00:38:35.400 --> 00:38:37.099
+But how do you actually measure
+
+00:38:37.100 --> 00:38:39.760
+something as intangible
+as cognitive load?
+
+00:38:40.400 --> 00:38:42.199
+And how will you then translate that
+
+00:38:42.200 --> 00:38:45.040
+into a convincing story for the CFO?
+
+00:38:48.180 --> 00:38:51.860
+That's why Manuel Pais
+recommends focusing on the "last mile",
+
+00:38:51.940 --> 00:38:54.680
+measuring the generated
+value of your platform.
+
+00:38:58.180 --> 00:39:02.760
+This slide demonstrates that
+measuring platform value is a journey.
+
+00:39:03.520 --> 00:39:05.180
+It starts with building trust,
+
+00:39:05.540 --> 00:39:07.100
+then sharing success stories,
+
+00:39:07.380 --> 00:39:09.020
+and measuring internal metrics.
+
+00:39:10.000 --> 00:39:12.339
+The last mile is about translating that
+
+00:39:12.340 --> 00:39:16.099
+into external metrics that the
+entire organization understands
+
+00:39:16.100 --> 00:39:18.720
+like return on investment,
+
+00:39:19.060 --> 00:39:20.920
+cost control, and time to market.
+
+00:39:22.480 --> 00:39:24.780
+If you want to learn
+more about this journey,
+
+00:39:25.140 --> 00:39:28.240
+I highly recommend checking
+out Manuel Pais' talk;
+
+00:39:29.340 --> 00:39:32.280
+I might create a video on
+that subject in the future.
+
+00:39:35.160 --> 00:39:38.599
+The ultimate goal is to
+transform internal platforms
+
+00:39:38.600 --> 00:39:42.120
+from mere technical
+solutions into strategic assets,
+
+00:39:42.440 --> 00:39:46.360
+fostering a collective understanding
+and appreciation across stakeholders.
+
+00:39:47.220 --> 00:39:49.240
+That's what the last mile is all about.
+
+00:39:52.230 --> 00:39:56.640
+The stuff that platform teams do
+is <i>context</i> for application teams.
+
+00:39:57.300 --> 00:40:01.600
+Things that are necessary, but don't
+directly contribute to the customer's value.
+
+00:40:02.720 --> 00:40:04.580
+But for the platform team themselves,
+
+00:40:05.060 --> 00:40:07.540
+all of this stuff lies within the <i>core</i>.
+
+00:40:08.440 --> 00:40:10.000
+It's the reason for being.
+
+00:40:10.880 --> 00:40:16.199
+By focusing on value creation and
+rigorously measuring the impact of platforms
+
+00:40:16.200 --> 00:40:20.580
+on the amount of time application
+teams can spend above the "value line",
+
+00:40:20.780 --> 00:40:24.799
+You can demonstrate that this platform
+team contributes to the company's value
+
+00:40:24.800 --> 00:40:26.900
+and can be viewed as a strategic asset.
+
+00:40:29.140 --> 00:40:30.380
+Thank you for watching!
+
+00:40:30.860 --> 00:40:33.520
+I hope you found this session
+insightful and engaging.
+
+00:40:34.290 --> 00:40:35.550
+If you liked this video,
+
+00:40:35.560 --> 00:40:37.220
+why not share it with your peers?
+
+00:40:38.180 --> 00:40:39.479
+Feel free to reach out
+
+00:40:39.480 --> 00:40:43.400
+if you'd like to discuss platforms
+and Platform-as-a-Product further.
+
+00:40:45.140 --> 00:40:47.219
+Stay tuned for my upcoming video
+
+00:40:47.220 --> 00:40:49.660
+"From Product Vision to Product Goal",
+
+00:40:49.660 --> 00:40:52.460
+where we'll explore the
+different business objectives
+
+00:40:52.500 --> 00:40:54.900
+and related potential product goals.
+
+00:40:55.080 --> 00:40:58.440
+Because you can do
+anything, but not everything.
+
+00:41:01.360 --> 00:41:03.400
+Thank you for sticking around to the end.
+
+00:41:03.960 --> 00:41:06.760
+The remainder of this
+video contains an overview
+
+00:41:06.960 --> 00:41:08.420
+of all resources used.
+
+00:41:08.545 --> 00:41:10.685
+There's some great stuff out there,
+
+00:41:10.710 --> 00:41:12.894
+often with references
+to even more great stuff.
+
+00:41:13.716 --> 00:41:15.876
+Are you ready to go
+down this rabbit hole?
