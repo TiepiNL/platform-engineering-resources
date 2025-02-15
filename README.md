@@ -195,7 +195,7 @@ Coming soon. Planned release date: Feb 24, 2025.
 * [6 Archetypes of Broken Ownership](https://blog.alexewerlof.com/p/broken-ownership) | Alex Ewerlöf | Aug 01, 2023
 * [The Role of Platform Engineering for Enterprise-scale Applications](https://insights.daffodilsw.com/blog/platform-engineering) | Nikita Sachdeva @ daffodil | Jun 1, 2023
 * [Maximizing Developer Effectiveness](https://martinfowler.com/articles/developer-effectiveness.html) | Tim Cochran @ martinFowler.com | Jan 26, 2021
-* [From junior to Jedi - cracking the leverage code](Source: https://www.asyncagile.org/blog/from-junior-to-jedi-cracking-the-leverage-code) | Sumeet Moghe @ Async agile | 30 Jun, 2023
+* [From junior to Jedi - cracking the leverage code](https://www.asyncagile.org/blog/from-junior-to-jedi-cracking-the-leverage-code) | Sumeet Moghe @ Async agile | 30 Jun, 2023
 * [The State of Cloud-Native Software Development](https://mogenius.com/blog-posts/the-state-of-cloud-native-software-development) | Marvin Tekautschitz @ mogenius
 * [How to Build a Platform Team (And Why You Need One)](https://deploy.equinix.com/blog/how-to-build-a-platform-team-and-why-you-need-one/) | Daniel Li @ Equinix | Jan 25, 2024
 * [How to craft a Product Goal](https://www.seriousscrum.com/page/how-to-craft-a-product-goal) | Sjoerd Nijland @ Serious Scrum
