@@ -173,7 +173,6 @@ Coming soon. Planned release date: Feb 24, 2025.
 
 * [From infrastructure to app deployment: Where does a platform start & end?](https://www.youtube.com/watch?v=GEWkHeJ6KHc) | Paula Kennedy @ Syntasso | DevOps Exchange London 2023
 * [Fast Flow & Organizational Evolution with Team Topologies (slides)](https://www.slideshare.net/ManuelPais/fast-flow-organizational-evolution-with-team-topologies-masters-of-software-engineering-mse-carnegie-mellon-university-apr-2021) | Manuel Pais @ Masters of Software Engineering (MSE) - Carnegie Mellon University | Apr, 2021
-* [Conway's Law is Out to Get You! (slides)](https://www.slideshare.net/slideshow/conways-law-is-out-to-get-you-large-financial-group-apr-2022/251683377) | Manuel Pais @ Large Financial Group | Apr, 2022
 * [K8s is Not Your Platform, It’s Just the Foundation (slides)](https://www.slideshare.net/slideshow/kubernetes-is-not-your-platform-its-just-the-foundation-uk-cloud-infrastructure-user-group-dec-2020/239657556) | Manuel Pais @ UK Cloud Infrastructure User Group | Dec, 2020
 * [The Magic of Platforms](https://www.youtube.com/watch?v=WaL3ZbLgMuI) | Gregor Hohpe | PlatformCon 2022
 * [Platform Engineering Loves Security: Shift Down to Your Platform, not Left to Your Developers!](https://www.youtube.com/watch?v=lKmGbuH2JYM) ([slides](https://github.com/mathieu-benoit/presentations/raw/main/2024-11-PlatformEngineeringLovesSecurity_ShiftDownToYourPlatformNotLeftToYourDevelopers.pdf)) | Mathieu Benoit @ Humanitec | Cloud Native Rejekts 2024
@@ -183,6 +182,7 @@ Coming soon. Planned release date: Feb 24, 2025.
 * [Beating the 1:100 Odds with Team Design for Security (slides)](https://www.slideshare.net/slideshow/beating-the-1100-odds-team-design-for-security-all-day-devops-2019/191138772) | Manuel Pais @ Team Topologies | All Dy DevOps (ADDO) 2019
 * [Mastering on-prem platform engineering: The good, the bad, the metal](https://www.youtube.com/watch?v=wPdzUQZZHEU) ([slides](https://5890440.fs1.hubspotusercontent-na1.net/hubfs/5890440/Webinar%20speaker%20slides/WB%20-%202025-02-11%20-%20Mastering%20on-prem%20platform%20engineering%20The%20good%2c%20the%20bad%2c%20the%20metal.pdf)) | Scott Rosenberg @ Platform Engineering | Feb 11, 2025
 * [What is an Internal Developer Platform (IDP)?](https://www.youtube.com/watch?v=2Nrlkn-km5A) | Armon Dadgar @ HashiCorp | May 6, 2024
+* [Conway's Law is Out to Get You! (slides)](https://www.slideshare.net/slideshow/conways-law-is-out-to-get-you-large-financial-group-apr-2022/251683377) | Manuel Pais @ Large Financial Group | Apr, 2022
 * [DevOps or DevX – Lessons We Learned Shifting Left the Wrong Way](https://www.youtube.com/watch?v=91rtD9Os9Aw) | Hannah Foxwell @ VMware | stackconf 2022
 
 #### Sites & Blogs
