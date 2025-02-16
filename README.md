@@ -198,6 +198,7 @@ Coming soon. Planned release date: Feb 24, 2025.
 * [From junior to Jedi - cracking the leverage code](https://www.asyncagile.org/blog/from-junior-to-jedi-cracking-the-leverage-code) | Sumeet Moghe @ Async agile | 30 Jun, 2023
 * [The State of Cloud-Native Software Development](https://mogenius.com/blog-posts/the-state-of-cloud-native-software-development) | Marvin Tekautschitz @ mogenius
 * [How to Build a Platform Team (And Why You Need One)](https://deploy.equinix.com/blog/how-to-build-a-platform-team-and-why-you-need-one/) | Daniel Li @ Equinix | Jan 25, 2024
+* [How To Create a Compelling Product Vision That Will Drive Your Team](https://www.uxstudioteam.com/ux-blog/product-vision) | Dorottya Kiss @ UX studio | Nov 3, 2019
 * [How to craft a Product Goal](https://www.seriousscrum.com/page/how-to-craft-a-product-goal) | Sjoerd Nijland @ Serious Scrum
 * [What I Talk About When I Talk About Platforms](https://martinfowler.com/articles/talk-about-platforms.html) | Evan Bottcher @ martinFowler.com | Mar 05, 2018
 * [Value Line](https://jshingler.github.io/blog/2023/04/01/valueline/) | Jim Shingler | April 1, 2023
