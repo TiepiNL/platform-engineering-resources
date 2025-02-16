@@ -171,8 +171,8 @@ Coming soon. Planned release date: Feb 24, 2025.
 
 #### Conference Talks & Videos
 
+* [From infrastructure to app deployment: Where does a platform start & end?](https://www.youtube.com/watch?v=GEWkHeJ6KHc) | Paula Kennedy @ Syntasso | DevOps Exchange London 2023
 * [Fast Flow & Organizational Evolution with Team Topologies (slides)](https://www.slideshare.net/ManuelPais/fast-flow-organizational-evolution-with-team-topologies-masters-of-software-engineering-mse-carnegie-mellon-university-apr-2021) | Manuel Pais @ Masters of Software Engineering (MSE) - Carnegie Mellon University | Apr, 2021
-* [DevOps or DevX – Lessons We Learned Shifting Left the Wrong Way](https://www.youtube.com/watch?v=91rtD9Os9Aw) | Hannah Foxwell @ VMware | stackconf 2022
 * [Conway's Law is Out to Get You! (slides)](https://www.slideshare.net/slideshow/conways-law-is-out-to-get-you-large-financial-group-apr-2022/251683377) | Manuel Pais @ Large Financial Group | Apr, 2022
 * [K8s is Not Your Platform, It’s Just the Foundation (slides)](https://www.slideshare.net/slideshow/kubernetes-is-not-your-platform-its-just-the-foundation-uk-cloud-infrastructure-user-group-dec-2020/239657556) | Manuel Pais @ UK Cloud Infrastructure User Group | Dec, 2020
 * [The Magic of Platforms](https://www.youtube.com/watch?v=WaL3ZbLgMuI) | Gregor Hohpe | PlatformCon 2022
@@ -182,24 +182,24 @@ Coming soon. Planned release date: Feb 24, 2025.
 * [Team Topologies for Security](https://www.youtube.com/watch?v=WZAnnSmPG7c) | Mario Platt & Manuel Pais @ Team Topologies | Open Security Summit 2020
 * [Beating the 1:100 Odds with Team Design for Security (slides)](https://www.slideshare.net/slideshow/beating-the-1100-odds-team-design-for-security-all-day-devops-2019/191138772) | Manuel Pais @ Team Topologies | All Dy DevOps (ADDO) 2019
 * [Mastering on-prem platform engineering: The good, the bad, the metal](https://www.youtube.com/watch?v=wPdzUQZZHEU) ([slides](https://5890440.fs1.hubspotusercontent-na1.net/hubfs/5890440/Webinar%20speaker%20slides/WB%20-%202025-02-11%20-%20Mastering%20on-prem%20platform%20engineering%20The%20good%2c%20the%20bad%2c%20the%20metal.pdf)) | Scott Rosenberg @ Platform Engineering | Feb 11, 2025
-* [https://www.youtube.com/watch?v=2Nrlkn-km5A](What is an Internal Developer Platform (IDP)?) | Armon Dadgar @ HashiCorp | May 6, 2024
-* [From infrastructure to app deployment: Where does a platform start & end?](https://www.youtube.com/watch?v=GEWkHeJ6KHc) | Paula Kennedy @ Syntasso | DevOps Exchange London 2023
+* [What is an Internal Developer Platform (IDP)?](https://www.youtube.com/watch?v=2Nrlkn-km5A) | Armon Dadgar @ HashiCorp | May 6, 2024
+* [DevOps or DevX – Lessons We Learned Shifting Left the Wrong Way](https://www.youtube.com/watch?v=91rtD9Os9Aw) | Hannah Foxwell @ VMware | stackconf 2022
 
 #### Sites & Blogs
 
 * [The Difference Between the Product Goal and the Product Vision in Scrum](https://thescrumacademy.com/2024/05/10/the-difference-between-the-product-goal-and-the-product-vision-in-scrum/) | Carlton Nettleton @ The Scrum Academy | May 10, 2024
 * [How to brew a perfect strategy, responsibly (part one)](https://www.thoughtworks.com/insights/blog/digital-transformation/how-to-brew-a-perfect-strategy-responsibly-part-one) | Harshal Shah @ Thoughtworks | Jan 19, 2022
-* [Inverse-Conway-Maneuver: How to speed up product development teams successfully](https://www.thoughtworks.com/insights/blog/customer-experience/inverse-conway-maneuver-product-development-teams) | Tobias Soffner and Benjamin Cremer @ Thoughtworks | May 26, 2023
-* [DevOps Topologies](https://confluxhq.com/devops-topologies) | Matthew Skelton @ Conflux
-* [What Team Structure is Right for DevOps to Flourish?](https://web.devopstopologies.com/) | devopstopologies.com
-* [6 Archetypes of Broken Ownership](https://blog.alexewerlof.com/p/broken-ownership) | Alex Ewerlöf | Aug 01, 2023
+* [How To Create a Compelling Product Vision That Will Drive Your Team](https://www.uxstudioteam.com/ux-blog/product-vision) | Dorottya Kiss @ UX studio | Nov 3, 2019
+* [How to craft a Product Goal](https://www.seriousscrum.com/page/how-to-craft-a-product-goal) | Sjoerd Nijland @ Serious Scrum
 * [The Role of Platform Engineering for Enterprise-scale Applications](https://insights.daffodilsw.com/blog/platform-engineering) | Nikita Sachdeva @ daffodil | Jun 1, 2023
 * [Maximizing Developer Effectiveness](https://martinfowler.com/articles/developer-effectiveness.html) | Tim Cochran @ martinFowler.com | Jan 26, 2021
 * [From junior to Jedi - cracking the leverage code](https://www.asyncagile.org/blog/from-junior-to-jedi-cracking-the-leverage-code) | Sumeet Moghe @ Async agile | 30 Jun, 2023
 * [The State of Cloud-Native Software Development](https://mogenius.com/blog-posts/the-state-of-cloud-native-software-development) | Marvin Tekautschitz @ mogenius
 * [How to Build a Platform Team (And Why You Need One)](https://deploy.equinix.com/blog/how-to-build-a-platform-team-and-why-you-need-one/) | Daniel Li @ Equinix | Jan 25, 2024
-* [How To Create a Compelling Product Vision That Will Drive Your Team](https://www.uxstudioteam.com/ux-blog/product-vision) | Dorottya Kiss @ UX studio | Nov 3, 2019
-* [How to craft a Product Goal](https://www.seriousscrum.com/page/how-to-craft-a-product-goal) | Sjoerd Nijland @ Serious Scrum
+* [Inverse-Conway-Maneuver: How to speed up product development teams successfully](https://www.thoughtworks.com/insights/blog/customer-experience/inverse-conway-maneuver-product-development-teams) | Tobias Soffner and Benjamin Cremer @ Thoughtworks | May 26, 2023
+* [DevOps Topologies](https://confluxhq.com/devops-topologies) | Matthew Skelton @ Conflux
+* [What Team Structure is Right for DevOps to Flourish?](https://web.devopstopologies.com/) | devopstopologies.com
+* [6 Archetypes of Broken Ownership](https://blog.alexewerlof.com/p/broken-ownership) | Alex Ewerlöf | Aug 01, 2023
 * [What I Talk About When I Talk About Platforms](https://martinfowler.com/articles/talk-about-platforms.html) | Evan Bottcher @ martinFowler.com | Mar 05, 2018
 * [Value Line](https://jshingler.github.io/blog/2023/04/01/valueline/) | Jim Shingler | April 1, 2023
 
