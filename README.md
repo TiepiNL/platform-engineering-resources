@@ -40,7 +40,7 @@ Each section below corresponds to one of the videos and contains links categoriz
 
 * [Thoughtworks Technology Radar Vol. 24 (2021)](https://www.thoughtworks.com/content/dam/thoughtworks/documents/radar/2021/04/tr_technology_radar_vol_24_en.pdf) (pdf)
 * [2021 State of DevOps Report](https://media.webteam.puppet.com/uploads/2021/07/Puppet-State-of-DevOps-Report-2021.pdf) (pdf)
-* [Gartner Top 10 Strategic Technology Trends for 2023](https://www.gartner.com/en/articles/gartner-top-10-strategic-technology-trends-for-2023) (pdf)
+* [Gartner Top 10 Strategic Technology Trends for 2023](https://www.gartner.com/en/articles/gartner-top-10-strategic-technology-trends-for-2023) ([pdf](https://www.gartner.com/document/code/775990) (paywall))
 * [2023 State of DevOps Report](https://www.puppet.com/system/files/report-puppet-sodor-2023-platform-engineering.pdf) (pdf)
 * [2024 State of DevOps Report](https://www.puppet.com/system/files/pup-2024-sodor-report.pdf) (pdf)
 
@@ -165,6 +165,7 @@ Coming soon. Planned release date: Feb 24, 2025.
 #### Reports
 
 * [Evidence-Based Management Guide](https://www.scrum.org/resources/online-evidence-based-management-guide) ([pdf](https://scrumorg-website-prod.s3.amazonaws.com/drupal/2024-05/Evidence%20Based%20Management%20Guide%202024.pdf?nexus-file=https%3A%2F%2Fscrumorg-website-prod.s3.amazonaws.com%2Fdrupal%2F2024-05%2FEvidence%2520Based%2520Management%2520Guide%25202024.pdf))
+* [Gartner Top 10 Strategic Technology Trends for 2023](https://www.gartner.com/en/articles/gartner-top-10-strategic-technology-trends-for-2023) ([pdf](https://www.gartner.com/document/code/775990) (paywall))
 * [2021 State of DevOps Report](https://media.webteam.puppet.com/uploads/2021/07/Puppet-State-of-DevOps-Report-2021.pdf) (pdf)
 * [2024 State of DevOps Report](https://www.puppet.com/system/files/pup-2024-sodor-report.pdf) (pdf)
 * [The Scrum Guide](https://scrumguides.org/scrum-guide.html) ([pdf](https://scrumguides.org/docs/scrumguide/v2020/2020-Scrum-Guide-US.pdf))
