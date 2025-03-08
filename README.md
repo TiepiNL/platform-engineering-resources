@@ -15,8 +15,8 @@ The series covers:
 | 1 | Why Platform Engineering is the Natural Evolution of DevOps | Jan 13, 2025 | [jump-to](#1-why-platform-engineering-is-the-natural-evolution-of-devops) | [YouTube](https://youtu.be/Qe9AafRDhTQ) | [EN](./video-series/closed-captioning/why-platform-engineering-is-the-natural-evolution-of-devops.vtt) |
 | 2 | What is an Internal Developer Platform?                     | Jan 27, 2025 | [jump-to](#2-what-is-an-internal-developer-platform) | [YouTube](https://youtu.be/uhycU7K0610) | [EN](./video-series/closed-captioning/what-is-an-internal-developer-platform.vtt) |
 | 3 | Platform-as-a-Product                                       | Feb 14, 2025 | [jump-to](#3-platform-as-a-product) | [YouTube](https://youtu.be/hj31U2D1QUQ) | [EN](./video-series/closed-captioning/platform-as-a-product.vtt) |
-| 4 | From Product Vision to Product Goal                         | Feb 26, 2025 | [jump-to](#4-from-product-vision-to-product-goal) | [YouTube](#) | [EN](#) |
-| 5 | Professional Development                                    | Mar 10, 2025 | [jump-to](#5-professional-development) | [YouTube](#) | [EN](#) |
+| 4 | From Product Vision to Product Goal                         | Mar 10, 2025 | [jump-to](#4-from-product-vision-to-product-goal) | [YouTube](#) | [EN](#) |
+| 5 | Professional Development                                    | Apr 7, 2025 | [jump-to](#5-professional-development) | [YouTube](#) | [EN](#) |
 | 6 | BONUS: Inverse Conway Maneuver                              | Mar 24, 2025 | [jump-to](#bonus-inverse-conway-maneuver) | [YouTube](#) | [EN](#) |
 
 ### Why This Repository?
@@ -161,7 +161,7 @@ Each section below corresponds to one of the videos and contains links categoriz
 
 ### 4. From Product Vision to Product Goal
 
-Coming soon. Planned release date: Feb 26, 2025.
+Coming soon. Planned release date: Mar 10, 2025.
 
 #### Reports
 
@@ -203,7 +203,7 @@ Coming soon. Planned release date: Feb 26, 2025.
 
 *Roles in a Platform Engineering Product Team.*
 
-Coming soon. Planned release date: Mar 10, 2025.
+Coming soon. Planned release date: Apr 7, 2025.
 
 ### BONUS: Inverse Conway Maneuver
 
