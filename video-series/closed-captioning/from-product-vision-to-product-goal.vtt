@@ -1,0 +1,3363 @@
+﻿WEBVTT
+
+00:00:01.120 --> 00:00:04.700
+Hi there! I'm Tom Peperkamp,
+a Platform Product Owner.
+
+00:00:05.500 --> 00:00:08.520
+That's right, platforms
+should be treated as products!
+
+00:00:09.860 --> 00:00:12.600
+Platform Engineering is a
+new and rapidly evolving field.
+
+00:00:13.900 --> 00:00:15.420
+To help you navigate this space,
+
+00:00:15.860 --> 00:00:18.120
+I've created a video
+series that dives into
+
+00:00:18.120 --> 00:00:20.880
+the why, what and how
+of Platform Engineering.
+
+00:00:21.720 --> 00:00:25.880
+This series pulls together insights
+from top-quality public resources,
+
+00:00:26.420 --> 00:00:28.380
+organizing them
+into focused topics
+
+00:00:28.780 --> 00:00:31.460
+to create a 'crash course'
+in Platform Engineering.
+
+00:00:32.200 --> 00:00:36.000
+Each video is curated to support
+your Platform Engineering journey,
+
+00:00:36.680 --> 00:00:38.760
+offering practical
+knowledge and insights
+
+00:00:39.160 --> 00:00:42.180
+to deepen your understanding
+of its principles and potential.
+
+00:00:43.180 --> 00:00:44.380
+Let's get started!
+
+00:00:47.280 --> 00:00:48.360
+Throughout my talk,
+
+00:00:48.500 --> 00:00:51.280
+I'll be referencing content from
+leading voices in our industry.
+
+00:00:52.300 --> 00:00:54.100
+A big shout out
+to these rockstars
+
+00:00:54.100 --> 00:00:56.420
+for their amazing blogs
+and conference talks!
+
+00:00:57.440 --> 00:01:00.240
+You'll find all the sources
+listed at the end of the video.
+
+00:01:01.160 --> 00:01:03.500
+These references
+aren't just for ethics,
+
+00:01:03.920 --> 00:01:07.560
+they're packed with valuable insights
+that I highly recommend exploring.
+
+00:01:08.240 --> 00:01:10.320
+So, if you enjoy this video,
+
+00:01:10.760 --> 00:01:12.980
+definitely check them
+out and dive deeper!
+
+00:01:16.070 --> 00:01:18.200
+Alright, let's talk
+about direction.
+
+00:01:19.540 --> 00:01:21.360
+Without a clear idea
+of where you're going,
+
+00:01:21.780 --> 00:01:23.920
+even the best team
+can feel lost at sea.
+
+00:01:24.720 --> 00:01:26.700
+Are you looking to
+shorten your time-to-market?
+
+00:01:27.470 --> 00:01:29.190
+Deliver more value
+with each release?
+
+00:01:29.850 --> 00:01:33.350
+Or maybe just bring a little
+sanity to your development cycles?
+
+00:01:34.580 --> 00:01:37.720
+In this video, "From Product
+Vision to Product Goal",
+
+00:01:38.280 --> 00:01:41.560
+we'll chart a course from the
+big, inspiring vision of your platform
+
+00:01:41.990 --> 00:01:45.730
+to the concrete, actionable goals
+that drive your team's daily work.
+
+00:01:47.240 --> 00:01:52.140
+We'll explore what a compelling
+(Platform as a) Product vision looks like,
+
+00:01:53.220 --> 00:01:55.280
+dive into proven
+frameworks for creating it,
+
+00:01:56.000 --> 00:01:57.700
+and then, most importantly,
+
+00:01:58.200 --> 00:02:00.160
+learn how to break that
+the grand vision down
+
+00:02:00.460 --> 00:02:03.240
+into smaller, manageable,
+and measurable goals.
+
+00:02:03.960 --> 00:02:06.680
+So, grab your compass,
+and let's get started!
+
+00:02:10.060 --> 00:02:12.560
+"You can do anything,
+but not everything."
+
+00:02:13.860 --> 00:02:17.220
+This quote from David Allen,
+the author of "Getting Things Done",
+
+00:02:17.620 --> 00:02:21.320
+reminds us that while we have
+the potential to achieve anything,
+
+00:02:21.740 --> 00:02:23.780
+we can't achieve
+everything simultaneously.
+
+00:02:24.860 --> 00:02:29.180
+It's about making choices and focusing
+our energy on the most impactful goals.
+
+00:02:31.310 --> 00:02:33.080
+In the context of
+Platform Engineering,
+
+00:02:33.406 --> 00:02:36.120
+this means prioritizing
+the features and capabilities
+
+00:02:36.540 --> 00:02:39.840
+that will deliver the most value to
+your developers and the business,
+
+00:02:40.380 --> 00:02:42.720
+rather than trying to
+build everything at once.
+
+00:02:46.040 --> 00:02:48.580
+Instead of diving straight
+into another quote,
+
+00:02:49.100 --> 00:02:51.680
+let's take a moment to
+reflect on the previous point.
+
+00:02:52.420 --> 00:02:55.620
+How often do we find ourselves
+trying to do everything at once,
+
+00:02:56.240 --> 00:02:59.460
+only to end up feeling
+overwhelmed and unproductive?
+
+00:03:00.800 --> 00:03:05.380
+It's a common trap, but one that we
+can avoid by setting a clear direction.
+
+00:03:06.720 --> 00:03:10.020
+Now, back to the quote
+by Roy Blount Jr., which
+
+00:03:10.420 --> 00:03:14.840
+emphasizes that the North is
+a direction, not a specific destination.
+
+00:03:15.980 --> 00:03:19.120
+Similarly, a vision
+is a guiding direction,
+
+00:03:19.280 --> 00:03:21.880
+not a SMART goal with
+all the details figured out.
+
+00:03:22.400 --> 00:03:24.180
+It's about setting a
+course for the future,
+
+00:03:24.440 --> 00:03:27.260
+allowing for flexibility and
+adaptation along the way.
+
+00:03:30.090 --> 00:03:33.400
+And there's a difference between
+a Product Vision and a Product Goal.
+
+00:03:34.240 --> 00:03:36.000
+The Product Vision
+is the "tower viewer",
+
+00:03:36.480 --> 00:03:38.120
+looking far into the future,
+
+00:03:38.440 --> 00:03:40.820
+while the Product
+Goal is a closer target,
+
+00:03:41.340 --> 00:03:43.400
+guiding the team's
+actions in the medium term.
+
+00:03:44.440 --> 00:03:47.620
+It's about aligning the team's daily
+efforts with the overarching vision,
+
+00:03:48.060 --> 00:03:50.880
+ensuring that every step
+contributes to the bigger picture.
+
+00:03:52.340 --> 00:03:54.420
+Think big vision,
+act small goals.
+
+00:03:57.130 --> 00:04:01.920
+This graphic from the Evidence-Based
+Management (EBM) Guide illustrates the
+
+00:04:01.920 --> 00:04:06.640
+three goal horizons that can help a Product
+Owner navigate the product landscape.
+
+00:04:07.600 --> 00:04:11.160
+Think of them as tactical,
+intermediate, and strategic goals.
+
+00:04:12.340 --> 00:04:15.610
+The "Strategic Goal" is
+your North Star, the vision.
+
+00:04:16.640 --> 00:04:17.960
+But how do you get there?
+
+00:04:18.780 --> 00:04:22.300
+Well, the EBM Guide
+suggests an iterative approach:
+
+00:04:22.900 --> 00:04:26.660
+experimenting, inspecting, and
+adapting to reach those goals.
+
+00:04:27.380 --> 00:04:29.720
+This is where the "Immediate
+Tactical Goal" comes in.
+
+00:04:30.680 --> 00:04:33.620
+It's the focus of your
+current sprint or iteration,
+
+00:04:34.120 --> 00:04:36.000
+something achievable
+in the short term.
+
+00:04:36.940 --> 00:04:40.760
+You form a hypothesis,
+experiment, measure the results,
+
+00:04:41.040 --> 00:04:44.520
+inspect what you've learned, and
+adapt your approach accordingly.
+
+00:04:45.280 --> 00:04:48.200
+It's here that Agile
+ways of working shine,
+
+00:04:48.580 --> 00:04:52.120
+allowing you to incrementally
+deliver value and make progress
+
+00:04:52.120 --> 00:04:54.720
+towards your larger
+goals, adjusting as you go.
+
+00:04:55.780 --> 00:04:59.240
+It's all about reaching strategic
+goals together, step by step.
+
+00:05:02.020 --> 00:05:05.470
+A Lean Value Tree
+(LVT), is a great tool
+
+00:05:05.470 --> 00:05:07.750
+for visualizing and
+breaking down your strategy.
+
+00:05:08.380 --> 00:05:12.720
+It starts with your vision –
+that lofty, inspiring statement.
+
+00:05:13.680 --> 00:05:15.580
+But how do you make
+that vision a reality?
+
+00:05:16.560 --> 00:05:19.040
+That's where the LVT comes in.
+
+00:05:20.420 --> 00:05:22.420
+Beneath the vision,
+you have your goals –
+
+00:05:23.120 --> 00:05:26.220
+what specifically needs to be
+achieved to realize that vision?
+
+00:05:27.040 --> 00:05:29.860
+Then, for each
+goal, you define "bets" –
+
+00:05:30.700 --> 00:05:34.640
+these are your hypotheses about
+what will drive progress towards that goal.
+
+00:05:35.920 --> 00:05:39.500
+Finally, for each bet, you
+outline the concrete initiatives –
+
+00:05:40.020 --> 00:05:43.240
+the actual tasks you'll
+undertake to test your hypotheses.
+
+00:05:44.880 --> 00:05:47.760
+The key is to frame
+everything in terms of outcomes.
+
+00:05:48.410 --> 00:05:50.370
+What impact are you
+hoping to achieve?
+
+00:05:51.100 --> 00:05:53.680
+And how will you measure
+progress and validate success?
+
+00:05:54.460 --> 00:05:56.340
+Just like those Jobs To Be Done
+
+00:05:56.340 --> 00:05:58.500
+we discussed in the
+Platform-as-a-Product video!
+
+00:05:59.460 --> 00:06:03.660
+The LVT forces you to connect every
+action back to the overarching vision,
+
+00:06:04.160 --> 00:06:08.560
+ensuring that your team is always working
+towards the most impactful outcomes.
+
+00:06:09.220 --> 00:06:13.720
+Think of it as brewing the
+perfect strategy, drop by drop!
+
+00:06:17.000 --> 00:06:20.820
+All right, now that we understand
+the importance of vision and goals,
+
+00:06:21.200 --> 00:06:22.240
+let's get practical.
+
+00:06:22.940 --> 00:06:26.100
+In this section, we'll
+explore the crucial step
+
+00:06:26.100 --> 00:06:29.500
+of translating that big
+vision into actionable goals.
+
+00:06:30.180 --> 00:06:34.440
+It's important to remember that
+creating a compelling vision is teamwork.
+
+00:06:35.200 --> 00:06:39.020
+It's a collaborative process that requires
+bringing the right people together,
+
+00:06:39.520 --> 00:06:41.020
+bouncing ideas off each other,
+
+00:06:41.500 --> 00:06:44.100
+and leading workshops
+to explore the possibilities.
+
+00:06:44.920 --> 00:06:46.580
+Don't try to do
+this in a vacuum!
+
+00:06:49.460 --> 00:06:53.020
+We'll also delve into some
+useful frameworks for ideation,
+
+00:06:53.480 --> 00:06:57.300
+helping you structure your thinking
+and create a vision that truly resonates.
+
+00:07:00.080 --> 00:07:02.490
+Creating a compelling
+vision starts with
+
+00:07:02.490 --> 00:07:05.350
+painting a bigger picture of
+the future you want to create.
+
+00:07:05.960 --> 00:07:08.460
+The text here is an
+example of such a vision,
+
+00:07:08.840 --> 00:07:10.880
+inspired by the
+evolution of DevOps,
+
+00:07:11.220 --> 00:07:13.780
+as we discussed in the
+first video of this series.
+
+00:07:14.580 --> 00:07:18.120
+It envisions a future where
+everyone is a developer in some way,
+
+00:07:18.460 --> 00:07:21.320
+and where all these
+developers are empowered by
+
+00:07:21.320 --> 00:07:24.560
+self-service Internal
+Developer Platforms (IDPs),
+
+00:07:25.040 --> 00:07:27.080
+allowing them to
+focus on innovation
+
+00:07:27.380 --> 00:07:31.160
+while specialized platform teams
+handle operational responsibilities.
+
+00:07:32.020 --> 00:07:36.760
+It's a future where cognitive load is
+sustainable and delivery is accelerated.
+
+00:07:37.540 --> 00:07:40.740
+Think tower viewer,
+think far, think big.
+
+00:07:44.080 --> 00:07:46.860
+The showcased example
+of a product vision statement
+
+00:07:47.200 --> 00:07:50.480
+is not very effective due
+to its length and complexity.
+
+00:07:51.240 --> 00:07:55.200
+It's important to keep vision statements
+concise and easy to understand,
+
+00:07:55.740 --> 00:07:59.060
+capturing the essence
+of the desired future state
+
+00:07:59.380 --> 00:08:01.460
+in a way that resonates
+with everyone.
+
+00:08:02.180 --> 00:08:03.700
+Does this statement inspire you?
+
+00:08:07.100 --> 00:08:09.720
+The key to writing an
+effective vision statement
+
+00:08:09.720 --> 00:08:11.520
+centered on the
+customer's aspirational goals,
+
+00:08:11.920 --> 00:08:13.480
+in 15 words or less,
+
+00:08:13.880 --> 00:08:16.180
+is to focus on the
+impact you seek to make.
+
+00:08:17.020 --> 00:08:19.300
+Make statements
+convincing and effective.
+
+00:08:20.600 --> 00:08:22.700
+American Express has
+a great vision statement.
+
+00:08:23.840 --> 00:08:25.660
+"Become essential
+to our customers...
+
+00:08:26.160 --> 00:08:28.720
+...by providing differentiated
+products and services...
+
+00:08:29.120 --> 00:08:31.100
+...to help them achieve
+their aspirations."
+
+00:08:32.419 --> 00:08:34.299
+Why is this a powerful example?
+
+00:08:35.280 --> 00:08:37.980
+Because it's focused on the
+customer, not the company.
+
+00:08:38.720 --> 00:08:40.920
+It's about helping them
+achieve their aspirations.
+
+00:08:42.279 --> 00:08:44.520
+And that's crucial in
+Platform Engineering too!
+
+00:08:45.280 --> 00:08:47.460
+Your "customers"
+are your developers,
+
+00:08:47.860 --> 00:08:51.200
+and your vision should focus
+on how you're enabling them
+
+00:08:51.200 --> 00:08:53.780
+to be more productive,
+innovative and successful.
+
+00:08:55.360 --> 00:08:57.680
+The father of
+visions, Roman Pichler,
+
+00:08:58.280 --> 00:08:59.820
+calls the ideal product vision
+
+00:09:00.720 --> 00:09:05.840
+Clear &amp; stable: Every participant
+should find it easy to understand,
+
+00:09:06.400 --> 00:09:10.420
+so avoid empty phrases that
+don't say anything (aka bullshit).
+
+00:09:11.380 --> 00:09:16.640
+Broad &amp; engaging: It should depict a
+higher picture that everyone can relate to
+
+00:09:16.640 --> 00:09:19.640
+and that inspires people to
+give their best to make it happen.
+
+00:09:20.620 --> 00:09:23.980
+And, short &amp; sweet: It needs
+to get straight to the point.
+
+00:09:25.280 --> 00:09:27.600
+Additionally, make
+it: Achievable,
+
+00:09:28.547 --> 00:09:31.765
+Although a vision should
+be a futuristic idea of what the
+
+00:09:32.182 --> 00:09:35.900
+product might become, set a
+goal that can be actually met.
+
+00:09:37.100 --> 00:09:40.988
+Insightful: Craft the idea based
+on users’ needs and motives
+
+00:09:41.412 --> 00:09:44.100
+and define the main reason
+behind the product’s existence.
+
+00:09:47.024 --> 00:09:50.724
+Do you think the platform purpose
+as described by Team Topologies
+
+00:09:50.948 --> 00:09:53.748
+is compelling enough to be
+used as a vision statement?
+
+00:09:55.100 --> 00:09:58.300
+It's important to have a vision
+that not only guides the team,
+
+00:09:58.620 --> 00:10:00.880
+but also inspires
+and motivates them,
+
+00:10:01.440 --> 00:10:03.860
+something they can
+believe in and strive towards.
+
+00:10:04.740 --> 00:10:07.560
+This purpose, like the
+American Express statement,
+
+00:10:07.920 --> 00:10:12.200
+focuses on enabling others, in
+this case, stream-aligned teams,
+
+00:10:12.700 --> 00:10:13.800
+to achieve their goals.
+
+00:10:14.660 --> 00:10:17.520
+By providing autonomy
+and self-service capabilities,
+
+00:10:17.980 --> 00:10:20.340
+the platform empowers
+them to do their best work.
+
+00:10:21.160 --> 00:10:23.360
+But can this
+statement itself serve
+
+00:10:23.360 --> 00:10:27.440
+as a compelling vision and truly
+"sell" the value of your platform?
+
+00:10:28.640 --> 00:10:29.740
+As we'll see in a minute,
+
+00:10:30.040 --> 00:10:34.820
+different frameworks can help us shape such
+a purpose into a more inspiring vision.
+
+00:10:38.000 --> 00:10:41.000
+There are various frameworks for
+creating vision statements out there,
+
+00:10:41.280 --> 00:10:43.300
+each with a slightly
+different perspective.
+
+00:10:44.400 --> 00:10:46.920
+The ease of use with these
+fill-in-the-blank approaches
+
+00:10:47.220 --> 00:10:50.980
+comes in helping product teams
+structure their thinking and ensure that
+
+00:10:50.980 --> 00:10:54.200
+their vision statement is
+clear, concise, and compelling.
+
+00:10:55.520 --> 00:10:58.640
+These frameworks can help
+you focus on customer value
+
+00:10:59.040 --> 00:11:00.660
+and align with Agile principles.
+
+00:11:01.460 --> 00:11:02.300
+In a way,
+
+00:11:02.300 --> 00:11:06.540
+you can think of each filled-in framework
+as a potential hypothesis to test.
+
+00:11:07.760 --> 00:11:10.980
+Do our developers really
+want "App Store convenience
+
+00:11:10.980 --> 00:11:12.700
+for internal infrastructure
+and services"?
+
+00:11:13.620 --> 00:11:17.700
+That's something you can validate through
+user research and iterative development.
+
+00:11:18.900 --> 00:11:21.800
+Did you recognize the structure
+of one of these frameworks
+
+00:11:22.180 --> 00:11:25.360
+in your current vision statement
+(assuming you have one)?
+
+00:11:27.950 --> 00:11:31.680
+This view introduces Jeffrey
+Moore's product vision template
+
+00:11:31.880 --> 00:11:35.420
+as a tool for creating a concise
+and compelling vision statement.
+
+00:11:36.280 --> 00:11:39.500
+It emphasizes the importance of
+understanding the target customer,
+
+00:11:39.700 --> 00:11:42.460
+their needs, and the unique
+benefits of the product.
+
+00:11:43.240 --> 00:11:45.000
+It differs from other frameworks
+
+00:11:45.000 --> 00:11:48.040
+by focusing on differentiation
+and competitive advantage.
+
+00:11:48.800 --> 00:11:51.700
+It's all about finding your
+unique place in the market.
+
+00:11:52.560 --> 00:11:54.780
+Or in this case within
+your organization.
+
+00:11:58.160 --> 00:12:02.040
+These examples showcase
+how the same thing, an IDP,
+
+00:12:02.600 --> 00:12:04.760
+can be positioned in
+completely different ways
+
+00:12:05.360 --> 00:12:08.540
+depending on the target
+customer and their specific needs
+
+00:12:08.900 --> 00:12:11.020
+by using Moore's
+product vision template.
+
+00:12:12.480 --> 00:12:16.400
+Notice how the first statement is
+targeted at internal development teams
+
+00:12:17.100 --> 00:12:21.340
+who need to provision cloud resources
+quickly without cloud complexity.
+
+00:12:22.460 --> 00:12:24.440
+It emphasizes ease
+of use and speed.
+
+00:12:25.240 --> 00:12:28.020
+The second statement
+is for DevOps teams
+
+00:12:28.020 --> 00:12:30.080
+managing Kubernetes
+-based applications
+
+00:12:30.080 --> 00:12:33.200
+who need flexibility
+without operational burden.
+
+00:12:34.420 --> 00:12:37.580
+It focuses on integration
+and reduced overhead.
+
+00:12:38.560 --> 00:12:41.820
+And the third statement
+is aimed at product teams
+
+00:12:41.820 --> 00:12:45.500
+who need a unified platform
+experience to ship software efficiently.
+
+00:12:46.320 --> 00:12:49.900
+Highlighting curated workflows and
+deep integration with internal tooling.
+
+00:12:53.210 --> 00:12:56.120
+The key takeaway here is
+that your vision statement
+
+00:12:56.120 --> 00:12:59.240
+and therefore your product
+goals need to be tailored
+
+00:12:59.760 --> 00:13:02.920
+to your specific audience
+and their unique challenges.
+
+00:13:03.680 --> 00:13:07.200
+What changes do you need to be
+able to convince your stakeholders?
+
+00:13:07.940 --> 00:13:09.880
+More on this stakeholder
+perspective later.
+
+00:13:13.240 --> 00:13:17.580
+This product vision board by Roman
+Pickler captures the whole concept
+
+00:13:17.580 --> 00:13:20.880
+of the product covering key
+topics for vision formulations.
+
+00:13:21.520 --> 00:13:25.810
+Target audience, customer needs,
+product attributes, and business goals.
+
+00:13:28.920 --> 00:13:31.160
+If you are familiar with
+the Business Model Canvas
+
+00:13:31.160 --> 00:13:33.680
+or the Lean Canvas,
+you'll notice similarities.
+
+00:13:34.600 --> 00:13:37.480
+While the Product Vision
+Board prioritizes the user,
+
+00:13:38.020 --> 00:13:40.820
+the BMC brings broader
+business considerations
+
+00:13:41.320 --> 00:13:44.100
+and the Lean Canvas focuses
+on riskiest assumptions.
+
+00:13:45.080 --> 00:13:46.560
+These models
+strengthen each other.
+
+00:13:47.060 --> 00:13:49.020
+A defined target from the PVB
+
+00:13:49.020 --> 00:13:52.660
+informs the customer segment
+on the BMC / Lean Canvas,
+
+00:13:53.020 --> 00:13:55.940
+which can then enforce
+research and economic viability.
+
+00:13:57.140 --> 00:13:59.360
+It's not a static
+one -time exercise.
+
+00:13:59.920 --> 00:14:01.980
+Treat all of these models
+like living documents,
+
+00:14:02.580 --> 00:14:04.660
+constantly evolving
+as you learn and adapt.
+
+00:14:05.700 --> 00:14:08.980
+Revisit the product vision board
+any time change becomes necessary.
+
+00:14:09.620 --> 00:14:13.580
+Conduct further market research,
+user tests, and other ways of validation.
+
+00:14:14.740 --> 00:14:18.220
+Multiple things might change
+here, and keep everybody up to date
+
+00:14:18.620 --> 00:14:20.340
+on the current
+state of the vision.
+
+00:14:23.240 --> 00:14:24.920
+This quote by David Ogilvie,
+
+00:14:25.860 --> 00:14:28.400
+if it doesn't sell,
+it isn't creative,
+
+00:14:28.800 --> 00:14:31.940
+reminds us that even
+the most innovative ideas
+
+00:14:32.240 --> 00:14:34.180
+need to be marketable
+and compelling.
+
+00:14:35.000 --> 00:14:38.720
+So, how can we make our
+platform vision truly sell?
+
+00:14:40.200 --> 00:14:43.900
+One fun and effective technique
+is the product box innovation game.
+
+00:14:44.540 --> 00:14:47.560
+Imagine you're designing the
+packaging for your platform.
+
+00:14:48.640 --> 00:14:51.560
+What would it look like? What
+key features would you highlight?
+
+00:14:52.280 --> 00:14:53.800
+What catchy slogan
+would you use?
+
+00:14:55.120 --> 00:14:58.500
+This exercise forces you to
+distill the essence of your platform
+
+00:14:59.100 --> 00:15:01.440
+into a concise and
+compelling message.
+
+00:15:01.980 --> 00:15:05.380
+Also, it's really important to
+come up with a good product name.
+
+00:15:06.440 --> 00:15:09.880
+Why? A great name can
+capture the imagination,
+
+00:15:10.280 --> 00:15:14.160
+create a sense of identity, and
+make your platform more memorable.
+
+00:15:15.200 --> 00:15:16.560
+A bad name, on the other hand,
+
+00:15:16.620 --> 00:15:19.400
+can create confusion
+and undermine your efforts.
+
+00:15:20.440 --> 00:15:25.020
+Remember, think like a marketer,
+and make your vision sell itself.
+
+00:15:28.280 --> 00:15:32.240
+So, you've crafted a powerful
+vision statement. Now what?
+
+00:15:33.080 --> 00:15:35.380
+It's time to turn that
+dream into reality.
+
+00:15:35.860 --> 00:15:37.360
+And as Napoleon Hill said,
+
+00:15:37.700 --> 00:15:39.820
+a goal is a dream
+with a deadline.
+
+00:15:40.580 --> 00:15:42.300
+Let's move on to
+the product goal.
+
+00:15:45.340 --> 00:15:49.200
+Crafting a product goal is about
+bringing focus and action to that vision.
+
+00:15:50.440 --> 00:15:51.980
+And to get there,
+it has to be
+
+00:15:52.440 --> 00:15:56.400
+Strategic: it should describe the
+desired future state of the product,
+
+00:15:57.180 --> 00:15:59.280
+tying directly back
+to the overall vision.
+
+00:16:00.260 --> 00:16:02.520
+Focused: it needs
+to be specific.
+
+00:16:03.380 --> 00:16:05.500
+Why are we unwilling
+to postpone this?
+
+00:16:06.120 --> 00:16:09.120
+Why are we willing to accept
+this challenge over others?
+
+00:16:10.080 --> 00:16:13.240
+Empirical: it needs
+to support empiricism.
+
+00:16:14.600 --> 00:16:16.880
+What's the most important
+thing we need to learn first?
+
+00:16:17.520 --> 00:16:20.060
+What's the least amount of
+work needed? To learn this.
+
+00:16:20.880 --> 00:16:25.600
+Measurable outcomes: what problems
+need to be solved? How will it add value?
+
+00:16:26.620 --> 00:16:29.860
+How will we know when we've reached
+the goal? And what's the deadline?
+
+00:16:31.460 --> 00:16:35.080
+Interestingly, there are many
+frameworks for creating vision statements,
+
+00:16:35.400 --> 00:16:38.200
+but surprisingly few for
+crafting product goals.
+
+00:16:40.800 --> 00:16:44.080
+After setting the Product Goal,
+start working on a product roadmap
+
+00:16:44.080 --> 00:16:48.340
+and create a product backlog to
+define what will fulfill the Product Goal.
+
+00:16:50.280 --> 00:16:52.180
+Okay. It's time
+for the fun part.
+
+00:16:53.320 --> 00:16:57.720
+Now we'll start a search for suitable
+candidates for your IDP Product Goal.
+
+00:16:58.560 --> 00:17:00.780
+We'll explore different
+potential focus areas
+
+00:17:01.080 --> 00:17:03.200
+from various
+stakeholder perspectives.
+
+00:17:03.760 --> 00:17:05.600
+We'll analyze the pros and cons,
+
+00:17:05.760 --> 00:17:07.499
+ultimately helping
+you choose the goal
+
+00:17:07.699 --> 00:17:10.960
+that best aligns with your
+organization's needs and priorities.
+
+00:17:12.879 --> 00:17:14.520
+Cue the dramatic music.
+
+00:17:23.380 --> 00:17:27.240
+This slide reiterates the platform
+purpose from Team Topologies:
+
+00:17:28.140 --> 00:17:30.940
+Enable stream aligned teams
+to deliver work autonomously
+
+00:17:31.240 --> 00:17:32.860
+with self -service capabilities.
+
+00:17:34.240 --> 00:17:36.460
+Think of it like a
+platform mantra.
+
+00:17:39.460 --> 00:17:43.460
+In order to reduce extraneous
+cognitive load on stream aligned teams.
+
+00:17:45.340 --> 00:17:47.480
+Combined, it's a single
+purpose statement.
+
+00:17:48.520 --> 00:17:51.800
+Now you might think,
+great, that's our product goal.
+
+00:17:52.960 --> 00:17:54.080
+But hold on.
+
+00:17:54.460 --> 00:17:57.620
+A purpose statement is
+directional. It's not a goal on its own.
+
+00:17:59.000 --> 00:18:00.180
+It informs your product goal,
+
+00:18:00.860 --> 00:18:04.700
+but it needs to be more specific,
+more measurable, and more focused.
+
+00:18:06.340 --> 00:18:09.960
+What specific aspect of extraneous
+cognitive load are you targeting?
+
+00:18:11.460 --> 00:18:13.000
+And how will you
+measure your progress?
+
+00:18:13.640 --> 00:18:16.460
+That's what transforms a
+purpose into a true product goal.
+
+00:18:19.500 --> 00:18:23.180
+Team topologies also highlights
+these three key platform characteristics.
+
+00:18:23.820 --> 00:18:27.080
+Reliable, fit for purpose,
+and focused on DevEx.
+
+00:18:28.100 --> 00:18:30.520
+Could one of these be the
+foundation for a product goal?
+
+00:18:31.600 --> 00:18:32.660
+Absolutely.
+
+00:18:33.600 --> 00:18:36.940
+Each of these characteristics
+represents a valuable area of focus
+
+00:18:36.940 --> 00:18:38.000
+for your platform team.
+
+00:18:39.000 --> 00:18:40.180
+The key is to drill down
+
+00:18:40.180 --> 00:18:43.580
+and define specifically
+what reliable,
+
+00:18:45.000 --> 00:18:48.340
+fit for purpose,
+or DevEx focus is.
+
+00:18:53.480 --> 00:18:56.460
+Let's take reliable
+platform as an example.
+
+00:18:57.540 --> 00:19:01.280
+Team topologies lists several
+elements that contribute to reliability.
+
+00:19:02.540 --> 00:19:04.860
+On -call support,
+service status pages,
+
+00:19:05.680 --> 00:19:09.040
+suitable comms channels,
+response time for incidents,
+
+00:19:09.580 --> 00:19:10.960
+and planned and
+announced downtime.
+
+00:19:11.880 --> 00:19:14.020
+How could we turn
+this into a product goal?
+
+00:19:15.140 --> 00:19:17.380
+Instead of focusing on
+a service status page,
+
+00:19:17.960 --> 00:19:20.700
+let's phrase it as a
+Jobs-To-Be-Done style to need.
+
+00:19:21.540 --> 00:19:24.580
+When our platform has
+downtime, planned or unplanned,
+
+00:19:25.080 --> 00:19:27.120
+I want to provide
+developers with insights
+
+00:19:27.220 --> 00:19:30.340
+into the current status
+in an intuitive way.
+
+00:19:31.640 --> 00:19:34.840
+That is already way more
+concrete than reliable platform.
+
+00:19:35.780 --> 00:19:37.740
+We can continue with
+such a product goal
+
+00:19:38.140 --> 00:19:42.000
+by first making the service status
+page visible on the developer portal,
+
+00:19:42.580 --> 00:19:44.500
+and then try to automate
+as much as possible.
+
+00:19:45.360 --> 00:19:46.820
+Connected with the
+monitoring system,
+
+00:19:47.400 --> 00:19:50.000
+connect downtime announcements
+with slack channels, etc.
+
+00:19:51.100 --> 00:19:54.600
+See how that goal has body and
+can shape the product backlog?
+
+00:19:57.460 --> 00:19:59.300
+What about "Fit for
+Purpose Platform"?
+
+00:20:00.440 --> 00:20:05.920
+Team topologies suggest prototyping,
+fast/regular feedback, agile practices,
+
+00:20:06.720 --> 00:20:10.420
+few(er) services with high(er) quality,
+and skilled product management.
+
+00:20:11.320 --> 00:20:14.600
+Let's say you want to focus
+on "Fast, regular feedback".
+
+00:20:16.080 --> 00:20:20.140
+A product goal could be: "Have
+a clearly defined feedback loop...
+
+00:20:20.620 --> 00:20:23.960
+(for example: surveys, user
+interviews, usage metrics),
+
+00:20:24.320 --> 00:20:26.860
+with stream-aligned teams
+for all platform services...
+
+00:20:26.860 --> 00:20:30.580
+...by the end of Q2, as measured
+by our platform service catalog".
+
+00:20:32.220 --> 00:20:35.900
+This goal is measurable,
+achievable, and directly addresses
+
+00:20:35.900 --> 00:20:39.600
+the need for regular feedback to ensure
+the platform remains fit for purpose.
+
+00:20:42.460 --> 00:20:44.800
+And finally, a "DevEx
+Focused Platform".
+
+00:20:45.880 --> 00:20:50.040
+Here, Team Topologies emphasizes
+speaking the same language
+
+00:20:50.140 --> 00:20:52.580
+and providing the right
+level of abstractions
+
+00:20:52.600 --> 00:20:54.260
+for your engineering
+teams today.
+
+00:20:56.960 --> 00:20:59.620
+Let's say you discover
+that a common pain point
+
+00:20:59.620 --> 00:21:03.160
+is the level of abstraction
+for different platform services.
+
+00:21:04.000 --> 00:21:07.580
+A Product Goal could be:
+"Have sensible defaults in place...
+
+00:21:08.000 --> 00:21:09.280
+...for all platform services."
+
+00:21:10.140 --> 00:21:13.780
+In line with the "opinionated
+but sensible" TVP principle,
+
+00:21:14.280 --> 00:21:18.200
+this product goal enforces a more
+user-friendly platform experience
+
+00:21:18.200 --> 00:21:21.780
+by lowering the amount of
+entry-level parameters to configure.
+
+00:21:25.440 --> 00:21:26.800
+What other options do we have
+
+00:21:26.800 --> 00:21:31.540
+to transform this more general
+DevEx-focused platform goal
+
+00:21:31.540 --> 00:21:34.040
+to something specific
+for your organization?
+
+00:21:37.560 --> 00:21:38.620
+Perhaps you are thinking
+
+00:21:38.620 --> 00:21:41.780
+that all the answers from the
+previous slide are listed here.
+
+00:21:42.220 --> 00:21:45.320
+Enhancing developer experience,
+empowering productivity,
+
+00:21:46.240 --> 00:21:50.140
+facilitating smooth collaboration,
+accelerating release velocity,
+
+00:21:50.700 --> 00:21:54.380
+ensuring robust security,
+enabling seamless scalability,
+
+00:21:55.200 --> 00:21:57.120
+and optimizing
+operational efficiency.
+
+00:21:59.080 --> 00:22:00.780
+Why not strive for
+all of these benefits?
+
+00:22:02.160 --> 00:22:07.020
+An IDP could have all of these
+benefits, but it's crucial to remember that
+
+00:22:07.620 --> 00:22:10.080
+"you can do anything,
+but not everything"
+
+00:22:10.800 --> 00:22:12.100
+quote from earlier.
+
+00:22:13.140 --> 00:22:15.320
+Trying to tackle all of
+these benefits at once
+
+00:22:15.320 --> 00:22:16.780
+is a recipe for disaster.
+
+00:22:18.100 --> 00:22:19.120
+Focus is key.
+
+00:22:20.740 --> 00:22:23.300
+You need a specific,
+intermediate Product Goal
+
+00:22:23.300 --> 00:22:25.420
+that aligns with
+your overall vision
+
+00:22:25.420 --> 00:22:28.000
+but is achievable in a
+reasonable time frame.
+
+00:22:29.300 --> 00:22:31.000
+Think back to that
+Lean Value Tree!
+
+00:22:33.420 --> 00:22:36.020
+This slide highlights the power
+of linking your Product Goals
+
+00:22:36.020 --> 00:22:37.620
+to broader business objectives.
+
+00:22:38.700 --> 00:22:42.740
+Each technical implementation should
+directly support a key business driver,
+
+00:22:43.380 --> 00:22:46.100
+whether it's minimizing
+mistakes, increasing velocity,
+
+00:22:46.980 --> 00:22:51.060
+improving products, enforcing
+compliance, or reducing lock-in.
+
+00:22:52.660 --> 00:22:56.100
+By explicitly connecting your
+platform efforts to these objectives,
+
+00:22:56.740 --> 00:22:58.380
+you make a stronger
+case for investment
+
+00:22:58.380 --> 00:23:02.960
+and ensure that your work is aligned
+with the overall goals of the organization.
+
+00:23:03.740 --> 00:23:05.900
+Are those objectives
+applicable to your company?
+
+00:23:06.920 --> 00:23:10.420
+We'll see in the next slide that
+cost optimization and talent retention
+
+00:23:10.420 --> 00:23:12.860
+can also be significant
+business objectives.
+
+00:23:16.460 --> 00:23:19.620
+This graphic, from Gartner's
+Top Strategic Technology Trends,
+
+00:23:19.620 --> 00:23:23.580
+showcases how Platform Engineering
+aligns with critical business goals.
+
+00:23:24.480 --> 00:23:25.660
+Gartner noted that
+
+00:23:25.800 --> 00:23:28.700
+"forward-thinking companies have
+begun to build operating platforms...
+
+00:23:28.700 --> 00:23:34.320
+...that sit between the user and the
+backing services on which they rely."
+
+00:23:34.760 --> 00:23:37.580
+They also predict that "by 2026,
+
+00:23:37.580 --> 00:23:42.300
+80% of software engineering organizations
+will establish platform teams...
+
+00:23:42.300 --> 00:23:45.060
+...as internal providers
+of reusable services,
+
+00:23:45.900 --> 00:23:48.260
+components, and tools
+for application delivery."
+
+00:23:50.040 --> 00:23:54.560
+You see, Gartner directly connects
+Platform Engineering as a technology trend
+
+00:23:55.020 --> 00:23:58.220
+to the business goals:
+creating secure foundations,
+
+00:23:58.860 --> 00:24:02.640
+attracting and retaining talent, and
+accelerating digital transformation.
+
+00:24:03.980 --> 00:24:08.720
+So, how does this help us
+move from vision to Product Goal?
+
+00:24:09.840 --> 00:24:13.040
+By understanding the business
+imperative behind your platform vision,
+
+00:24:13.700 --> 00:24:16.240
+you can prioritize and
+select a Product Goal
+
+00:24:16.240 --> 00:24:18.780
+that drives the most
+significant business value
+
+00:24:18.780 --> 00:24:21.200
+while still resonating
+with your developers.
+
+00:24:22.180 --> 00:24:25.780
+Are you primarily building a platform
+to accelerate digital transformation?
+
+00:24:26.780 --> 00:24:29.080
+or are you aiming to create
+more secure foundations?
+
+00:24:30.200 --> 00:24:33.940
+This informs your Product Goal and the
+metrics you'll use to measure success.
+
+00:24:37.540 --> 00:24:40.840
+Internal Developer Platforms
+aren't just for developers,
+
+00:24:41.660 --> 00:24:44.100
+they offer benefits to
+the entire organization!
+
+00:24:44.620 --> 00:24:45.800
+As promised earlier,
+
+00:24:46.400 --> 00:24:48.640
+let's take a deeper look at
+the stakeholder perspective.
+
+00:24:49.720 --> 00:24:52.560
+This image highlights
+some of the key stakeholders
+
+00:24:52.560 --> 00:24:53.880
+and their respective interests.
+
+00:24:54.780 --> 00:24:58.480
+Think about it from the
+perspective of your CIO.
+
+00:24:59.440 --> 00:25:02.240
+They're likely focused on slashing
+lead time and time to market.
+
+00:25:03.040 --> 00:25:05.740
+For Finance, it's all
+about saving cloud costs.
+
+00:25:06.880 --> 00:25:08.520
+Operations wants
+to drive automation,
+
+00:25:09.180 --> 00:25:12.260
+while the CISO is focused
+on compliance by design.
+
+00:25:13.720 --> 00:25:16.660
+Application Developers are
+clamoring for self-service and speed,
+
+00:25:16.660 --> 00:25:19.460
+and Architects are
+driving standardization.
+
+00:25:20.180 --> 00:25:21.460
+And what about HR?
+
+00:25:21.860 --> 00:25:25.580
+Human Resources wants
+to attract and retain talent.
+
+00:25:26.240 --> 00:25:28.060
+Dr. Nicole Forsgren nailed it:
+
+00:25:29.080 --> 00:25:32.020
+"It is well known that software
+engineers don't leave jobs,
+
+00:25:32.500 --> 00:25:35.220
+they leave managers. But
+they also leave systems."
+
+00:25:36.340 --> 00:25:39.800
+Building a great platform can
+directly contribute to talent retention!
+
+00:25:41.280 --> 00:25:44.320
+From this perspective, you can
+see the many different directions
+
+00:25:44.320 --> 00:25:46.240
+you could take
+your Product Goal.
+
+00:25:47.220 --> 00:25:48.740
+Let your stakeholders
+be your guide!
+
+00:25:50.160 --> 00:25:52.980
+Knowing their needs is
+already half of the work.
+
+00:25:56.440 --> 00:25:58.700
+All right. After
+careful deliberation,
+
+00:25:59.300 --> 00:26:02.580
+and considering all the business
+objectives and stakeholder perspectives,
+
+00:26:02.600 --> 00:26:06.540
+we've narrowed down our "nominees"
+for the Product Goal top spot!
+
+00:26:07.800 --> 00:26:09.120
+And the nominees are...
+
+00:26:11.300 --> 00:26:12.420
+...for: Enabling Fast Flow!
+
+00:26:14.580 --> 00:26:16.880
+...for: Significantly
+Reducing Cognitive Load!
+
+00:26:19.300 --> 00:26:20.860
+...for: Proactively
+Enhancing Security!
+
+00:26:22.580 --> 00:26:24.540
+These three emerged
+as the most promising
+
+00:26:24.640 --> 00:26:28.600
+based on our exploration of
+aligning technical mechanisms
+
+00:26:28.600 --> 00:26:30.660
+with overarching business goals.
+
+00:26:31.520 --> 00:26:33.840
+As we saw, these
+are all strongly related
+
+00:26:33.840 --> 00:26:36.860
+and important in the whole
+Platform Engineering context.
+
+00:26:37.640 --> 00:26:38.780
+But it's only an example!
+
+00:26:39.560 --> 00:26:41.840
+In your situation, you
+may get other nominees.
+
+00:26:43.340 --> 00:26:45.500
+Let's take a closer look at
+each of these contenders.
+
+00:26:48.500 --> 00:26:51.380
+So, why is fast flow
+a strong contender?
+
+00:26:52.480 --> 00:26:53.700
+In our previous videos,
+
+00:26:54.220 --> 00:26:56.860
+we emphasized the
+importance of developer velocity.
+
+00:26:57.860 --> 00:26:59.980
+Team Topologies
+perfectly summarizes
+
+00:26:59.980 --> 00:27:02.920
+the importance of developer
+velocity and state that:
+
+00:27:03.360 --> 00:27:06.120
+"The platform acts as
+an engine for fast flow...
+
+00:27:06.120 --> 00:27:09.360
+...by increasing capacity &amp;
+speed of engineering teams."
+
+00:27:10.380 --> 00:27:14.260
+Fast flow equals faster value
+delivery and a competitive edge.
+
+00:27:15.520 --> 00:27:18.040
+By optimizing the
+platform to enable teams
+
+00:27:18.040 --> 00:27:20.180
+to release software more
+quickly and efficiently,
+
+00:27:20.200 --> 00:27:22.320
+we directly impact
+the bottom line.
+
+00:27:23.000 --> 00:27:24.080
+And the faster you go,
+
+00:27:24.760 --> 00:27:27.540
+the sooner you get the opportunity
+to get that valuable feedback!
+
+00:27:30.220 --> 00:27:31.620
+It's important to acknowledge
+
+00:27:31.620 --> 00:27:36.040
+that many obstacles to fast flow
+exist at the organizational level.
+
+00:27:36.540 --> 00:27:38.860
+Things like teams being
+pulled in many directions,
+
+00:27:39.400 --> 00:27:41.520
+confusing organizational
+design options,
+
+00:27:42.020 --> 00:27:44.480
+and painful reorganizations
+every few years.
+
+00:27:45.300 --> 00:27:48.740
+However, there are
+definitely plenty of areas
+
+00:27:48.740 --> 00:27:51.400
+where an IDP can
+help to improve flow.
+
+00:27:52.400 --> 00:27:54.240
+By streamlining
+deployment processes,
+
+00:27:54.800 --> 00:27:56.540
+automating
+infrastructure provisioning,
+
+00:27:56.680 --> 00:27:58.840
+and providing
+self-service capabilities,
+
+00:27:59.320 --> 00:28:01.340
+an IDP can directly
+address issues
+
+00:28:01.340 --> 00:28:03.540
+like blocked flow and
+disengaged teams.
+
+00:28:05.540 --> 00:28:09.260
+A well designed IDP clears
+the path for continuous delivery.
+
+00:28:11.600 --> 00:28:15.600
+Just how much impact does flow
+have on developer effectiveness?
+
+00:28:16.820 --> 00:28:19.280
+Let's consider two
+hypothetical scenarios.
+
+00:28:19.920 --> 00:28:22.640
+A day in the life in a
+low effective environment
+
+00:28:22.640 --> 00:28:26.060
+versus a day in the life in a
+highly effective environment.
+
+00:28:26.700 --> 00:28:30.300
+In the first scenario, the
+developer is constantly interrupted,
+
+00:28:31.180 --> 00:28:35.280
+battling alerts, waiting on responses,
+and struggling with broken processes.
+
+00:28:36.280 --> 00:28:39.720
+The end result?
+Frustration and low motivation.
+
+00:28:40.560 --> 00:28:43.140
+In the second, highly
+effective scenario,
+
+00:28:43.680 --> 00:28:47.340
+the developer has a clear
+focus, automated processes,
+
+00:28:48.180 --> 00:28:51.040
+easy access to documentation,
+and minimal interruptions.
+
+00:28:52.120 --> 00:28:55.780
+The result?
+Incremental progress and a happy developer.
+
+00:28:57.280 --> 00:28:59.000
+Which scenario
+sounds more appealing?
+
+00:28:59.380 --> 00:29:02.080
+Which day do you
+think is most valuable
+
+00:29:02.620 --> 00:29:04.520
+for both the organization
+and the developer?
+
+00:29:05.420 --> 00:29:07.620
+Do you recognize one
+of the two situations?
+
+00:29:08.720 --> 00:29:09.760
+The contrast is stark,
+
+00:29:10.160 --> 00:29:13.720
+and it highlights the direct link between
+flow and developer effectiveness.
+
+00:29:16.500 --> 00:29:19.660
+To truly optimize flow,
+we need to focus on
+
+00:29:19.660 --> 00:29:22.940
+what Tim Cochran calls
+"micro-feedback loops".
+
+00:29:23.940 --> 00:29:25.880
+These are the
+small, repetitive tasks
+
+00:29:26.020 --> 00:29:30.080
+that developers perform dozens,
+even hundreds of times a day.
+
+00:29:31.060 --> 00:29:33.240
+These are things
+like running a unit test,
+
+00:29:34.200 --> 00:29:38.520
+seeing a code change reflected in
+your local environment, or refreshing data.
+
+00:29:39.280 --> 00:29:42.380
+Even seemingly minor improvements
+to these micro-feedback loops
+
+00:29:42.840 --> 00:29:46.860
+can have a huge cumulative impact
+on developer productivity and flow.
+
+00:29:47.220 --> 00:29:50.400
+These micro-improvements
+can have big impact.
+
+00:29:51.360 --> 00:29:53.700
+Can you already picture
+some micro-feedback loops
+
+00:29:53.700 --> 00:29:56.120
+to improve in your current
+working environment?
+
+00:29:57.000 --> 00:30:00.880
+By focusing on optimizing these
+small, often overlooked tasks,
+
+00:30:01.340 --> 00:30:03.285
+we can unlock
+significant gains in
+
+00:30:03.309 --> 00:30:05.700
+developer velocity and
+overall effectiveness.
+
+00:30:08.440 --> 00:30:12.440
+Cognitive load reduction is the
+backbone of a successful platform,
+
+00:30:12.500 --> 00:30:15.040
+as I told you many times
+throughout my videos.
+
+00:30:15.960 --> 00:30:18.220
+Team Topologies
+perfectly summarizes:
+
+00:30:18.800 --> 00:30:23.060
+"A valuable platform reduces the
+cognitive load of stream aligned teams."
+
+00:30:24.780 --> 00:30:28.180
+By simplifying processes,
+automating repetitive tasks,
+
+00:30:28.700 --> 00:30:31.280
+and providing easy access
+to essential resources,
+
+00:30:31.720 --> 00:30:35.120
+a platform can significantly
+decrease the mental effort
+
+00:30:35.120 --> 00:30:37.060
+required for developers
+to do their jobs.
+
+00:30:40.600 --> 00:30:42.440
+While I keep talking
+about cognitive load,
+
+00:30:42.920 --> 00:30:45.460
+it's important to note that
+DevEx is more than just that.
+
+00:30:46.700 --> 00:30:51.280
+Dr. Nicole Forsgren explains the three
+dimensions of developer experience.
+
+00:30:52.000 --> 00:30:55.740
+Fast feedback loops:
+The sooner we get actionable feedback,
+
+00:30:56.180 --> 00:30:58.260
+the better our
+ability to act on it.
+
+00:30:58.620 --> 00:31:01.900
+This comes from setting up
+efficient development environments,
+
+00:31:02.640 --> 00:31:04.560
+optimizing build
+and test processes,
+
+00:31:05.240 --> 00:31:07.220
+and reducing wait times
+from manual handoffs.
+
+00:31:08.100 --> 00:31:11.880
+A flow state:
+We achieve this joyful state of work
+
+00:31:12.220 --> 00:31:14.380
+when we can perform our
+tasks without interruptions.
+
+00:31:15.740 --> 00:31:19.220
+Too many meetings and chat messages,
+and there goes your flow state.
+
+00:31:20.500 --> 00:31:21.980
+Reduced cognitive load:
+
+00:31:22.120 --> 00:31:26.580
+It's unproductive to keep heaps of
+knowledge in our working memories.
+
+00:31:27.780 --> 00:31:29.780
+The lower the cognitive load,
+
+00:31:29.980 --> 00:31:33.200
+the easier it is for any
+technologist to build software.
+
+00:31:34.200 --> 00:31:38.000
+We lower this cognitive load by
+making information easy to access
+
+00:31:38.000 --> 00:31:40.500
+and creating the right
+level of abstractions,
+
+00:31:41.000 --> 00:31:44.060
+and by organizing teams,
+code, and documentation
+
+00:31:44.120 --> 00:31:47.000
+such that it feels
+intuitive to the team.
+
+00:31:48.300 --> 00:31:52.240
+In the Modern Ops landscape that we
+explained in the DevOps evolution video,
+
+00:31:52.740 --> 00:31:56.680
+reducing cognitive load is the
+bedrock for better developer experience.
+
+00:31:59.620 --> 00:32:03.720
+This slide showcases the seven
+pillars of a good developer experience,
+
+00:32:04.600 --> 00:32:10.060
+according to Mogenius: tool usability,
+performance, support, resources,
+
+00:32:10.560 --> 00:32:14.860
+integration, feedback loops,
+debugging, and tooling consistency.
+
+00:32:16.260 --> 00:32:20.180
+An IDP can absolutely contribute
+to many of these aspects of DevEx.
+
+00:32:21.060 --> 00:32:25.200
+But are these pillars substantial enough
+to form the basis of a Product Goal?
+
+00:32:25.980 --> 00:32:27.999
+Perhaps.
+
+00:32:28.023 --> 00:32:30.220
+However, I would argue
+
+00:32:30.220 --> 00:32:32.980
+that these are often too
+granular for a Product Goal.
+
+00:32:33.380 --> 00:32:35.100
+The problem
+descriptions are clear,
+
+00:32:35.600 --> 00:32:37.720
+so they might be more
+like Sprint Goal material.
+
+00:32:38.740 --> 00:32:42.600
+Remember to keep that North
+Star (strategic goal) in sight!
+
+00:32:45.280 --> 00:32:47.300
+To truly tackle cognitive load,
+
+00:32:47.720 --> 00:32:50.820
+we need to understand that
+it's not a monolithic entity.
+
+00:32:51.720 --> 00:32:55.080
+Team Topologies breaks it
+down into three distinct types.
+
+00:32:56.340 --> 00:33:01.200
+Intrinsic cognitive load: This relates to
+the inherent complexity of the task itself,
+
+00:33:01.440 --> 00:33:04.060
+the core skills and
+knowledge required.
+
+00:33:04.700 --> 00:33:09.200
+For example, knowing the structure of a
+Java class, or how to create a new method.
+
+00:33:10.420 --> 00:33:12.180
+Extraneous cognitive load:
+
+00:33:12.180 --> 00:33:15.400
+This stems from the environment
+and processes surrounding the task.
+
+00:33:15.740 --> 00:33:19.720
+Things like deployment procedures,
+configuration settings, and tooling.
+
+00:33:20.760 --> 00:33:23.360
+Think, "how do I deploy
+this component again?"
+
+00:33:23.860 --> 00:33:26.960
+Or, "how do I
+configure this service?"
+
+00:33:28.140 --> 00:33:31.860
+Germane cognitive load:
+This is the cognitive effort
+
+00:33:31.860 --> 00:33:34.840
+dedicated to learning and
+high-performance problem solving.
+
+00:33:35.580 --> 00:33:36.900
+The "value-add" thinking.
+
+00:33:38.480 --> 00:33:42.200
+For example, understanding how a
+service should interact with another,
+
+00:33:42.780 --> 00:33:45.140
+or grappling with the intricacies
+of the business domain.
+
+00:33:46.740 --> 00:33:49.720
+The intrinsic cognitive load
+for a web application developer
+
+00:33:49.720 --> 00:33:52.780
+could be the knowledge of the
+computer language being used,
+
+00:33:53.180 --> 00:33:55.480
+on top of the fundamentals
+of programming.
+
+00:33:56.620 --> 00:33:59.320
+The extraneous cognitive
+load might be details of
+
+00:33:59.320 --> 00:34:02.860
+the commands needed to instantiate
+a dynamic testing environment,
+
+00:34:03.560 --> 00:34:06.580
+which needs multiple,
+hard-to-remember console commands.
+
+00:34:07.459 --> 00:34:11.720
+And the germane cognitive load
+could be the specific aspects of
+
+00:34:11.720 --> 00:34:15.060
+the business domain that the
+application developer is programming,
+
+00:34:15.660 --> 00:34:18.860
+such as an invoicing system
+or a video processing algorithm.
+
+00:34:22.380 --> 00:34:27.040
+So, what's the ideal way to manage
+these different types of cognitive load?
+
+00:34:27.979 --> 00:34:30.519
+First, minimize
+intrinsic cognitive load
+
+00:34:30.519 --> 00:34:33.920
+through training, good technology
+choices, and strategic hiring.
+
+00:34:35.280 --> 00:34:38.400
+Then, eliminate extraneous
+cognitive load altogether
+
+00:34:38.400 --> 00:34:42.060
+by automating away boring or
+superfluous tasks and commands.
+
+00:34:43.459 --> 00:34:47.340
+This leaves more space for
+germane cognitive load,
+
+00:34:47.340 --> 00:34:49.380
+which is where the
+value-add thinking lies.
+
+00:34:50.939 --> 00:34:52.580
+Remember the
+Value Line framework?
+
+00:34:53.640 --> 00:34:57.000
+By shifting the cognitive load
+from the extraneous to the germane,
+
+00:34:57.460 --> 00:35:01.720
+you are essentially freeing up developers
+to spend more time above the value line,
+
+00:35:01.960 --> 00:35:05.960
+focusing on the activities that
+directly contribute to customer value.
+
+00:35:06.580 --> 00:35:08.160
+That's where the magic happens.
+
+00:35:09.450 --> 00:35:11.960
+We'll come back to that
+Value Line again a bit later!
+
+00:35:14.500 --> 00:35:18.000
+Let's move on to the
+final "nominee": Security.
+
+00:35:20.700 --> 00:35:25.180
+Security is essential, but it needs to
+be treated as an enabler, not a blocker.
+
+00:35:27.220 --> 00:35:30.360
+By baking in organizational
+security standards into the platform
+
+00:35:30.860 --> 00:35:32.480
+(Compliance-as-Code!),
+
+00:35:32.900 --> 00:35:35.620
+and enabling the platform
+team to stay on top
+
+00:35:35.620 --> 00:35:41.220
+of new security strategies, practices,
+practices, tools, frameworks, and threads,
+
+00:35:41.800 --> 00:35:45.420
+we can build secure foundations
+without overwhelming developers.
+
+00:35:48.670 --> 00:35:51.640
+The security team is the
+source of knowledge here.
+
+00:35:51.920 --> 00:35:53.800
+They are the "enabling team".
+
+00:35:54.460 --> 00:35:56.060
+This visual emphasizes that
+
+00:35:56.480 --> 00:35:58.920
+while the security team
+acts as an enabling team,
+
+00:35:59.500 --> 00:36:00.880
+providing guidance
+and expertise,
+
+00:36:01.580 --> 00:36:03.400
+there's still a
+significant amount
+
+00:36:03.400 --> 00:36:05.960
+of security related
+responsibilities for product teams.
+
+00:36:06.580 --> 00:36:10.180
+From vulnerability checking
+and secure code analysis
+
+00:36:10.180 --> 00:36:12.540
+to authentication and
+secrets management,
+
+00:36:12.920 --> 00:36:16.880
+developers can no longer claim to
+be blissfully ignorant about security.
+
+00:36:17.460 --> 00:36:19.740
+Let's see how a
+platform can help here.
+
+00:36:22.700 --> 00:36:28.020
+Security is everywhere and still complex to
+set up and control in a cloud-native world.
+
+00:36:29.600 --> 00:36:32.760
+A pure "shift left"
+approach to DevSecOps
+
+00:36:33.200 --> 00:36:35.260
+can create a cognitive
+overload for developers.
+
+00:36:35.920 --> 00:36:38.660
+As Kelsey Hightower
+famously said,
+
+00:36:39.040 --> 00:36:42.020
+"I think we are asking
+developers to do too much...
+
+00:36:42.420 --> 00:36:44.500
+...by shifting everything
+left, including security.
+
+00:36:45.560 --> 00:36:47.220
+While it should be
+a collective effort,
+
+00:36:47.700 --> 00:36:50.480
+the idea that developers need
+to become security experts...
+
+00:36:50.480 --> 00:36:54.160
+...in addition to everything
+else just isn't sustainable."
+
+00:36:56.200 --> 00:36:59.060
+Here's a message for your
+Chief Information Security Officer.
+
+00:36:59.820 --> 00:37:02.100
+Platform Engineering
+loves security.
+
+00:37:02.860 --> 00:37:05.600
+Your platform can abstract
+and standardize most of it.
+
+00:37:06.100 --> 00:37:09.780
+So shift down to your platform,
+not left to your developers.
+
+00:37:10.680 --> 00:37:13.180
+Platform Engineering teams
+can embed governance and
+
+00:37:13.420 --> 00:37:16.040
+scalable security controls
+within the infrastructure,
+
+00:37:16.740 --> 00:37:19.340
+freeing developers to focus
+on code and business value,
+
+00:37:19.960 --> 00:37:23.580
+instead of being an afterthought or
+a blocker for developer productivity.
+
+00:37:27.600 --> 00:37:30.560
+A platform with
+organizational standards built-in
+
+00:37:30.560 --> 00:37:32.940
+can offload product
+teams significantly
+
+00:37:32.940 --> 00:37:35.700
+by offering compliance
+and security as code.
+
+00:37:37.380 --> 00:37:40.380
+Instead of expecting developers
+to become security experts,
+
+00:37:40.660 --> 00:37:43.500
+the platform provides
+secure-by-default infrastructure
+
+00:37:43.540 --> 00:37:45.520
+and automated compliance checks.
+
+00:37:46.520 --> 00:37:48.920
+Now you see "Compliance
+as Code" appearing!
+
+00:37:51.640 --> 00:37:53.560
+Does this image look familiar?
+
+00:37:53.780 --> 00:37:56.440
+You might recognize it from
+the DevOps evolution video.
+
+00:37:56.960 --> 00:38:01.440
+As we discussed, a dedicated
+platform team serves as the central hub,
+
+00:38:02.000 --> 00:38:05.580
+coordinating across critical functions
+such as security and compliance.
+
+00:38:07.080 --> 00:38:10.640
+This visual perfectly illustrates the
+power of a well-designed platform.
+
+00:38:12.040 --> 00:38:16.480
+It not only provides cognitive
+offloading from a knowledge perspective,
+
+00:38:16.880 --> 00:38:19.360
+but also reduces the number
+of interactions required.
+
+00:38:20.860 --> 00:38:24.200
+By centralizing security and
+compliance checks within the platform,
+
+00:38:24.760 --> 00:38:28.140
+we minimize the number of queries
+directed at individual product teams,
+
+00:38:28.760 --> 00:38:31.500
+streamlining workflows
+and freeing up valuable time.
+
+00:38:34.680 --> 00:38:38.700
+The "2024 State of DevOps"
+report confirms
+
+00:38:38.700 --> 00:38:41.620
+that security is a major
+trend in Platform Engineering.
+
+00:38:42.680 --> 00:38:47.500
+The report states: "The biggest takeaway
+from our survey this year surprised us.
+
+00:38:48.860 --> 00:38:53.020
+Not only are Platform Engineering teams
+supporting security and compliance efforts,
+
+00:38:53.240 --> 00:38:57.360
+but they are tackling and
+troubleshooting issues around security...
+
+00:38:58.580 --> 00:39:01.860
+...in a way that suggests this is
+going to be a much larger trend."
+
+00:39:03.640 --> 00:39:07.140
+Even when security isn't your
+primary driver and Product Goal,
+
+00:39:07.420 --> 00:39:10.180
+it's definitely a topic
+that cannot be ignored.
+
+00:39:10.580 --> 00:39:12.740
+It might not win
+the "top spot" today,
+
+00:39:13.320 --> 00:39:15.920
+but it is most definitely a
+force to be reckoned with.
+
+00:39:18.660 --> 00:39:21.880
+Alright, the moment
+you've all been waiting for!
+
+00:39:22.980 --> 00:39:24.720
+After considering
+the potential impact,
+
+00:39:25.180 --> 00:39:28.300
+alignment with our vision
+and overall strategic value,
+
+00:39:28.580 --> 00:39:31.120
+it's time to announce the
+winning Product Goal topic.
+
+00:39:38.880 --> 00:39:40.160
+The winners are...
+
+00:39:41.600 --> 00:39:44.660
+In third place, for its
+essential contribution to
+
+00:39:44.680 --> 00:39:47.540
+a secure and reliable
+platform: Security!
+
+00:39:49.420 --> 00:39:52.300
+In second place, for
+its direct impact on
+
+00:39:52.300 --> 00:39:55.320
+value delivery and
+business outcomes: Fast Flow!
+
+00:39:57.070 --> 00:40:00.320
+And taking the top spot
+for its fundamental role in
+
+00:40:00.320 --> 00:40:03.800
+improving developer experience:
+Cognitive Load Reduction!
+
+00:40:04.620 --> 00:40:08.460
+However, it's important to
+remember that this is just an example.
+
+00:40:08.980 --> 00:40:10.820
+The key takeaway here
+
+00:40:10.820 --> 00:40:14.660
+is to prioritize based on a balanced
+and well thought out understanding
+
+00:40:14.660 --> 00:40:17.620
+of your specific context
+and business needs.
+
+00:40:18.120 --> 00:40:21.580
+And of course, you can only
+have one Product Goal at a time,
+
+00:40:21.960 --> 00:40:23.800
+the most strategic
+one to start with!
+
+00:40:24.240 --> 00:40:28.360
+Let's find out why I've put cognitive
+load reduction in this leading position.
+
+00:40:31.760 --> 00:40:33.720
+As Armon Dadgar
+visualizes here,
+
+00:40:33.720 --> 00:40:36.160
+an IDP provides "consistency",
+
+00:40:36.160 --> 00:40:40.340
+which splits into "cost"
+and "risk" on the Ops side,
+
+00:40:40.340 --> 00:40:42.520
+and "velocity" on the dev side.
+
+00:40:43.300 --> 00:40:47.080
+Let's call velocity "Option A"
+and consistency "Option B".
+
+00:40:48.160 --> 00:40:51.680
+Now, based on our previous
+video about the DevOps evolution,
+
+00:40:52.360 --> 00:40:56.140
+and how Platform Engineering's
+purpose is to reduce cognitive load,
+
+00:40:56.580 --> 00:41:00.580
+it makes sense to focus a Product
+Goal on the development side of the IDP:
+
+00:41:01.460 --> 00:41:02.920
+Option A, velocity.
+
+00:41:04.500 --> 00:41:07.560
+Cognitive load reduction
+is a foundational principle,
+
+00:41:07.580 --> 00:41:11.280
+and cognitive load reduction
+is an "engine for fast flow".
+
+00:41:11.860 --> 00:41:14.580
+But fast flow also helps
+to reduce cognitive load
+
+00:41:15.020 --> 00:41:16.620
+and improve DevEx in general.
+
+00:41:17.700 --> 00:41:19.520
+So, which one comes first?
+
+00:41:20.500 --> 00:41:24.380
+Well, that focus also depends
+on the type of organization.
+
+00:41:25.720 --> 00:41:29.140
+Do you value a better flow of
+work more, or the human factor?
+
+00:41:29.980 --> 00:41:31.600
+Although they go hand in hand,
+
+00:41:32.100 --> 00:41:35.300
+I subjectively value happiness
+over productivity here.
+
+00:41:36.620 --> 00:41:40.000
+Another reason for not putting
+security in that leading position
+
+00:41:40.000 --> 00:41:44.060
+is because as we discussed in
+the Platform-as-a-Product video,
+
+00:41:44.660 --> 00:41:45.980
+platforms are optional to use.
+
+00:41:46.940 --> 00:41:50.720
+Even though security standards
+built-in should be a UDP,
+
+00:41:51.580 --> 00:41:54.180
+reality is often that
+it's seen as a burden.
+
+00:41:55.360 --> 00:41:58.740
+With the "opinionated
+but sensible" TVP principle,
+
+00:41:59.640 --> 00:42:02.160
+organizational standards
+are built-in as a convention
+
+00:42:02.180 --> 00:42:04.280
+for things like security
+and compliance,
+
+00:42:04.280 --> 00:42:07.460
+while offering sensible
+but adjustable defaults,
+
+00:42:08.440 --> 00:42:12.960
+we‘re linking consistency
+(Option B) with velocity (Option A).
+
+00:42:15.840 --> 00:42:18.980
+So, we've talked about
+crafting visions and goals
+
+00:42:19.000 --> 00:42:21.900
+and we've even chosen a
+"winning" Product Goal topic.
+
+00:42:23.120 --> 00:42:28.160
+But setting a goal - truly committing
+to a direction - has implications.
+
+00:42:28.840 --> 00:42:30.300
+As the dictionary says,
+
+00:42:30.380 --> 00:42:34.720
+an implication is "the conclusion
+that can be drawn from something...
+
+00:42:34.720 --> 00:42:36.800
+...although it is not
+explicitly stated."
+
+00:42:40.640 --> 00:42:44.880
+Let's take a quick look at how the
+Product Goal fits into the Scrum framework.
+
+00:42:46.460 --> 00:42:47.540
+As the Scrum guide states,
+
+00:42:48.240 --> 00:42:52.160
+"A Scrum team is focused on one
+objective at a time, the Product Goal."
+
+00:42:53.400 --> 00:42:56.240
+The Product Goal provides
+a long-term objective
+
+00:42:56.280 --> 00:42:58.600
+and describes a future
+state of the product
+
+00:42:58.600 --> 00:43:00.120
+that the team can plan against.
+
+00:43:01.420 --> 00:43:03.740
+But honestly,
+isn't the concept of
+
+00:43:03.740 --> 00:43:07.360
+having a clear, focused
+objective something valuable
+
+00:43:07.360 --> 00:43:09.380
+regardless of whether
+you're using Scrum or not?
+
+00:43:12.580 --> 00:43:14.080
+For those of you
+familiar with Scrum,
+
+00:43:14.560 --> 00:43:18.940
+you know that the Product Goal is like the
+cornerstone of Scrum events and artifacts.
+
+00:43:19.210 --> 00:43:21.780
+It's reinstated in
+Sprint Planning,
+
+00:43:21.780 --> 00:43:25.160
+it shapes the Product Backlog,
+each Increment should contribute to it,
+
+00:43:25.820 --> 00:43:27.920
+and progress is discussed
+in the Sprint Review.
+
+00:43:29.360 --> 00:43:31.400
+How often are the
+Product Vision and/or
+
+00:43:31.740 --> 00:43:34.560
+Product Goal reinstated
+during your development cycle?
+
+00:43:37.880 --> 00:43:40.220
+"Strategy is figuring
+out what not to do."
+
+00:43:41.160 --> 00:43:45.360
+This quote from Steve Jobs gets
+straight to the heart of strategy.
+
+00:43:46.640 --> 00:43:49.180
+Vision and Product
+Goals should be the basis
+
+00:43:49.180 --> 00:43:52.700
+that guides decisions and
+helps prioritize features or tasks.
+
+00:43:54.000 --> 00:43:56.060
+Does this feature
+contribute to the goal?
+
+00:43:56.720 --> 00:44:00.260
+If not, channel your energy
+into activities that truly matter.
+
+00:44:01.360 --> 00:44:03.660
+Saying "no" is tough,
+but it's essential!
+
+00:44:05.040 --> 00:44:06.580
+So ask yourself,
+
+00:44:06.620 --> 00:44:10.120
+is our backlog a true
+reflection of a clear direction,
+
+00:44:10.120 --> 00:44:12.140
+aligned with our Product Goal?
+
+00:44:14.960 --> 00:44:16.960
+Mark Zuckerberg reminds us:
+
+00:44:18.100 --> 00:44:21.860
+"I'm here to build something for the
+long-term. Anything else is a distraction."
+
+00:44:23.600 --> 00:44:25.940
+This highlights the importance
+of avoiding distractions
+
+00:44:25.940 --> 00:44:28.980
+and constantly asking if
+you're spending your time well.
+
+00:44:30.140 --> 00:44:33.380
+If something is a distraction
+from the Product Goal,
+
+00:44:33.520 --> 00:44:37.800
+saying "no" helps you to stay focused
+on the most impactful activities
+
+00:44:37.800 --> 00:44:40.570
+and prevents your goals
+from remaining unachieved.
+
+00:44:41.990 --> 00:44:47.100
+In terms of the EBM model we
+discussed earlier, it all needs to align:
+
+00:44:47.400 --> 00:44:51.420
+Are our Sprint Goals the next logical
+step towards achieving our Product Goal?
+
+00:44:54.960 --> 00:44:56.620
+Richard L. Evans
+puts it perfectly:
+
+00:44:57.780 --> 00:45:00.220
+"Your direction is more
+important than your speed."
+
+00:45:00.940 --> 00:45:05.380
+This video, and Product Goal-setting
+in general, is all about direction.
+
+00:45:07.180 --> 00:45:08.880
+"Building the things
+right" is important,
+
+00:45:09.420 --> 00:45:12.640
+but only if we're "building the
+right things" in the first place.
+
+00:45:13.400 --> 00:45:18.080
+In product management terms, it's a
+shift in focus from delivery to discovery.
+
+00:45:19.160 --> 00:45:22.340
+And, as we emphasized in
+the Platform-as a-Product video,
+
+00:45:23.320 --> 00:45:27.200
+building a successful platform requires
+continuous discovery and feedback.
+
+00:45:28.320 --> 00:45:30.980
+So, are we ready
+for that shift in focus?
+
+00:45:34.820 --> 00:45:37.940
+Okay, so you've crafted
+a compelling vision
+
+00:45:37.980 --> 00:45:39.840
+and defined a
+strategic Product Goal.
+
+00:45:40.520 --> 00:45:42.040
+But that's only half the battle.
+
+00:45:42.740 --> 00:45:47.200
+Now, you need to ensure that everyone
+understands and buys into that vision.
+
+00:45:47.780 --> 00:45:49.720
+That's where effective
+communication comes in.
+
+00:45:52.970 --> 00:45:56.880
+You may not have a big hall
+like this, but the message is clear:
+
+00:45:56.920 --> 00:46:00.340
+You need to actively and repeatedly
+communicate the Product Vision
+
+00:46:01.000 --> 00:46:04.280
+and Product Goal to everyone
+involved in the development process.
+
+00:46:05.120 --> 00:46:07.880
+Stakeholders must know the
+direction in which you are heading,
+
+00:46:08.160 --> 00:46:09.860
+and that knowledge
+gives them confidence.
+
+00:46:11.280 --> 00:46:13.180
+Share the vision
+and goal in any form.
+
+00:46:13.640 --> 00:46:17.560
+Presentations, boards, posters,
+one-on-one meetings, and so on.
+
+00:46:18.900 --> 00:46:21.460
+And... repeat, repeat, repeat!
+
+00:46:22.260 --> 00:46:25.020
+Start every Sprint Planning,
+every Sprint Review
+
+00:46:25.320 --> 00:46:27.560
+with reinstating the Product
+Vision and Product Goal.
+
+00:46:31.930 --> 00:46:35.380
+A powerful way to communicate
+your vision is with metrics.
+
+00:46:35.420 --> 00:46:37.280
+They are far more
+than just numbers.
+
+00:46:38.040 --> 00:46:42.460
+Data is a communication tool,
+as Nicole Forsgren highlights here.
+
+00:46:43.820 --> 00:46:49.060
+The data provides: opportunities to clarify
+and define what those metrics even are;
+
+00:46:49.720 --> 00:46:54.020
+A shared language between teams, enabling
+effective collaboration and alignment;
+
+00:46:54.780 --> 00:46:57.940
+and data-informed insights,
+moving teams away from
+
+00:46:57.940 --> 00:47:01.760
+relying solely on intuition and
+towards a more objective understanding.
+
+00:47:05.000 --> 00:47:06.760
+Without a clear
+Product Vision and -Goal,
+
+00:47:07.220 --> 00:47:09.280
+the Product Owner
+is like a tugboat,
+
+00:47:09.960 --> 00:47:14.220
+painstakingly pulling each "ship",
+your development teams, individually.
+
+00:47:15.000 --> 00:47:17.400
+Instead, your Product
+Vision is a lighthouse,
+
+00:47:18.100 --> 00:47:19.880
+providing a clear
+and constant beacon,
+
+00:47:20.540 --> 00:47:23.120
+and your Product Goal as
+a clearly mapped course.
+
+00:47:24.040 --> 00:47:27.440
+Your ships can then navigate
+safely and efficiently on their own.
+
+00:47:28.700 --> 00:47:31.480
+This also frees the Product
+Owner or Product Manager
+
+00:47:31.480 --> 00:47:34.820
+to operate at a more
+strategic, macro level,
+
+00:47:35.640 --> 00:47:38.940
+ensuring the platform is aligned
+with the overall business objectives.
+
+00:47:40.970 --> 00:47:43.640
+What does this mean in
+terms of communication?
+
+00:47:44.340 --> 00:47:49.080
+It means that your role isn't just about
+giving <i>directions</i> (the what and how),
+
+00:47:49.300 --> 00:47:51.240
+but giving <i>direction</i> (the why).
+
+00:47:52.320 --> 00:47:54.020
+Simon Sinek
+captures this perfectly:
+
+00:47:55.120 --> 00:47:58.080
+"There is a difference between
+giving directions and giving direction."
+
+00:48:00.940 --> 00:48:02.400
+One more thing...
+
+00:48:03.860 --> 00:48:06.860
+You know, we've talked
+a lot about visions, goals,
+
+00:48:07.160 --> 00:48:09.740
+and all the wonderful things a
+platform can do for developers.
+
+00:48:10.720 --> 00:48:14.960
+But there's an important foundational
+element we haven't really addressed yet.
+
+00:48:18.040 --> 00:48:20.680
+Platform Engineering
+is NOT just for the cloud.
+
+00:48:21.040 --> 00:48:23.200
+In fact, on-prem environments
+
+00:48:23.200 --> 00:48:27.460
+often need self-service and automation
+even <i>more</i> than cloud environments!
+
+00:48:28.640 --> 00:48:30.080
+But the reality is,
+
+00:48:30.520 --> 00:48:33.780
+moving towards an API-driven,
+automatable infrastructure
+
+00:48:33.900 --> 00:48:36.700
+with simple and powerful
+container management
+
+00:48:37.180 --> 00:48:40.580
+can be a huge challenge when you're
+starting with legacy on-prem systems.
+
+00:48:41.400 --> 00:48:43.020
+So, how do you get there?
+
+00:48:45.740 --> 00:48:49.960
+To create an IDP, we build it
+upon underlying infrastructure layers.
+
+00:48:50.540 --> 00:48:55.160
+If those IDPs consist of reusable
+components, building blocks,
+
+00:48:55.560 --> 00:48:57.460
+glued together
+into golden paths,
+
+00:48:57.460 --> 00:49:00.160
+then that IDP needs those
+infrastructure building blocks
+
+00:49:00.460 --> 00:49:06.060
+to come in an automated way: as
+infrastructure-as-a-Service (IaaS).
+
+00:49:07.080 --> 00:49:10.000
+And that's not self-evident in an
+on-premise infrastructure setting.
+
+00:49:11.220 --> 00:49:13.520
+So, fix the infra first!
+
+00:49:15.000 --> 00:49:17.200
+<i>Footnote: "Fix the infra first"</i>
+
+00:49:17.460 --> 00:49:20.440
+<i>primarily refers to automating
+technical provisioning.</i>
+
+00:49:21.160 --> 00:49:25.360
+<i>However, a platform can also
+start as something simpler,</i>
+
+00:49:25.360 --> 00:49:29.300
+<i>like a well-organized wiki with
+documented standards and best practices.</i>
+
+00:49:32.960 --> 00:49:36.520
+This is what Evan Bottcher
+calls the "superficial private cloud".
+
+00:49:36.660 --> 00:49:38.540
+You know, something <i>like</i> cloud,
+
+00:49:38.840 --> 00:49:41.600
+but really just
+old-fashioned IT operations
+
+00:49:41.600 --> 00:49:43.800
+with a thin veneer
+of automation.
+
+00:49:45.240 --> 00:49:48.100
+Take a look at this workflow.
+What's happening here?
+
+00:49:48.900 --> 00:49:52.900
+It's "TicketOps" - work being
+delegated from team to team.
+
+00:49:53.760 --> 00:49:56.280
+The manual work and
+this “backlog coupling”
+
+00:49:56.340 --> 00:49:57.840
+(dependencies across work queues)
+
+00:49:58.440 --> 00:50:00.340
+is creating those
+long lead times
+
+00:50:00.340 --> 00:50:03.120
+that are unacceptable in
+today's software environment.
+
+00:50:06.080 --> 00:50:10.340
+A key point of Platform Engineering is
+to unblock infrastructure provisioning.
+
+00:50:11.600 --> 00:50:13.720
+That means treating
+your on-prem environment
+
+00:50:13.720 --> 00:50:16.800
+as an "internal cloud"
+with IaaS capabilities.
+
+00:50:19.780 --> 00:50:21.780
+In team topologies language,
+
+00:50:21.780 --> 00:50:26.560
+it's about moving away from "blocking
+dependencies based on work handovers"
+
+00:50:26.560 --> 00:50:30.640
+and towards "non-blocking dependencies
+based on growing capabilities".
+
+00:50:34.240 --> 00:50:37.180
+It's important to be realistic
+about where you are.
+
+00:50:38.440 --> 00:50:41.680
+Unrealistic product goals can lead
+to frustration and disappointment.
+
+00:50:42.640 --> 00:50:48.080
+That's why, in many cases, it's better
+to focus on "fixing" that IaaS layer first,
+
+00:50:48.960 --> 00:50:51.900
+even if that means setting
+an intermediate Product Goal
+
+00:50:52.000 --> 00:50:54.120
+that's not about
+Golden Paths yet.
+
+00:50:55.460 --> 00:51:00.020
+For example, instead of immediately
+striving for full IDP functionality,
+
+00:51:00.700 --> 00:51:03.320
+you might focus on
+"Empowering DevOps teams...
+
+00:51:03.320 --> 00:51:05.800
+...with a unified
+self-service platform...
+
+00:51:05.800 --> 00:51:09.480
+...that delivers reusable
+building blocks as-a-Service,
+
+00:51:09.980 --> 00:51:13.700
+has organizational standards built-in,
+and provides actionable insights."
+
+00:51:16.500 --> 00:51:19.540
+And as we discussed in the IDP
+and Platform-as-a-Product videos,
+
+00:51:20.320 --> 00:51:23.420
+a clear vocabulary and
+visualizations like Kratix Promises
+
+00:51:23.420 --> 00:51:26.820
+can help with scoping and
+communicating your Product Goals
+
+00:51:26.820 --> 00:51:28.880
+in a realistic and
+actionable way.
+
+00:51:32.080 --> 00:51:34.700
+Remember the Value Line
+framework we talked about earlier,
+
+00:51:35.220 --> 00:51:37.060
+and in the Platform-as-a-Product video?
+
+00:51:38.440 --> 00:51:41.380
+Your platform team eventually
+wants to focus on the "Core",
+
+00:51:41.780 --> 00:51:45.760
+like that "floating platform" concept
+of Gregor Hohpe we discussed before.
+
+00:51:46.700 --> 00:51:48.080
+But even with the
+best intentions,
+
+00:51:48.660 --> 00:51:52.360
+the infrastructure, which represents
+"Context" from your team's perspective,
+
+00:51:53.100 --> 00:51:55.620
+simply cannot be ignored.
+It underpins everything.
+
+00:51:59.100 --> 00:52:00.200
+Expanding on that thought,
+
+00:52:00.400 --> 00:52:03.920
+let's look at the relationship between
+the three aforementioned layers
+
+00:52:03.920 --> 00:52:06.420
+of Infrastructure,
+Platforms, and Applications.
+
+00:52:07.700 --> 00:52:10.060
+In fact, there are
+two Value Lines here.
+
+00:52:11.460 --> 00:52:13.760
+From a Core/Context perspective,
+
+00:52:13.980 --> 00:52:16.820
+it would make sense if the
+Platform Team didn't have to focus
+
+00:52:16.820 --> 00:52:20.420
+on the infrastructural building blocks
+because they're "Context" for them.
+
+00:52:21.320 --> 00:52:23.440
+And in a public cloud
+setting, that's often the case.
+
+00:52:24.240 --> 00:52:26.680
+The cloud provider handles
+the underlying infrastructure.
+
+00:52:27.580 --> 00:52:31.140
+However, in on-prem scenarios,
+you face some critical decisions.
+
+00:52:32.500 --> 00:52:35.200
+Option 1: create a brand
+new Platform Team.
+
+00:52:36.260 --> 00:52:39.320
+This requires that you also
+have a capable infrastructure team
+
+00:52:39.320 --> 00:52:44.340
+already operating at an IaaS level,
+providing the foundational building blocks.
+
+00:52:45.380 --> 00:52:51.140
+Pros: clear separation of concerns,
+dedicated focus on platform user needs.
+
+00:52:51.920 --> 00:52:57.300
+Cons: requires significant budget for a
+new team, can be a steep learning curve,
+
+00:52:57.760 --> 00:53:01.080
+and the new Platform Team needs
+to build trust and credibility quickly.
+
+00:53:02.520 --> 00:53:05.960
+It can also highlight the cognitive
+load for existing developers.
+
+00:53:08.920 --> 00:53:11.780
+Option 2: have the
+existing infrastructure team
+
+00:53:11.780 --> 00:53:14.820
+move up the stack and take
+on platform responsibilities.
+
+00:53:16.500 --> 00:53:21.420
+Pros: Leverages existing expertise
+and infrastructure knowledge,
+
+00:53:22.100 --> 00:53:23.540
+and potentially more
+budget-friendly.
+
+00:53:24.320 --> 00:53:28.800
+Cons: Can create a massive
+cognitive load for the existing team.
+
+00:53:29.520 --> 00:53:33.260
+Crucially, many Ops engineers
+lack the Product Management skills
+
+00:53:33.260 --> 00:53:37.900
+or SDLC understanding to
+build a truly user-centric platform.
+
+00:53:38.940 --> 00:53:43.340
+They may also prioritize
+consistency (Option B from before).
+
+00:53:46.170 --> 00:53:50.920
+The key takeaway here is that the combined
+infrastructure and platform responsibility
+
+00:53:50.920 --> 00:53:54.140
+for a <i>single</i> team can create
+a new cognitive bottleneck.
+
+00:53:54.800 --> 00:53:59.040
+Remember, you can <i>reassign</i>
+cognitive load, but you can't <i>eliminate</i> it!
+
+00:54:00.460 --> 00:54:02.800
+Which of the aforementioned
+options would you choose?
+
+00:54:03.240 --> 00:54:05.060
+I'm curious to hear
+your view here.
+
+00:54:08.180 --> 00:54:11.360
+Wow, you've made it to the end.
+Thank you for watching.
+
+00:54:12.860 --> 00:54:14.280
+Let's recap the key takeaways.
+
+00:54:15.040 --> 00:54:17.900
+- A clear Vision and Product
+Goal is key to success.
+
+00:54:19.040 --> 00:54:20.760
+- Don't try to do
+everything at once.
+
+00:54:21.760 --> 00:54:23.920
+- Focus on the most
+impactful business goals.
+
+00:54:24.700 --> 00:54:26.980
+- Communicate your vision
+clearly and constantly.
+
+00:54:27.400 --> 00:54:31.400
+- And remember, in on-prem
+environments, fix the infrastructure first.
+
+00:54:34.140 --> 00:54:36.840
+I hope you found this session
+insightful and engaging.
+
+00:54:37.380 --> 00:54:39.320
+Be sure to check
+out my next video,
+
+00:54:40.200 --> 00:54:43.680
+"Professional Development: Roles in
+a Platform Engineering Product Team",
+
+00:54:44.480 --> 00:54:47.480
+where we'll dive into the organizational
+side of Platform Engineering.
+
+00:54:48.380 --> 00:54:49.620
+See you there!
+
+00:54:52.120 --> 00:54:53.940
+Thank you for sticking
+around to the end.
+
+00:54:54.800 --> 00:54:59.120
+The remainder of this video contains
+an overview of all resources used.
+
+00:54:59.680 --> 00:55:01.320
+There's some
+great stuff out there,
+
+00:55:01.380 --> 00:55:03.660
+often with references
+to even more great stuff.
+
+00:55:04.640 --> 00:55:06.500
+Are you ready to go
+down this rabbit hole?
