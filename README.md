@@ -207,22 +207,25 @@ Coming soon. Planned release date: Apr 28, 2025.
 
 Coming soon. Planned release date: Apr 14, 2025.
 
-#### Reports
+#### Reports & Papers
 
+* [How do committees invent?](https://www.melconway.com/Home/pdf/committees.pdf) | Melvin E. Conway
+* [Exploring the duality between product and organizational architectures: A test of the "mirroring" hypothesis](https://www.hbs.edu/ris/Publication%20Files/Research%20Policy%2041%20(2012)%201309%E2%80%93%201324_c5c2350e-013c-4065-a2f9-d95eb32177d5.pdf) | MacCormack et al | 2012
 * [2021 State of DevOps Report](https://media.webteam.puppet.com/uploads/2021/07/Puppet-State-of-DevOps-Report-2021.pdf) (pdf)
 
 #### Conference Talks & Videos
 
+* [Team Topologies for Managers - The evidence for Conway’s Law](https://www.youtube.com/watch?v=ZfPzmWr6Wf8) | Team Topologies | Apr 14, 2023
 * [Fast Flow & Organizational Evolution with Team Topologies (slides)](https://www.slideshare.net/ManuelPais/fast-flow-organizational-evolution-with-team-topologies-masters-of-software-engineering-mse-carnegie-mellon-university-apr-2021) | Manuel Pais @ Masters of Software Engineering (MSE) - Carnegie Mellon University | Apr, 2021
 * [Conway's Law is Out to Get You! (slides)](https://www.slideshare.net/slideshow/conways-law-is-out-to-get-you-large-financial-group-apr-2022/251683377) | Manuel Pais @ Large Financial Group | Apr, 2022
 * [DevOps or DevX – Lessons We Learned Shifting Left the Wrong Way](https://www.youtube.com/watch?v=91rtD9Os9Aw) | Hannah Foxwell @ VMware | stackconf 2022
 
 #### Sites & Blogs
 
-* [Inverse-Conway-Maneuver: How to speed up product development teams successfully](https://www.thoughtworks.com/insights/blog/customer-experience/inverse-conway-maneuver-product-development-teams) | Tobias Soffner and Benjamin Cremer @ Thoughtworks | May 26, 2023
 * [DevOps Topologies](https://confluxhq.com/devops-topologies) | Matthew Skelton @ Conflux
 * [What Team Structure is Right for DevOps to Flourish?](https://web.devopstopologies.com/) | devopstopologies.com
 * [6 Archetypes of Broken Ownership](https://blog.alexewerlof.com/p/broken-ownership) | Alex Ewerlöf | Aug 01, 2023
+* [Inverse-Conway-Maneuver: How to speed up product development teams successfully](https://www.thoughtworks.com/insights/blog/customer-experience/inverse-conway-maneuver-product-development-teams) | Tobias Soffner and Benjamin Cremer @ Thoughtworks | May 26, 2023
 
 ### Other resources
 
