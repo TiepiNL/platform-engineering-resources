@@ -222,6 +222,7 @@ Coming soon. Planned release date: Apr 14, 2025.
 
 #### Sites & Blogs
 
+* [Conway's Law](https://martinfowler.com/bliki/ConwaysLaw.html) | Martin Fowler | Oct 20, 2022
 * [DevOps Topologies](https://confluxhq.com/devops-topologies) | Matthew Skelton @ Conflux
 * [What Team Structure is Right for DevOps to Flourish?](https://web.devopstopologies.com/) | devopstopologies.com
 * [6 Archetypes of Broken Ownership](https://blog.alexewerlof.com/p/broken-ownership) | Alex Ewerlöf | Aug 01, 2023
