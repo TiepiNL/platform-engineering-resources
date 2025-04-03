@@ -219,6 +219,7 @@ Coming soon. Planned release date: Apr 14, 2025.
 * [Fast Flow & Organizational Evolution with Team Topologies (slides)](https://www.slideshare.net/ManuelPais/fast-flow-organizational-evolution-with-team-topologies-masters-of-software-engineering-mse-carnegie-mellon-university-apr-2021) | Manuel Pais @ Masters of Software Engineering (MSE) - Carnegie Mellon University | Apr, 2021
 * [Conway's Law is Out to Get You! (slides)](https://www.slideshare.net/slideshow/conways-law-is-out-to-get-you-large-financial-group-apr-2022/251683377) | Manuel Pais @ Large Financial Group | Apr, 2022
 * [DevOps or DevX – Lessons We Learned Shifting Left the Wrong Way](https://www.youtube.com/watch?v=91rtD9Os9Aw) | Hannah Foxwell @ VMware | stackconf 2022
+* [Remote first team interactions with Team Topologies (slides)](https://www.slideshare.net/slideshow/remote-first-team-interactions-with-team-topologies-iris-software-group-20200907/238527627) | Matthew Skelton @ Iris Software Group | Sep 07, 2020
 
 #### Sites & Blogs
 
