@@ -211,6 +211,7 @@ Coming soon. Planned release date: Apr 14, 2025.
 
 * [How do committees invent?](https://www.melconway.com/Home/pdf/committees.pdf) | Melvin E. Conway
 * [Exploring the duality between product and organizational architectures: A test of the "mirroring" hypothesis](https://www.hbs.edu/ris/Publication%20Files/Research%20Policy%2041%20(2012)%201309%E2%80%93%201324_c5c2350e-013c-4065-a2f9-d95eb32177d5.pdf) | MacCormack et al | 2012
+* [ThoughtWorks Technology Radar Volume 10](https://www.thoughtworks.com/content/dam/thoughtworks/documents/radar/2014/07/tr_technology_radar_vol_10_en.pdf) (pdf) | July, 2014
 * [2021 State of DevOps Report](https://media.webteam.puppet.com/uploads/2021/07/Puppet-State-of-DevOps-Report-2021.pdf) (pdf)
 
 #### Conference Talks & Videos
@@ -224,6 +225,7 @@ Coming soon. Planned release date: Apr 14, 2025.
 #### Sites & Blogs
 
 * [Conway's Law](https://martinfowler.com/bliki/ConwaysLaw.html) | Martin Fowler | Oct 20, 2022
+* [Inverse-Conway-Maneuver: How to speed up product development teams successfully](https://www.thoughtworks.com/insights/blog/customer-experience/inverse-conway-maneuver-product-development-teams) | Tobias Soffner & Benjamin Cremer @ Thoughtworks |  May 26, 2023
 * [DevOps Topologies](https://confluxhq.com/devops-topologies) | Matthew Skelton @ Conflux
 * [What Team Structure is Right for DevOps to Flourish?](https://web.devopstopologies.com/) | devopstopologies.com
 * [6 Archetypes of Broken Ownership](https://blog.alexewerlof.com/p/broken-ownership) | Alex Ewerlöf | Aug 01, 2023
