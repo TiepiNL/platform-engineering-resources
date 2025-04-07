@@ -209,8 +209,8 @@ Coming soon. Planned release date: Apr 14, 2025.
 
 #### Reports & Papers
 
-* [How do committees invent?](https://www.melconway.com/Home/pdf/committees.pdf) | Melvin E. Conway
-* [Exploring the duality between product and organizational architectures: A test of the "mirroring" hypothesis](https://www.hbs.edu/ris/Publication%20Files/Research%20Policy%2041%20(2012)%201309%E2%80%93%201324_c5c2350e-013c-4065-a2f9-d95eb32177d5.pdf) | MacCormack et al | 2012
+* [How do committees invent?](https://www.melconway.com/Home/pdf/committees.pdf) (pdf) | Melvin E. Conway
+* [Exploring the duality between product and organizational architectures: A test of the "mirroring" hypothesis](https://www.hbs.edu/ris/Publication%20Files/Research%20Policy%2041%20(2012)%201309%E2%80%93%201324_c5c2350e-013c-4065-a2f9-d95eb32177d5.pdf) (pdf) | MacCormack et al | 2012
 * [ThoughtWorks Technology Radar Volume 10](https://www.thoughtworks.com/content/dam/thoughtworks/documents/radar/2014/07/tr_technology_radar_vol_10_en.pdf) (pdf) | July, 2014
 * [2021 State of DevOps Report](https://media.webteam.puppet.com/uploads/2021/07/Puppet-State-of-DevOps-Report-2021.pdf) (pdf)
 
