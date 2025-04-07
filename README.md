@@ -229,7 +229,6 @@ Coming soon. Planned release date: Apr 14, 2025.
 * [DevOps Topologies](https://confluxhq.com/devops-topologies) | Matthew Skelton @ Conflux
 * [What Team Structure is Right for DevOps to Flourish?](https://web.devopstopologies.com/) | devopstopologies.com
 * [6 Archetypes of Broken Ownership](https://blog.alexewerlof.com/p/broken-ownership) | Alex Ewerlöf | Aug 01, 2023
-* [Inverse-Conway-Maneuver: How to speed up product development teams successfully](https://www.thoughtworks.com/insights/blog/customer-experience/inverse-conway-maneuver-product-development-teams) | Tobias Soffner and Benjamin Cremer @ Thoughtworks | May 26, 2023
 
 ### Other resources
 
