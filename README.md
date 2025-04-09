@@ -10,14 +10,14 @@ Platform Engineering is still a new concept for many teams and organizations. Th
 
 The series covers:
 
-| # | Title                                                       | Release Date | Resources | Video | CC |
-|---|:------------------------------------------------------------|--------------|-----------|-------|----|
-| 1 | Why Platform Engineering is the Natural Evolution of DevOps | Jan 13, 2025 | [jump-to](#1-why-platform-engineering-is-the-natural-evolution-of-devops) | [YouTube](https://youtu.be/Qe9AafRDhTQ) | [EN](./video-series/closed-captioning/why-platform-engineering-is-the-natural-evolution-of-devops.vtt) |
-| 2 | What is an Internal Developer Platform?                     | Jan 27, 2025 | [jump-to](#2-what-is-an-internal-developer-platform) | [YouTube](https://youtu.be/uhycU7K0610) | [EN](./video-series/closed-captioning/what-is-an-internal-developer-platform.vtt) |
-| 3 | Platform-as-a-Product                                       | Feb 14, 2025 | [jump-to](#3-platform-as-a-product) | [YouTube](https://youtu.be/hj31U2D1QUQ) | [EN](./video-series/closed-captioning/platform-as-a-product.vtt) |
-| 4 | From Product Vision to Product Goal                         | Mar 31, 2025 | [jump-to](#4-from-product-vision-to-product-goal) | [YouTube](https://youtu.be/jrecrLEQ3Bk) | [EN](./video-series/closed-captioning/from-product-vision-to-product-goal.vtt) |
-| 5 | Professional Development                                    | Apr 28, 2025 | [jump-to](#5-professional-development) | [YouTube](#) | [EN](#) |
-| 6 | BONUS: Inverse Conway Maneuver                              | Apr 14, 2025 | [jump-to](#bonus-inverse-conway-maneuver) | [YouTube](#) | [EN](#) |
+| # | Title                                                        | Release Date | Resources | Video | CC |
+|---|:-------------------------------------------------------------|--------------|-----------|-------|----|
+| 1 | Why Platform Engineering is the Natural Evolution of DevOps  | Jan 13, 2025 | [jump-to](#1-why-platform-engineering-is-the-natural-evolution-of-devops) | [YouTube](https://youtu.be/Qe9AafRDhTQ) | [EN](./video-series/closed-captioning/why-platform-engineering-is-the-natural-evolution-of-devops.vtt) |
+| 2 | What is an Internal Developer Platform?                      | Jan 27, 2025 | [jump-to](#2-what-is-an-internal-developer-platform) | [YouTube](https://youtu.be/uhycU7K0610) | [EN](./video-series/closed-captioning/what-is-an-internal-developer-platform.vtt) |
+| 3 | Platform-as-a-Product                                        | Feb 14, 2025 | [jump-to](#3-platform-as-a-product) | [YouTube](https://youtu.be/hj31U2D1QUQ) | [EN](./video-series/closed-captioning/platform-as-a-product.vtt) |
+| 4 | From Product Vision to Product Goal                          | Mar 31, 2025 | [jump-to](#4-from-product-vision-to-product-goal) | [YouTube](https://youtu.be/jrecrLEQ3Bk) | [EN](./video-series/closed-captioning/from-product-vision-to-product-goal.vtt) |
+| 5 | Professional Development                                     | Apr 28, 2025 | [jump-to](#5-professional-development) | [YouTube](#) | [EN](#) |
+| 6 | Inverse Conway Maneuver: Organizational Design for Fast Flow | Apr 09, 2025 | [jump-to](#bonus-inverse-conway-maneuver) | [YouTube](https://youtu.be/YiV4Ki9-brY) | [EN](./video-series/closed-captioning/inverse-conway-maneuver-organizational-design-for-fast-flow.vtt) |
 
 ### Why This Repository?
 
@@ -204,8 +204,6 @@ Each section below corresponds to one of the videos and contains links categoriz
 Coming soon. Planned release date: Apr 28, 2025.
 
 ### BONUS: Inverse Conway Maneuver
-
-Coming soon. Planned release date: Apr 14, 2025.
 
 #### Reports & Papers
 
