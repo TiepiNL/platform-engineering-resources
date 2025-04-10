@@ -235,3 +235,8 @@ Interesting stuff I wish I'd discovered sooner or might use in future videos.
 #### Reports
 
 * [Measuring the value of your internal developer platform investments](https://itrevolution.com/product/value-internal-developer-platform-investments/) (email-wall) | Sridhar Kotagiri & Ajay Chankramath @ Thoughtworks, via ITrevolution | Spring 2024
+
+#### Sites & Blogs
+
+* [Washing machine vs laundry room](https://blog.alexewerlof.com/p/washing-machine-vs-laundry-room) | Alex Ewerlöf | Nov 14, 2023
+* [How To Structure Units and Teams in a Platform Organization](https://www.boundaryless.io/blog/how-to-structure-units-and-teams-in-a-platform-organization/) | Simone Cicero, Emanuele Quintarelli, Luca Ruggeri @ Boundaryless | Apr 09, 2024
